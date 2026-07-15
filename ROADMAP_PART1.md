@@ -56,3 +56,10 @@ Keep applications running every single week — the roadmap is supporting eviden
 
 *PDF: [`Roadmap_Part1_Sequence_Checklist.pdf`](./Roadmap_Part1_Sequence_Checklist.pdf)*  
 *HTML (re-print): [`roadmap-part1.html`](./roadmap-part1.html) → **Print / Save as PDF** (landscape).*
+
+---
+
+## Full Document
+
+*Full PDF (Parts 0–3): [`Roadmap_Full_Document.pdf`](./Roadmap_Full_Document.pdf)*  
+*HTML source: [`roadmap-full.html`](./roadmap-full.html)*
