@@ -263,7 +263,14 @@ export const experience: Experience[] = [
       'Led architecture and database migration work that improved scalability and reduced latency by ~20%.',
       'Delivered multi-client platforms spanning GenAI, ERP, and insurance workflows.',
     ],
-    clients: ['Emerson', 'BallCorp', 'Berry Global', 'Maldivian Mermaid', 'Internal Product', 'CNA'],
+    clients: [
+      'Emerson',
+      'BallCorp',
+      'Berry Global',
+      'Maldivian Mermaid',
+      'Internal Product',
+      'CNA',
+    ],
     projects: [
       'Insure AI',
       'Dextr',
@@ -273,7 +280,7 @@ export const experience: Experience[] = [
       'MM-ERP',
       'TAT',
       'Mithril',
-      "POCs & Demos",
+      'POCs & Demos',
     ],
     tech: [
       'Node.js',
@@ -317,7 +324,7 @@ export const experience: Experience[] = [
       'Critical module performance improved by ~68%.',
     ],
     clients: ['CNA', 'Finolex'],
-    projects: ['NBSI', 'Endorsement', "POCs & Demos"],
+    projects: ['NBSI', 'Endorsement', 'POCs & Demos'],
     tech: [
       'Node.js',
       'Express.js',
@@ -347,9 +354,7 @@ export const experience: Experience[] = [
       'Created interactive AR web experiences with A-Frame, Three.js, and JSArToolKit.',
       'Operated AWS (EC2, S3, ASG, Security Groups, ELB) inside VPC topologies.',
     ],
-    impact: [
-      'Shipped immersive AR product experiences optimized for cross-device 3D performance.',
-    ],
+    impact: ['Shipped immersive AR product experiences optimized for cross-device 3D performance.'],
     clients: ['ALS', 'In-House Product'],
     projects: ['AR Cards', 'L Catalog', 'Multiple AR projects'],
     tech: [
@@ -390,7 +395,8 @@ export const projects: Project[] = [
     tagline: 'AI-powered insurance workflows',
     description:
       'Insurance platform capabilities spanning intelligent quote support, risk-oriented assistance, and AI-assisted underwriting flows.',
-    challenge: 'Accelerate insurance operations with GenAI without sacrificing compliance or reliability.',
+    challenge:
+      'Accelerate insurance operations with GenAI without sacrificing compliance or reliability.',
     solution:
       'Node.js services on Kubernetes with OpenAI/OCR integrations, secure identity, and observability.',
     impact: 'Enabled faster quote and underwriting assistance across client programs.',
@@ -504,7 +510,8 @@ export const openSourcePackages = [
   },
   {
     name: 'rag-toolkit',
-    description: 'Tiny RAG toolkit — chunking, embeddings, similarity search, and context building.',
+    description:
+      'Tiny RAG toolkit — chunking, embeddings, similarity search, and context building.',
     language: 'JavaScript',
     tags: ['ai', 'rag'],
     version: '—',

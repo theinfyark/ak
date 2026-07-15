@@ -18,12 +18,16 @@ const levelLabel: Record<SkillLevel, string> = {
 
 export function Skills() {
   const filters = useMemo(
-    () => [{ id: 'all', label: 'All' }, ...skillCategories.map((c) => ({ id: c.id, label: c.label }))],
+    () => [
+      { id: 'all', label: 'All' },
+      ...skillCategories.map((c) => ({ id: c.id, label: c.label })),
+    ],
     [],
   );
   const [active, setActive] = useState('all');
 
-  const visible = active === 'all' ? skillCategories : skillCategories.filter((c) => c.id === active);
+  const visible =
+    active === 'all' ? skillCategories : skillCategories.filter((c) => c.id === active);
 
   return (
     <section id="skills" className="section-pad">
@@ -68,7 +72,9 @@ export function Skills() {
                     <li key={skill.name}>
                       <div className="mb-1 flex items-center justify-between gap-3 text-sm">
                         <span>{skill.name}</span>
-                        <span className="text-xs text-[var(--muted)]">{levelLabel[skill.level]}</span>
+                        <span className="text-xs text-[var(--muted)]">
+                          {levelLabel[skill.level]}
+                        </span>
                       </div>
                       <div className="h-1.5 overflow-hidden rounded-full bg-[color-mix(in_oklab,var(--fg)_8%,transparent)]">
                         <div

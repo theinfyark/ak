@@ -46,7 +46,10 @@ export function About() {
               </h3>
               <ul className="mt-3 grid gap-2 sm:grid-cols-2">
                 {about.loveBuilding.map((item) => (
-                  <li key={item} className="rounded-xl border border-[var(--line)] px-3 py-2 text-sm">
+                  <li
+                    key={item}
+                    className="rounded-xl border border-[var(--line)] px-3 py-2 text-sm"
+                  >
                     {item}
                   </li>
                 ))}
@@ -86,7 +89,10 @@ export function About() {
                 </h3>
                 <div className="mt-3 flex flex-wrap gap-2">
                   {about.technologies.map((s) => (
-                    <Badge key={s} className="border-[color-mix(in_oklab,var(--accent)_35%,var(--line))] text-[var(--fg)]">
+                    <Badge
+                      key={s}
+                      className="border-[color-mix(in_oklab,var(--accent)_35%,var(--line))] text-[var(--fg)]"
+                    >
                       {s}
                     </Badge>
                   ))}

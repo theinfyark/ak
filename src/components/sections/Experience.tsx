@@ -26,7 +26,9 @@ export function Experience() {
                   <p className="mt-1 text-sm text-[var(--muted)]">{job.location}</p>
                 </div>
                 <article className="glass rounded-3xl p-6">
-                  <h3 className="display text-xl font-semibold text-[var(--fg-strong)]">{job.role}</h3>
+                  <h3 className="display text-xl font-semibold text-[var(--fg-strong)]">
+                    {job.role}
+                  </h3>
                   <p className="mt-1 text-[var(--muted)]">{job.company}</p>
 
                   <h4 className="mt-5 text-xs font-semibold tracking-[0.16em] text-[var(--muted)] uppercase">

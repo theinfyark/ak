@@ -45,7 +45,10 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
       )}
     >
       <div className="container-shell flex h-16 items-center justify-between gap-4">
-        <a href="#home" className="display text-lg font-bold tracking-tight text-[var(--fg-strong)]">
+        <a
+          href="#home"
+          className="display text-lg font-bold tracking-tight text-[var(--fg-strong)]"
+        >
           {siteConfig.shortName}
           <span className="text-[var(--accent)]">.</span>
         </a>

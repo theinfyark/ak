@@ -21,8 +21,12 @@ export function SectionHeading({
           {eyebrow}
         </p>
       ) : null}
-      <h2 className="display text-3xl font-semibold text-[var(--fg-strong)] sm:text-4xl">{title}</h2>
-      {description ? <p className="mt-3 text-base leading-relaxed text-[var(--muted)]">{description}</p> : null}
+      <h2 className="display text-3xl font-semibold text-[var(--fg-strong)] sm:text-4xl">
+        {title}
+      </h2>
+      {description ? (
+        <p className="mt-3 text-base leading-relaxed text-[var(--muted)]">{description}</p>
+      ) : null}
     </div>
   );
 }
