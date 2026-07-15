@@ -56,7 +56,7 @@ export const about = {
   technologies: ['Node.js', 'Kubernetes', 'Azure', 'AWS', 'GCP', 'PostgreSQL', 'GenAI'],
 } as const;
 
-export type SkillLevel = 'expert' | 'advanced' | 'proficient';
+export type SkillLevel = 'expert' | 'advanced' | 'proficient' | 'intermediate' | 'working';
 
 export type SkillCategory = {
   id: string;
@@ -215,8 +215,8 @@ export const skillCategories: SkillCategory[] = [
     id: 'frontend',
     label: 'Frontend',
     skills: [
-      { name: 'React.js', level: 'proficient' },
-      { name: 'AngularJS', level: 'proficient' },
+      { name: 'AngularJS', level: 'intermediate' },
+      { name: 'React.js', level: 'working' },
       { name: 'HTML / CSS / Bootstrap', level: 'proficient' },
       { name: 'MUI / TanStack', level: 'proficient' },
       { name: 'PWA', level: 'advanced' },
@@ -629,18 +629,3 @@ export const floatingTech = [
   'Terraform',
   'Grafana',
 ] as const;
-
-export const placeholders = {
-  blog: {
-    title: 'Writing',
-    note: 'Placeholder — deep-dives on cloud platforms, GenAI delivery, and backend architecture coming soon.',
-  },
-  testimonials: {
-    title: 'Testimonials',
-    note: 'Placeholder — colleague and stakeholder quotes will appear here.',
-  },
-  speaking: {
-    title: 'Speaking',
-    note: 'Placeholder — talks and workshops on cloud, DevOps, and AI tooling will be listed here.',
-  },
-} as const;

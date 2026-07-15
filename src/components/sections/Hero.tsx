@@ -16,15 +16,6 @@ export function Hero() {
       <ParticleField />
 
       <div className="container-shell relative z-10 flex min-h-[calc(100svh-5rem)] flex-col justify-center py-16">
-        <motion.p
-          className="mb-4 text-sm font-medium tracking-[0.18em] text-[var(--accent)] uppercase"
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          Available for Staff / Lead Backend · Cloud · AI roles
-        </motion.p>
-
         <motion.h1
           className="display max-w-4xl text-5xl font-bold text-[var(--fg-strong)] sm:text-6xl lg:text-7xl"
           initial={{ opacity: 0, y: 18 }}

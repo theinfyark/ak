@@ -8,12 +8,16 @@ const levelWidth: Record<SkillLevel, string> = {
   expert: 'w-[92%]',
   advanced: 'w-[78%]',
   proficient: 'w-[64%]',
+  intermediate: 'w-[60%]',
+  working: 'w-[30%]',
 };
 
 const levelLabel: Record<SkillLevel, string> = {
   expert: 'Expert',
   advanced: 'Advanced',
   proficient: 'Proficient',
+  intermediate: 'Intermediate',
+  working: 'Working',
 };
 
 export function Skills() {

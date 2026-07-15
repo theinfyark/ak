@@ -10,7 +10,6 @@ import { Projects } from '@/components/sections/Projects';
 import { OpenSource } from '@/components/sections/OpenSource';
 import { Certifications } from '@/components/sections/Certifications';
 import { Contact } from '@/components/sections/Contact';
-import { Placeholders } from '@/components/sections/Placeholders';
 import { useTheme } from '@/hooks/useTheme';
 
 export default function App() {
@@ -35,7 +34,6 @@ export default function App() {
         <OpenSource />
         <Certifications />
         <Contact />
-        <Placeholders />
       </main>
       <Footer />
       <ScrollToTop />
