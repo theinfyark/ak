@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://theinfyark.github.io/ak/sitemap.xml

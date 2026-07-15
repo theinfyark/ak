@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Sora', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Outfit', ui-sans-serif, system-ui, sans-serif;
+  --color-ink: #07090f;
+  --color-ink-soft: #0e121b;
+  --color-panel: #121826;
+  --color-line: rgba(148, 163, 184, 0.16);
+  --color-muted: #94a3b8;
+  --color-fg: #e8eef8;
+  --color-fg-strong: #f8fafc;
+  --color-accent: #2dd4bf;
+  --color-accent-2: #38bdf8;
+  --color-accent-3: #f59e0b;
+}
+
+:root,
+[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #07090f;
+  --bg-elevated: #0e121b;
+  --bg-panel: rgba(18, 24, 38, 0.72);
+  --bg-panel-solid: #121826;
+  --fg: #e8eef8;
+  --fg-strong: #f8fafc;
+  --muted: #94a3b8;
+  --line: rgba(148, 163, 184, 0.16);
+  --accent: #2dd4bf;
+  --accent-2: #38bdf8;
+  --glow: rgba(45, 212, 191, 0.18);
+  --hero-a: #0b1020;
+  --hero-b: #102033;
+  --hero-c: #132018;
+}
+
+[data-theme='light'] {
+  color-scheme: light;
+  --bg: #f4f7fb;
+  --bg-elevated: #ffffff;
+  --bg-panel: rgba(255, 255, 255, 0.78);
+  --bg-panel-solid: #ffffff;
+  --fg: #1e293b;
+  --fg-strong: #0f172a;
+  --muted: #64748b;
+  --line: rgba(15, 23, 42, 0.1);
+  --accent: #0d9488;
+  --accent-2: #0284c7;
+  --glow: rgba(13, 148, 136, 0.12);
+  --hero-a: #e8eef8;
+  --hero-b: #dbeafe;
+  --hero-c: #ccfbf1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  color: var(--fg);
+  background:
+    radial-gradient(1200px 600px at 10% -10%, var(--glow), transparent 55%),
+    radial-gradient(900px 500px at 90% 0%, rgba(56, 189, 248, 0.12), transparent 50%),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg-elevated) 100%);
+  background-attachment: fixed;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body::before {
+  content: '';
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  z-index: 0;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--accent) 45%, transparent);
+  color: var(--fg-strong);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.display {
+  font-family: var(--font-display);
+  letter-spacing: -0.03em;
+}
+
+.glass {
+  background: var(--bg-panel);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.section-pad {
+  padding: clamp(4.5rem, 8vw, 7rem) 0;
+}
+
+.container-shell {
+  width: min(1120px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.gradient-text {
+  background: linear-gradient(120deg, var(--accent), var(--accent-2) 70%, #5eead4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.mesh {
+  background:
+    radial-gradient(circle at 20% 20%, color-mix(in oklab, var(--accent) 28%, transparent), transparent 42%),
+    radial-gradient(circle at 80% 10%, color-mix(in oklab, var(--accent-2) 24%, transparent), transparent 40%),
+    radial-gradient(circle at 50% 80%, color-mix(in oklab, #14b8a6 14%, transparent), transparent 45%),
+    linear-gradient(160deg, var(--hero-a), var(--hero-b) 45%, var(--hero-c));
+}
+
+.grid-fade {
+  background-image:
+    linear-gradient(to right, color-mix(in oklab, var(--fg) 8%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklab, var(--fg) 8%, transparent) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at center, black 20%, transparent 72%);
+}
+
+.btn-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-ripple::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(255, 255, 255, 0.28), transparent 42%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.btn-ripple:hover::after {
+  opacity: 1;
+}
+
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-float {
+  animation: float-y 5.5s ease-in-out infinite;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 3.2s ease-in-out infinite;
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
