@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Reskilling & Job-Hunt Roadmap — Azure to Gen AI/RAG learning path">
+  <title>Reskilling Roadmap | Anil Kumar P</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="roadmap.css">
+</head>
+<body>
+  <header class="rm-header">
+    <div class="container">
+      <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Portfolio</a>
+      <h1>Reskilling &amp; Job-Hunt Roadmap</h1>
+      <p class="subtitle">9+ YOE · ~25 weeks · One topic at a time</p>
+      <div class="progress-panel">
+        <div class="progress-meta">
+          <span id="progressText">0 / 0 complete</span>
+          <span id="progressPct">0%</span>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+      </div>
+      <nav class="path-nav" aria-label="Learning path">
+        <a href="#1-azure-fundamentals" class="path-pill">Azure</a>
+        <a href="#2-docker" class="path-pill">Docker</a>
+        <a href="#3-kubernetes" class="path-pill">K8s</a>
+        <a href="#4-terraform" class="path-pill">Terraform</a>
+        <a href="#5-node-js" class="path-pill">Node.js</a>
+        <a href="#6-react" class="path-pill">React</a>
+        <a href="#7-next-js" class="path-pill">Next.js</a>
+        <a href="#8-traditional-ai-machine-learning" class="path-pill">AI/ML</a>
+        <a href="#9-vector-databases" class="path-pill">Vectors</a>
+        <a href="#10-gen-ai-rag" class="path-pill">Gen AI</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container rm-main">
+    <div class="rule-banner">
+      <strong>Rule:</strong> One topic at a time, in order. Don&rsquo;t start topic 2 until topic 1&rsquo;s checklist is done.
+    </div>
+    <section class="rm-section" id="part-0-immediate-actions-start-today-run-throughout">
+<h2>PART 0 — Immediate Actions (start today, run throughout)</h2>
+<ul class="checklist">
+<li><label><input type="checkbox" data-id="part-0-immediate-actions-start-today-run-throughout--update-resume-with-quantified-achievements"> <span>Update resume with quantified achievements</span></label></li>
+<li><label><input type="checkbox" data-id="part-0-immediate-actions-start-today-run-throughout--update-linkedin-headline-open-to-work-recruiters-only-if-needed-"> <span>Update LinkedIn headline + &quot;open to work&quot; (recruiters only, if needed)</span></label></li>
+<li><label><input type="checkbox" data-id="part-0-immediate-actions-start-today-run-throughout--message-10-people-in-your-network-that-you-re-looking"> <span>Message 10 people in your network that you&#x27;re looking</span></label></li>
+<li><label><input type="checkbox" data-id="part-0-immediate-actions-start-today-run-throughout--apply-to-5-roles-this-week"> <span>Apply to 5+ roles this week</span></label></li>
+<li><label><input type="checkbox" data-id="part-0-immediate-actions-start-today-run-throughout--set-a-recurring-45-min-slot-2-3x-week-for-system-design-behavioral-practice-star"> <span>Set a recurring 45-min slot, 2-3x/week, for system design + behavioral practice (starts Week 2, runs to the end)</span></label></li>
+<li><label><input type="checkbox" data-id="part-0-immediate-actions-start-today-run-throughout--keep-applying-every-single-week-from-here-on-don-t-pause-for-certs"> <span>Keep applying every single week from here on - don&#x27;t pause for certs</span></label></li>
+</ul>
+<hr>
+</section>
+<section class="rm-section" id="part-1-high-level-sequence-checklist">
+<h2>PART 1 — High-Level Sequence Checklist</h2>
+<h3>Week 1-3 | Azure Fundamentals | 1-1.5 hrs/day</h3>
+<ul class="checklist">
+<li><label><input type="checkbox" data-id="part-1-high-level-sequence-checklist--concepts-done"> <span>Concepts done</span></label></li>
+<li><label><input type="checkbox" data-id="part-1-high-level-sequence-checklist--az-900-exam-booked"> <span>AZ-900 exam booked</span></label></li>
+<li><label><input type="checkbox" data-id="part-1-high-level-sequence-checklist--az-900-passed"> <span>AZ-900 passed</span></label></li>
+</ul>
+<h3>Week 4-6 | Docker | 1-1.5 hrs/day</h3>
+<ul class="checklist">
+<li><label><input type="checkbox" data-id="part-1-high-level-sequence-checklist--concepts-hands-on-done"> <span>Concepts + hands-on done</span></label></li>
+<li><label><input type="checkbox" data-id="part-1-high-level-sequence-checklist--can-containerize-an-app"> <span>Can containerize an app</span></label></li>
+</ul>
+<h3>Week 7-9 | Kubernetes | 1.5 hrs/day</h3>
+<ul class="checklist">
+<li><label><input type="checkbox" data-id="part-1-high-level-sequence-checklist--concepts-hands-on-done"> <span>Concepts + hands-on done</span></label></li>
+<li><label><input type="checkbox" data-id="part-1-high-level-sequence-checklist--can-deploy-an-app-to-a-local-cluster-minikube-kind-"> <span>Can deploy an app to a local cluster (minikube/kind)</span></label></li>
+</ul>
+<h3>Week 10-12 | Terraform | 1.5 hrs/day</h3>
+<ul class="checklist">
+<li><label><input type="checkbox" data-id="part-1-high-level-sequence-checklist--concepts-hands-on-done"> <span>Concepts + hands-on done</span></label></li>
+<li><label><input type="checkbox" data-id="part-1-high-level-sequence-checklist--terraform-associate-exam-booked"> <span>Terraform Associate exam booked</span></label></li>
+<li><label><input type="checkbox" data-id="part-1-high-level-sequence-checklist--terraform-associate-004-passed"> <span>Terraform Associate 004 passed</span></label></li>
+</ul>
+<h3>Week 13-15 | Node.js | 1-1.5 hrs/day</h3>
+<ul class="checklist">
+<li><label><input type="checkbox" data-id="part-1-high-level-sequence-checklist--concepts-done"> <span>Concepts done</span></label></li>
+<li><label><input type="checkbox" data-id="part-1-high-level-sequence-checklist--one-api-built-end-to-end"> <span>One API built end to end</span></label></li>
+</ul>
+<h3>Week 16-17 | React | 1-1.5 hrs/day</h3>
+<ul class="checklist">
+<li><label><input type="checkbox" data-id="part-1-high-level-sequence-checklist--concepts-done"> <span>Concepts done</span></label></li>
+<li><label><input type="checkbox" data-id="part-1-high-level-sequence-checklist--one-app-built-end-to-end"> <span>One app built end to end</span></label></li>
+</ul>
+<h3>Week 18 | Next.js | 1.5 hrs/day</h3>
+<ul class="checklist">
+<li><label><input type="checkbox" data-id="part-1-high-level-sequence-checklist--concepts-done"> <span>Concepts done</span></label></li>
+<li><label><input type="checkbox" data-id="part-1-high-level-sequence-checklist--app-migrated-rebuilt-in-next-js"> <span>App migrated/rebuilt in Next.js</span></label></li>
+</ul>
+<h3>Week 19-20 | Traditional AI/ML | 1-1.5 hrs/day</h3>
+<ul class="checklist">
+<li><label><input type="checkbox" data-id="part-1-high-level-sequence-checklist--concepts-done-no-coding-needed-just-fluency-"> <span>Concepts done (no coding needed, just fluency)</span></label></li>
+</ul>
+<h3>Week 21 | Vector Databases | 1 hr/day</h3>
+<ul class="checklist">
+<li><label><input type="checkbox" data-id="part-1-high-level-sequence-checklist--concepts-done"> <span>Concepts done</span></label></li>
+<li><label><input type="checkbox" data-id="part-1-high-level-sequence-checklist--one-small-embedding-search-demo-built"> <span>One small embedding search demo built</span></label></li>
+</ul>
+<h3>Week 22-23 | Gen AI / RAG | 1.5-2 hrs/day</h3>
+<ul class="checklist">
+<li><label><input type="checkbox" data-id="part-1-high-level-sequence-checklist--concepts-done"> <span>Concepts done</span></label></li>
+<li><label><input type="checkbox" data-id="part-1-high-level-sequence-checklist--mini-rag-chatbot-built"> <span>Mini RAG chatbot built</span></label></li>
+<li><label><input type="checkbox" data-id="part-1-high-level-sequence-checklist--ai-901-exam-booked"> <span>AI-901 exam booked</span></label></li>
+<li><label><input type="checkbox" data-id="part-1-high-level-sequence-checklist--ai-901-passed"> <span>AI-901 passed</span></label></li>
+</ul>
+<h3>Week 24-25 | Integration Project | 2 hrs/day</h3>
+<ul class="checklist">
+<li><label><input type="checkbox" data-id="part-1-high-level-sequence-checklist--next-js-node-api-rag-chatbot-built"> <span>Next.js + Node API + RAG chatbot built</span></label></li>
+<li><label><input type="checkbox" data-id="part-1-high-level-sequence-checklist--containerized-with-docker"> <span>Containerized with Docker</span></label></li>
+<li><label><input type="checkbox" data-id="part-1-high-level-sequence-checklist--deployed-to-azure-aks-or-app-service-via-terraform"> <span>Deployed to Azure (AKS or App Service) via Terraform</span></label></li>
+</ul>
+<h3>Ongoing from Week 2 | System Design + Behavioral | 45 min, 2-3x/week</h3>
+<ul class="checklist">
+<li><label><input type="checkbox" data-id="part-1-high-level-sequence-checklist--2-system-designs-week-practiced"> <span>2 system designs/week practiced</span></label></li>
+<li><label><input type="checkbox" data-id="part-1-high-level-sequence-checklist--6-star-stories-ready"> <span>6+ STAR stories ready</span></label></li>
+</ul>
+<p><strong>~25 weeks (~6 months) at a steady pace.</strong> If you already have strong exposure in one area, compress that section and bank the time for weaker areas - don&#x27;t skip the sequence, just move faster through what you know.</p>
+<hr>
+</section>
+<section class="rm-section" id="part-2-detailed-topic-breakdowns">
+<h2>PART 2 — Detailed Topic Breakdowns</h2>
+<p>Each topic has: <strong>Architecture</strong> (how the pieces fit together) → <strong>Sequenced checklist</strong> → <strong>30 interview questions</strong> (fundamentals first).</p>
+<hr>
+</section>
+<section class="rm-section topic" id="1-azure-fundamentals">
+<button type="button" class="topic-toggle" aria-expanded="false"><h2>1. Azure Fundamentals</h2><span class="chevron"><i class="fas fa-chevron-down"></i></span><span class="topic-progress" data-topic="1-azure-fundamentals">0%</span></button>
+<div class="topic-body">
+<h3>Architecture</h3>
+<p>Azure is organized as:</p>
+<ul class="bullet-list">
+<li>Management Groups (top-level governance)</li>
+<li>Subscriptions (billing + access boundary)</li>
+<li>Resource Groups (logical containers for related resources)</li>
+<li>Resources (VMs, storage, databases, etc.)</li>
+</ul>
+<p>All of this is deployed into Regions made up of Availability Zones for resilience.</p>
+<p>Identity flows through Entra ID (Azure AD), which issues tokens that RBAC checks against resources. Networking (VNets/subnets) isolates resources, and Azure Policy + Cost Management enforce governance across all of it.</p>
+<p>Everything you build later (Docker containers, Kubernetes clusters, Terraform-provisioned infra) ultimately lives inside this hierarchy.</p>
+<h3>Sequenced Checklist</h3>
+<ul class="checklist">
+<li><label><input type="checkbox" data-id="1-azure-fundamentals--1-core-architectural-components-regions-availability-zones-resource-groups-subsc"> <span>1. Core architectural components: regions, availability zones, resource groups, subscriptions, management groups</span></label></li>
+<li><label><input type="checkbox" data-id="1-azure-fundamentals--2-identity-entra-id-azure-ad-users-groups-rbac-roles-managed-identities"> <span>2. Identity: Entra ID (Azure AD), users/groups, RBAC roles, managed identities</span></label></li>
+<li><label><input type="checkbox" data-id="1-azure-fundamentals--3-networking-basics-vnets-subnets-nsgs-load-balancers-dns"> <span>3. Networking basics: VNets, subnets, NSGs, load balancers, DNS</span></label></li>
+<li><label><input type="checkbox" data-id="1-azure-fundamentals--4-compute-vms-app-service-azure-functions-aks-concept-only-for-now-"> <span>4. Compute: VMs, App Service, Azure Functions, AKS (concept only for now)</span></label></li>
+<li><label><input type="checkbox" data-id="1-azure-fundamentals--5-storage-blob-disk-file-redundancy-lrs-zrs-grs-"> <span>5. Storage: Blob/Disk/File, redundancy (LRS/ZRS/GRS)</span></label></li>
+<li><label><input type="checkbox" data-id="1-azure-fundamentals--6-databases-azure-sql-cosmos-db-concept-level-"> <span>6. Databases: Azure SQL, Cosmos DB (concept level)</span></label></li>
+<li><label><input type="checkbox" data-id="1-azure-fundamentals--7-governance-azure-policy-tags-cost-management-budgets"> <span>7. Governance: Azure Policy, tags, cost management/budgets</span></label></li>
+<li><label><input type="checkbox" data-id="1-azure-fundamentals--8-monitoring-azure-monitor-log-analytics-alerts"> <span>8. Monitoring: Azure Monitor, Log Analytics, alerts</span></label></li>
+<li><label><input type="checkbox" data-id="1-azure-fundamentals--9-azure-ai-services-overview-cognitive-services-azure-openai-ai-foundry-"> <span>9. Azure AI services overview (Cognitive Services, Azure OpenAI, AI Foundry)</span></label></li>
+<li><label><input type="checkbox" data-id="1-azure-fundamentals--10-shared-responsibility-model-compliance-basics"> <span>10. Shared responsibility model + compliance basics</span></label></li>
+<li><label><input type="checkbox" data-id="1-azure-fundamentals--book-and-pass-az-900"> <span>Book and pass AZ-900</span></label></li>
+</ul>
+<h3>Top 30 Interview Questions</h3>
+<ol class="q-list">
+<li>What is the relationship between management groups, subscriptions, resource groups, and resources?</li>
+<li>Explain the difference between a region and an availability zone.</li>
+<li>What&#x27;s the difference between Azure AD (Entra ID) RBAC and Azure Policy?</li>
+<li>What is a managed identity and why is it preferred over storing credentials in code?</li>
+<li>Explain LRS vs ZRS vs GRS storage redundancy - trade-offs?</li>
+<li>What&#x27;s the difference between Azure Functions and App Service?</li>
+<li>When would you choose a VM over App Service or Functions?</li>
+<li>How does an NSG (Network Security Group) work?</li>
+<li>What&#x27;s the difference between a public and private VNet subnet?</li>
+<li>How would you design a highly available architecture across regions?</li>
+<li>Explain the shared responsibility model in cloud computing.</li>
+<li>How do you control cloud costs at scale (tagging, budgets, reserved instances)?</li>
+<li>What monitoring/alerting would you set up for a production app?</li>
+<li>What&#x27;s the difference between Azure SQL and Cosmos DB?</li>
+<li>How does Azure Load Balancer differ from Application Gateway?</li>
+<li>What is Azure Policy used for, and how does it differ from RBAC?</li>
+<li>Explain how DNS resolution works within a VNet.</li>
+<li>What&#x27;s a service principal, and how does it differ from a managed identity?</li>
+<li>How would you securely store secrets for an application running in Azure?</li>
+<li>What&#x27;s the difference between horizontal and vertical scaling in App Service?</li>
+<li>Explain Azure&#x27;s disaster recovery options (backup, geo-redundancy, failover).</li>
+<li>What&#x27;s an ARM template, and how does it relate to Terraform?</li>
+<li>How do you peer two VNets, and why would you need to?</li>
+<li>What&#x27;s the difference between Standard and Premium storage tiers?</li>
+<li>How does Azure handle autoscaling for VMs vs App Service?</li>
+<li>What&#x27;s Azure AI Foundry, and how does it relate to Azure OpenAI Service?</li>
+<li>Explain how you&#x27;d set up least-privilege access for a team in Azure.</li>
+<li>What&#x27;s the difference between an NSG and Azure Firewall?</li>
+<li>How would you migrate an on-prem application to Azure with minimal downtime?</li>
+<li>Walk me through designing a 3-tier web app architecture in Azure end to end.</li>
+</ol>
+<hr>
+</div>
+</section>
+<section class="rm-section topic" id="2-docker">
+<button type="button" class="topic-toggle" aria-expanded="false"><h2>2. Docker</h2><span class="chevron"><i class="fas fa-chevron-down"></i></span><span class="topic-progress" data-topic="2-docker">0%</span></button>
+<div class="topic-body">
+<h3>Architecture</h3>
+<p>Docker packages an application into:</p>
+<ul class="bullet-list">
+<li>A Dockerfile (the build instructions)</li>
+<li>An Image (a read-only template, built in layers)</li>
+<li>A Container (a running instance of that image, isolated using the host OS kernel - not a full VM)</li>
+</ul>
+<p>The Docker Engine (daemon) manages images, containers, networks, and volumes on a host. Volumes persist data outside the container&#x27;s writable layer. Docker Compose lets you define and run multi-container apps (e.g., app + database) together.</p>
+<p>This containerization is the foundation Kubernetes later orchestrates at scale.</p>
+<h3>Sequenced Checklist</h3>
+<ul class="checklist">
+<li><label><input type="checkbox" data-id="2-docker--1-what-a-container-is-vs-a-vm-shared-kernel-vs-full-os-"> <span>1. What a container is vs a VM (shared kernel vs full OS)</span></label></li>
+<li><label><input type="checkbox" data-id="2-docker--2-images-vs-containers-image-layers-caching"> <span>2. Images vs containers - image layers, caching</span></label></li>
+<li><label><input type="checkbox" data-id="2-docker--3-writing-a-dockerfile-from-run-copy-cmd-entrypoint-expose-"> <span>3. Writing a Dockerfile (FROM, RUN, COPY, CMD, ENTRYPOINT, EXPOSE)</span></label></li>
+<li><label><input type="checkbox" data-id="2-docker--4-building-and-tagging-images-docker-build-docker-tag-"> <span>4. Building and tagging images (docker build, docker tag)</span></label></li>
+<li><label><input type="checkbox" data-id="2-docker--5-running-managing-containers-run-ps-exec-logs-stop-rm-"> <span>5. Running/managing containers (run, ps, exec, logs, stop, rm)</span></label></li>
+<li><label><input type="checkbox" data-id="2-docker--6-volumes-and-bind-mounts-persisting-data"> <span>6. Volumes and bind mounts - persisting data</span></label></li>
+<li><label><input type="checkbox" data-id="2-docker--7-networking-bridge-networks-port-mapping-container-to-container-communication"> <span>7. Networking: bridge networks, port mapping, container-to-container communication</span></label></li>
+<li><label><input type="checkbox" data-id="2-docker--8-multi-stage-builds-reducing-image-size-"> <span>8. Multi-stage builds (reducing image size)</span></label></li>
+<li><label><input type="checkbox" data-id="2-docker--9-docker-compose-multi-container-apps"> <span>9. Docker Compose - multi-container apps</span></label></li>
+<li><label><input type="checkbox" data-id="2-docker--10-image-registries-docker-hub-azure-container-registry-push-pull"> <span>10. Image registries (Docker Hub, Azure Container Registry) - push/pull</span></label></li>
+<li><label><input type="checkbox" data-id="2-docker--11-basic-security-minimizing-image-size-attack-surface-non-root-users"> <span>11. Basic security: minimizing image size/attack surface, non-root users</span></label></li>
+</ul>
+<h3>Top 30 Interview Questions</h3>
+<ol class="q-list">
+<li>What&#x27;s the difference between a container and a virtual machine?</li>
+<li>Explain the difference between a Docker image and a Docker container.</li>
+<li>What are image layers, and why do they matter for build speed and size?</li>
+<li>Walk me through a Dockerfile you&#x27;ve written - explain each instruction.</li>
+<li>What&#x27;s the difference between CMD and ENTRYPOINT?</li>
+<li>How do you persist data in a container that would otherwise be lost on restart?</li>
+<li>What&#x27;s the difference between a volume and a bind mount?</li>
+<li>How does container networking work - bridge vs host vs none?</li>
+<li>What is a multi-stage build, and why would you use one?</li>
+<li>How do you reduce the size of a Docker image?</li>
+<li>What&#x27;s the difference between docker run and docker exec?</li>
+<li>How would you debug a container that keeps crashing/restarting?</li>
+<li>What&#x27;s Docker Compose used for?</li>
+<li>How do you pass environment variables/secrets into a container securely?</li>
+<li>What&#x27;s a container registry, and how do you push/pull images from one?</li>
+<li>Explain the difference between COPY and ADD in a Dockerfile.</li>
+<li>How do you limit CPU/memory resources for a container?</li>
+<li>What happens to a container&#x27;s filesystem changes when it stops vs is removed?</li>
+<li>How would you run a container as a non-root user, and why does it matter?</li>
+<li>What&#x27;s the difference between an ENTRYPOINT script and just running the app directly?</li>
+<li>How do health checks work in Docker?</li>
+<li>What&#x27;s .dockerignore used for?</li>
+<li>How do you handle logging for containerized applications?</li>
+<li>What&#x27;s the difference between docker stop and docker kill?</li>
+<li>How would you containerize a Node.js app vs a Python app?</li>
+<li>What are the security risks of running containers, and how do you mitigate them?</li>
+<li>How do you version and tag images for a CI/CD pipeline?</li>
+<li>What&#x27;s the difference between an anonymous volume and a named volume?</li>
+<li>How does Docker networking differ when containers are on the same host vs across hosts?</li>
+<li>Describe how you&#x27;d migrate a legacy monolith into a containerized setup.</li>
+</ol>
+<hr>
+</div>
+</section>
+<section class="rm-section topic" id="3-kubernetes">
+<button type="button" class="topic-toggle" aria-expanded="false"><h2>3. Kubernetes</h2><span class="chevron"><i class="fas fa-chevron-down"></i></span><span class="topic-progress" data-topic="3-kubernetes">0%</span></button>
+<div class="topic-body">
+<h3>Architecture</h3>
+<p>Kubernetes orchestrates containers (built with Docker) across a cluster of machines, structured as:</p>
+<ul class="bullet-list">
+<li>Control Plane (API server, scheduler, controller manager, etcd) - manages the cluster</li>
+<li>Worker Nodes - run your containers</li>
+<li>Pods - the smallest deployable unit, running inside worker nodes</li>
+<li>Deployments - manage sets of identical Pods, handle rolling updates/rollbacks</li>
+<li>Services - give Pods a stable network identity, since Pods are ephemeral</li>
+<li>ConfigMaps/Secrets - inject configuration into Pods</li>
+<li>Ingress - routes external traffic in</li>
+</ul>
+<p>This is the layer that takes what Docker built and runs it reliably, at scale, self-healing - and it&#x27;s what Terraform will later provision (e.g., an AKS cluster).</p>
+<h3>Sequenced Checklist</h3>
+<ul class="checklist">
+<li><label><input type="checkbox" data-id="3-kubernetes--1-why-orchestration-is-needed-beyond-single-host-docker-"> <span>1. Why orchestration is needed (beyond single-host Docker)</span></label></li>
+<li><label><input type="checkbox" data-id="3-kubernetes--2-cluster-architecture-control-plane-vs-worker-nodes"> <span>2. Cluster architecture: control plane vs worker nodes</span></label></li>
+<li><label><input type="checkbox" data-id="3-kubernetes--3-pods-the-smallest-deployable-unit"> <span>3. Pods - the smallest deployable unit</span></label></li>
+<li><label><input type="checkbox" data-id="3-kubernetes--4-deployments-replica-sets-rolling-updates-rollbacks"> <span>4. Deployments - replica sets, rolling updates, rollbacks</span></label></li>
+<li><label><input type="checkbox" data-id="3-kubernetes--5-services-clusterip-nodeport-loadbalancer"> <span>5. Services - ClusterIP, NodePort, LoadBalancer</span></label></li>
+<li><label><input type="checkbox" data-id="3-kubernetes--6-configmaps-and-secrets"> <span>6. ConfigMaps and Secrets</span></label></li>
+<li><label><input type="checkbox" data-id="3-kubernetes--7-ingress-routing-external-traffic"> <span>7. Ingress - routing external traffic</span></label></li>
+<li><label><input type="checkbox" data-id="3-kubernetes--8-namespaces-isolating-environments-teams"> <span>8. Namespaces - isolating environments/teams</span></label></li>
+<li><label><input type="checkbox" data-id="3-kubernetes--9-persistent-volumes-persistent-volume-claims"> <span>9. Persistent Volumes / Persistent Volume Claims</span></label></li>
+<li><label><input type="checkbox" data-id="3-kubernetes--10-horizontal-pod-autoscaler"> <span>10. Horizontal Pod Autoscaler</span></label></li>
+<li><label><input type="checkbox" data-id="3-kubernetes--11-health-checks-liveness-vs-readiness-probes"> <span>11. Health checks: liveness vs readiness probes</span></label></li>
+<li><label><input type="checkbox" data-id="3-kubernetes--12-helm-concept-level-packaging-kubernetes-manifests"> <span>12. Helm (concept level) - packaging Kubernetes manifests</span></label></li>
+<li><label><input type="checkbox" data-id="3-kubernetes--13-hands-on-deploy-a-sample-app-to-minikube-or-kind-locally"> <span>13. Hands-on: deploy a sample app to minikube or kind locally</span></label></li>
+</ul>
+<h3>Top 30 Interview Questions</h3>
+<ol class="q-list">
+<li>What problem does Kubernetes solve that plain Docker doesn&#x27;t?</li>
+<li>Explain the Kubernetes control plane components and their roles.</li>
+<li>What is a Pod, and why isn&#x27;t it usually just one container forever guaranteed?</li>
+<li>What&#x27;s the difference between a Deployment and a ReplicaSet?</li>
+<li>How does a rolling update work, and how do you roll one back?</li>
+<li>Why do Pods need a Service, and what are the differences between ClusterIP, NodePort, and LoadBalancer?</li>
+<li>What&#x27;s the difference between a ConfigMap and a Secret?</li>
+<li>Explain liveness vs readiness probes.</li>
+<li>What is Ingress, and how does it differ from a LoadBalancer Service?</li>
+<li>How does the Horizontal Pod Autoscaler decide when to scale?</li>
+<li>What&#x27;s a Namespace used for?</li>
+<li>Explain Persistent Volumes vs Persistent Volume Claims.</li>
+<li>How does Kubernetes handle a node failure?</li>
+<li>What&#x27;s the difference between a StatefulSet and a Deployment?</li>
+<li>How do you perform a zero-downtime deployment in Kubernetes?</li>
+<li>What is a DaemonSet, and when would you use one?</li>
+<li>How does Kubernetes service discovery work internally (DNS)?</li>
+<li>What&#x27;s a Job vs a CronJob in Kubernetes?</li>
+<li>How would you debug a Pod stuck in CrashLoopBackOff?</li>
+<li>What&#x27;s the difference between kubectl apply and kubectl create?</li>
+<li>How do resource requests and limits work?</li>
+<li>What is Helm, and how does it simplify Kubernetes deployments?</li>
+<li>How do you manage secrets securely in Kubernetes (vs plain Secrets objects)?</li>
+<li>What&#x27;s a sidecar container pattern?</li>
+<li>How does Kubernetes networking allow Pod-to-Pod communication across nodes?</li>
+<li>What&#x27;s the difference between AKS-managed control plane and a self-managed cluster?</li>
+<li>How would you set up multi-environment isolation in one cluster?</li>
+<li>What&#x27;s a taint/toleration, and what problem does it solve?</li>
+<li>How do you monitor and log a Kubernetes cluster in production?</li>
+<li>Walk me through designing a Kubernetes deployment strategy for a high-traffic web app.</li>
+</ol>
+<hr>
+</div>
+</section>
+<section class="rm-section topic" id="4-terraform">
+<button type="button" class="topic-toggle" aria-expanded="false"><h2>4. Terraform</h2><span class="chevron"><i class="fas fa-chevron-down"></i></span><span class="topic-progress" data-topic="4-terraform">0%</span></button>
+<div class="topic-body">
+<h3>Architecture</h3>
+<p>Terraform is Infrastructure as Code. The workflow flows as:</p>
+<ul class="bullet-list">
+<li>HCL config files - you describe the infrastructure you want</li>
+<li>State file - Terraform&#x27;s record of what it last created</li>
+<li>Dependency graph - built from your config</li>
+<li>Plan - an execution diff, calculated before any real changes</li>
+<li>Apply - the real changes, made via cloud provider APIs</li>
+</ul>
+<p>Providers are the plugins that talk to a specific platform (e.g., AzureRM). Modules package reusable chunks of config. Remote state lets teams collaborate safely with locking, so two people can&#x27;t apply conflicting changes at once.</p>
+<p>This is the layer that actually provisions the Azure infrastructure and Kubernetes clusters you learned about above.</p>
+<h3>Sequenced Checklist</h3>
+<ul class="checklist">
+<li><label><input type="checkbox" data-id="4-terraform--1-why-infrastructure-as-code-matters"> <span>1. Why Infrastructure as Code matters</span></label></li>
+<li><label><input type="checkbox" data-id="4-terraform--2-core-workflow-init-plan-apply-destroy"> <span>2. Core workflow: init, plan, apply, destroy</span></label></li>
+<li><label><input type="checkbox" data-id="4-terraform--3-providers-resources-data-sources"> <span>3. Providers, resources, data sources</span></label></li>
+<li><label><input type="checkbox" data-id="4-terraform--4-variables-outputs-locals"> <span>4. Variables, outputs, locals</span></label></li>
+<li><label><input type="checkbox" data-id="4-terraform--5-state-what-it-is-remote-state-locking"> <span>5. State - what it is, remote state + locking</span></label></li>
+<li><label><input type="checkbox" data-id="4-terraform--6-terraform-state-mv-rm-import-list-show"> <span>6. terraform state mv/rm/import/list/show</span></label></li>
+<li><label><input type="checkbox" data-id="4-terraform--7-modules-writing-reusable-ones-versioning"> <span>7. Modules - writing reusable ones, versioning</span></label></li>
+<li><label><input type="checkbox" data-id="4-terraform--8-for-each-vs-count"> <span>8. for_each vs count</span></label></li>
+<li><label><input type="checkbox" data-id="4-terraform--9-workspaces-vs-separate-state-files-for-environments"> <span>9. Workspaces vs separate state files for environments</span></label></li>
+<li><label><input type="checkbox" data-id="4-terraform--10-lifecycle-rules-create-before-destroy-prevent-destroy-ignore-changes-"> <span>10. Lifecycle rules (create_before_destroy, prevent_destroy, ignore_changes)</span></label></li>
+<li><label><input type="checkbox" data-id="4-terraform--11-dependency-graph-implicit-vs-explicit-depends-on-"> <span>11. Dependency graph - implicit vs explicit (depends_on)</span></label></li>
+<li><label><input type="checkbox" data-id="4-terraform--12-secrets-handling-ephemeral-values-write-only-arguments-"> <span>12. Secrets handling (ephemeral values, write-only arguments)</span></label></li>
+<li><label><input type="checkbox" data-id="4-terraform--13-hcp-terraform-remote-runs-policy-checks-sentinel-opa-"> <span>13. HCP Terraform: remote runs, policy checks (Sentinel/OPA)</span></label></li>
+<li><label><input type="checkbox" data-id="4-terraform--14-hands-on-provision-a-vm-app-service-an-aks-cluster-with-terraform"> <span>14. Hands-on: provision a VM/App Service + an AKS cluster with Terraform</span></label></li>
+<li><label><input type="checkbox" data-id="4-terraform--book-and-pass-terraform-associate-004"> <span>Book and pass Terraform Associate 004</span></label></li>
+</ul>
+<h3>Top 30 Interview Questions</h3>
+<ol class="q-list">
+<li>What problem does Infrastructure as Code solve?</li>
+<li>What is Terraform state, and why is it dangerous to edit manually?</li>
+<li>Walk through the init -&gt; plan -&gt; apply workflow.</li>
+<li>How do you manage state for multiple environments?</li>
+<li>Explain for_each vs count.</li>
+<li>How do you import an existing cloud resource into Terraform management?</li>
+<li>What happens if two people run apply at the same time, and how do you prevent it?</li>
+<li>How do you structure a large Terraform codebase?</li>
+<li>What&#x27;s the difference between a provider and a provisioner?</li>
+<li>How would you handle a secret in Terraform without exposing it in state or logs?</li>
+<li>Describe a time you dealt with configuration drift.</li>
+<li>What&#x27;s your strategy for zero-downtime infrastructure changes?</li>
+<li>What&#x27;s the difference between a resource and a data source?</li>
+<li>How does Terraform build its dependency graph?</li>
+<li>What&#x27;s the difference between Terraform workspaces and separate state files?</li>
+<li>How do you version and pin providers/modules?</li>
+<li>What&#x27;s terraform refresh and when would you need it?</li>
+<li>Explain create_before_destroy and give a scenario.</li>
+<li>What&#x27;s the difference between local and remote state?</li>
+<li>How would you roll back a bad apply?</li>
+<li>What makes a Terraform module reusable vs project-specific?</li>
+<li>How do you handle Terraform in a CI/CD pipeline safely?</li>
+<li>What&#x27;s HCP Terraform, and what does it add over open-source Terraform?</li>
+<li>How do policy-as-code tools fit into a Terraform workflow?</li>
+<li>What&#x27;s the purpose of the .terraform.lock.hcl file?</li>
+<li>How do you handle a resource that must be destroyed/recreated?</li>
+<li>What are ephemeral values / write-only arguments?</li>
+<li>How would you provision an AKS cluster with Terraform, at a high level?</li>
+<li>What&#x27;s the blast radius concern with a single large state file?</li>
+<li>Walk me through Terraforming an entire environment from scratch.</li>
+</ol>
+<hr>
+</div>
+</section>
+<section class="rm-section topic" id="5-node-js">
+<button type="button" class="topic-toggle" aria-expanded="false"><h2>5. Node.js</h2><span class="chevron"><i class="fas fa-chevron-down"></i></span><span class="topic-progress" data-topic="5-node-js">0%</span></button>
+<div class="topic-body">
+<h3>Architecture</h3>
+<p>Node.js runs JavaScript outside the browser using the V8 engine, built around a single-threaded event loop with non-blocking I/O. Expensive operations are handed off so the main thread stays free, and a callback/Promise fires when work completes.</p>
+<p>On top of this, Express adds a middleware chain that processes each incoming request as:</p>
+<ul class="bullet-list">
+<li>Auth check</li>
+<li>Validation</li>
+<li>Business logic</li>
+<li>Response</li>
+</ul>
+<p>This is the backend layer that exposes your APIs (including the RAG chatbot&#x27;s backend) and gets containerized with Docker, deployed via Kubernetes/Terraform above.</p>
+<h3>Sequenced Checklist</h3>
+<ul class="checklist">
+<li><label><input type="checkbox" data-id="5-node-js--1-event-loop-and-non-blocking-i-o"> <span>1. Event loop and non-blocking I/O</span></label></li>
+<li><label><input type="checkbox" data-id="5-node-js--2-callbacks-promises-async-await"> <span>2. Callbacks -&gt; Promises -&gt; async/await</span></label></li>
+<li><label><input type="checkbox" data-id="5-node-js--3-commonjs-require-vs-es-modules-import-"> <span>3. CommonJS (require) vs ES Modules (import)</span></label></li>
+<li><label><input type="checkbox" data-id="5-node-js--4-error-handling-patterns"> <span>4. Error handling patterns</span></label></li>
+<li><label><input type="checkbox" data-id="5-node-js--5-express-routing-middleware-chain-request-response-cycle"> <span>5. Express: routing, middleware chain, request/response cycle</span></label></li>
+<li><label><input type="checkbox" data-id="5-node-js--6-building-a-rest-api-status-codes-versioning-validation"> <span>6. Building a REST API: status codes, versioning, validation</span></label></li>
+<li><label><input type="checkbox" data-id="5-node-js--7-authentication-basics-sessions-vs-jwt-vs-oauth"> <span>7. Authentication basics: sessions vs JWT vs OAuth</span></label></li>
+<li><label><input type="checkbox" data-id="5-node-js--8-streams-and-buffers"> <span>8. Streams and buffers</span></label></li>
+<li><label><input type="checkbox" data-id="5-node-js--9-environment-config-secrets-management"> <span>9. Environment config/secrets management</span></label></li>
+<li><label><input type="checkbox" data-id="5-node-js--10-testing-basics-jest-mocha-"> <span>10. Testing basics (Jest/Mocha)</span></label></li>
+<li><label><input type="checkbox" data-id="5-node-js--11-scaling-clustering-worker-threads-memory-leaks"> <span>11. Scaling: clustering, worker threads, memory leaks</span></label></li>
+<li><label><input type="checkbox" data-id="5-node-js--hands-on-build-one-small-rest-api-end-to-end"> <span>Hands-on: build one small REST API end to end</span></label></li>
+</ul>
+<h3>Top 30 Interview Questions</h3>
+<ol class="q-list">
+<li>Explain the Node.js event loop.</li>
+<li>What&#x27;s the difference between process.nextTick, setImmediate, and setTimeout?</li>
+<li>How do you handle errors in async/await code?</li>
+<li>What&#x27;s the difference between CommonJS and ES Modules?</li>
+<li>What&#x27;s middleware in Express?</li>
+<li>How do you secure a REST API?</li>
+<li>Explain JWT-based auth vs session-based auth.</li>
+<li>How would you scale a Node.js app across multiple CPU cores?</li>
+<li>When would you use a stream instead of loading a whole file into memory?</li>
+<li>How do you debug a memory leak in a Node app?</li>
+<li>What&#x27;s the difference between a Promise and an async function under the hood?</li>
+<li>How do you handle unhandled promise rejections?</li>
+<li>What&#x27;s the purpose of centralized error-handling middleware?</li>
+<li>How would you design rate limiting for a public API?</li>
+<li>What&#x27;s the difference between readable, writable, duplex, and transform streams?</li>
+<li>How do you manage environment-specific secrets in Node?</li>
+<li>What&#x27;s the Node.js cluster module vs worker threads?</li>
+<li>How would you version a REST API without breaking clients?</li>
+<li>What&#x27;s CORS, and how do you configure it correctly?</li>
+<li>How do you test an Express route that depends on a database?</li>
+<li>What&#x27;s the difference between npm and npx?</li>
+<li>How do you handle graceful shutdown of a Node server?</li>
+<li>What&#x27;s event-driven architecture, and how does EventEmitter relate?</li>
+<li>How would you implement pagination for a large dataset?</li>
+<li>Sync vs async validation in a request pipeline?</li>
+<li>How do you prevent injection attacks in a Node app?</li>
+<li>What&#x27;s the purpose of a .env file, and its risks?</li>
+<li>How would you structure a Node.js project for a mid-size team?</li>
+<li>What&#x27;s backpressure in streams?</li>
+<li>Walk me through designing a Node.js API handling uploads, auth, and rate limiting together.</li>
+</ol>
+<hr>
+</div>
+</section>
+<section class="rm-section topic" id="6-react">
+<button type="button" class="topic-toggle" aria-expanded="false"><h2>6. React</h2><span class="chevron"><i class="fas fa-chevron-down"></i></span><span class="topic-progress" data-topic="6-react">0%</span></button>
+<div class="topic-body">
+<h3>Architecture</h3>
+<p>React builds UIs as a tree of components describing what the UI should look like given current state and props. When state changes, the render flow is:</p>
+<ul class="bullet-list">
+<li>State changes</li>
+<li>React re-renders affected components into a Virtual DOM (an in-memory representation)</li>
+<li>Diffs it against the previous version (reconciliation)</li>
+<li>Applies only the minimal real DOM updates needed</li>
+</ul>
+<p>Hooks let function components hold state and side effects without classes. Data typically flows down via props; when many components need shared state, Context or a state library avoids &quot;prop drilling.&quot;</p>
+<p>This component tree is what Next.js wraps with routing, rendering strategy, and server/client boundaries.</p>
+<h3>Sequenced Checklist</h3>
+<ul class="checklist">
+<li><label><input type="checkbox" data-id="6-react--1-components-props-and-state-the-basics"> <span>1. Components, props, and state - the basics</span></label></li>
+<li><label><input type="checkbox" data-id="6-react--2-jsx-and-rendering"> <span>2. JSX and rendering</span></label></li>
+<li><label><input type="checkbox" data-id="6-react--3-core-hooks-usestate-useeffect"> <span>3. Core hooks: useState, useEffect</span></label></li>
+<li><label><input type="checkbox" data-id="6-react--4-virtual-dom-and-reconciliation"> <span>4. Virtual DOM and reconciliation</span></label></li>
+<li><label><input type="checkbox" data-id="6-react--5-lists-and-keys"> <span>5. Lists and keys</span></label></li>
+<li><label><input type="checkbox" data-id="6-react--6-controlled-vs-uncontrolled-components"> <span>6. Controlled vs uncontrolled components</span></label></li>
+<li><label><input type="checkbox" data-id="6-react--7-prop-drilling-context-api"> <span>7. Prop drilling -&gt; Context API</span></label></li>
+<li><label><input type="checkbox" data-id="6-react--8-performance-hooks-usememo-usecallback-react-memo"> <span>8. Performance hooks: useMemo, useCallback, React.memo</span></label></li>
+<li><label><input type="checkbox" data-id="6-react--9-custom-hooks"> <span>9. Custom hooks</span></label></li>
+<li><label><input type="checkbox" data-id="6-react--10-error-boundaries"> <span>10. Error boundaries</span></label></li>
+<li><label><input type="checkbox" data-id="6-react--11-state-management-libraries-redux-zustand-"> <span>11. State management libraries (Redux/Zustand)</span></label></li>
+<li><label><input type="checkbox" data-id="6-react--12-testing-basics-react-testing-library-"> <span>12. Testing basics (React Testing Library)</span></label></li>
+<li><label><input type="checkbox" data-id="6-react--hands-on-build-one-small-app"> <span>Hands-on: build one small app</span></label></li>
+</ul>
+<h3>Top 30 Interview Questions</h3>
+<ol class="q-list">
+<li>Explain the Virtual DOM and reconciliation.</li>
+<li>What&#x27;s the difference between state and props?</li>
+<li>useMemo vs useCallback - when do you actually need them?</li>
+<li>Why does React need a key prop in lists?</li>
+<li>Context API vs Redux/Zustand - when to use which?</li>
+<li>What&#x27;s a custom hook you&#x27;ve built?</li>
+<li>How do error boundaries work, and what don&#x27;t they catch?</li>
+<li>Controlled vs uncontrolled components - trade-offs?</li>
+<li>useEffect dependency array behaviors - empty vs none vs specific?</li>
+<li>How do you avoid unnecessary re-renders in a large tree?</li>
+<li>Class lifecycle methods vs hooks?</li>
+<li>What is &quot;lifting state up&quot;?</li>
+<li>How does React batch state updates?</li>
+<li>React.memo vs useMemo?</li>
+<li>How do you handle forms with many fields efficiently?</li>
+<li>What&#x27;s a render prop pattern?</li>
+<li>How would you debug a component re-rendering too often?</li>
+<li>Sync vs async state updates in React 18+?</li>
+<li>Data fetching pitfalls: race conditions, cleanup?</li>
+<li>What&#x27;s code-splitting (React.lazy, Suspense)?</li>
+<li>Reconciliation when component types change between renders?</li>
+<li>useRef vs useState?</li>
+<li>Sharing state between unrelated sibling components?</li>
+<li>Common cause of memory leaks in React components?</li>
+<li>Testing a component that depends on an API call?</li>
+<li>Shallow vs deep comparison in React?</li>
+<li>Implementing a debounced search input?</li>
+<li>Purpose of StrictMode?</li>
+<li>Global error handling across a React app?</li>
+<li>Walk me through architecting a medium-sized React app.</li>
+</ol>
+<hr>
+</div>
+</section>
+<section class="rm-section topic" id="7-next-js">
+<button type="button" class="topic-toggle" aria-expanded="false"><h2>7. Next.js</h2><span class="chevron"><i class="fas fa-chevron-down"></i></span><span class="topic-progress" data-topic="7-next-js">0%</span></button>
+<div class="topic-body">
+<h3>Architecture</h3>
+<p>Next.js is a framework built on React that adds routing, multiple rendering strategies, and a server layer.</p>
+<p>Rendering strategy options:</p>
+<ul class="bullet-list">
+<li>SSR - fresh HTML rendered on every request</li>
+<li>SSG - built once at build time</li>
+<li>ISR - built once, then revalidated on a schedule/on-demand</li>
+</ul>
+<p>With the App Router, components are Server Components by default (rendered on the server, zero client JS shipped) unless explicitly marked &quot;use client&quot;. Route Handlers let you build API endpoints inside the same app.</p>
+<p>This is the framework layer your RAG chatbot&#x27;s frontend and lightweight backend logic will likely live in.</p>
+<h3>Sequenced Checklist</h3>
+<ul class="checklist">
+<li><label><input type="checkbox" data-id="7-next-js--1-app-router-vs-pages-router"> <span>1. App Router vs Pages Router</span></label></li>
+<li><label><input type="checkbox" data-id="7-next-js--2-file-based-routing-basics"> <span>2. File-based routing basics</span></label></li>
+<li><label><input type="checkbox" data-id="7-next-js--3-server-components-vs-client-components"> <span>3. Server Components vs Client Components</span></label></li>
+<li><label><input type="checkbox" data-id="7-next-js--4-rendering-strategies-ssr-vs-ssg-vs-isr-vs-csr"> <span>4. Rendering strategies: SSR vs SSG vs ISR vs CSR</span></label></li>
+<li><label><input type="checkbox" data-id="7-next-js--5-data-fetching-patterns-and-caching"> <span>5. Data fetching patterns and caching</span></label></li>
+<li><label><input type="checkbox" data-id="7-next-js--6-route-handlers-api-routes-"> <span>6. Route Handlers (API routes)</span></label></li>
+<li><label><input type="checkbox" data-id="7-next-js--7-middleware"> <span>7. Middleware</span></label></li>
+<li><label><input type="checkbox" data-id="7-next-js--8-image-and-font-optimization"> <span>8. Image and font optimization</span></label></li>
+<li><label><input type="checkbox" data-id="7-next-js--9-auth-patterns-in-next-js"> <span>9. Auth patterns in Next.js</span></label></li>
+<li><label><input type="checkbox" data-id="7-next-js--10-deployment-considerations-vercel-vs-azure-containerized-"> <span>10. Deployment considerations (Vercel vs Azure/containerized)</span></label></li>
+<li><label><input type="checkbox" data-id="7-next-js--hands-on-rebuild-your-react-app-in-next-js"> <span>Hands-on: rebuild your React app in Next.js</span></label></li>
+</ul>
+<h3>Top 30 Interview Questions</h3>
+<ol class="q-list">
+<li>SSR vs SSG vs ISR vs CSR - how do you choose?</li>
+<li>Server Component vs Client Component?</li>
+<li>Why Server Components by default, when to add &quot;use client&quot;?</li>
+<li>How does Next.js caching work, how do you invalidate it?</li>
+<li>Structuring Route Handlers for backend-for-frontend?</li>
+<li>Auth: server-side vs client-side in Next.js?</li>
+<li>App Router vs Pages Router?</li>
+<li>File-based routing, dynamic routes ([id])?</li>
+<li>Middleware use cases?</li>
+<li>Fetching data server vs client in App Router?</li>
+<li>Vercel vs self-hosted Azure trade-offs?</li>
+<li>Next.js image optimization?</li>
+<li>Layouts and nested layout composition?</li>
+<li>loading.js / error.js states?</li>
+<li>Streaming SSR and Suspense?</li>
+<li>Implementing ISR for hourly-updating pages?</li>
+<li>fetch caching in Next.js vs plain fetch?</li>
+<li>Server-only vs NEXT_PUBLIC_ env vars?</li>
+<li>Containerizing a Next.js app with Docker?</li>
+<li>What&#x27;s a Route Group, why use one?</li>
+<li>SEO handling (metadata API, sitemaps)?</li>
+<li>Static params generation vs dynamic rendering?</li>
+<li>Protecting routes with middleware?</li>
+<li>Risk of sensitive logic in Client Components?</li>
+<li>Server Actions for form submissions?</li>
+<li>Server Action vs traditional API route?</li>
+<li>Optimizing Next.js bundle size?</li>
+<li>i18n in Next.js at a high level?</li>
+<li>revalidatePath vs revalidateTag?</li>
+<li>Walk me through architecting a full app with static/server pages and RAG API calls.</li>
+</ol>
+<hr>
+</div>
+</section>
+<section class="rm-section topic" id="8-traditional-ai-machine-learning">
+<button type="button" class="topic-toggle" aria-expanded="false"><h2>8. Traditional AI / Machine Learning</h2><span class="chevron"><i class="fas fa-chevron-down"></i></span><span class="topic-progress" data-topic="8-traditional-ai-machine-learning">0%</span></button>
+<div class="topic-body">
+<h3>Architecture</h3>
+<p>Before LLMs, &quot;AI&quot; mostly meant machine learning, structured broadly as:</p>
+<ul class="bullet-list">
+<li>Supervised learning - labeled outcomes (e.g., predict house price, classify spam)</li>
+<li>Unsupervised learning - no labels (e.g., group similar customers)</li>
+<li>Reinforcement learning - learning through reward/penalty feedback</li>
+</ul>
+<p>Models are built from features, evaluated on held-out data to check they generalize rather than overfit, and tuned using metrics matched to the task (accuracy, precision/recall, RMSE, etc.).</p>
+<p>This foundation matters for Gen AI because embeddings, evaluation, and grounding all borrow directly from this world - and interviewers often test whether you know the difference between &quot;old AI&quot; and &quot;new AI.&quot;</p>
+<h3>Sequenced Checklist</h3>
+<ul class="checklist">
+<li><label><input type="checkbox" data-id="8-traditional-ai-machine-learning--1-supervised-vs-unsupervised-vs-reinforcement-learning"> <span>1. Supervised vs unsupervised vs reinforcement learning</span></label></li>
+<li><label><input type="checkbox" data-id="8-traditional-ai-machine-learning--2-regression-vs-classification"> <span>2. Regression vs classification</span></label></li>
+<li><label><input type="checkbox" data-id="8-traditional-ai-machine-learning--3-features-labels-training-validation-test-splits"> <span>3. Features, labels, training/validation/test splits</span></label></li>
+<li><label><input type="checkbox" data-id="8-traditional-ai-machine-learning--4-overfitting-vs-underfitting-generalization"> <span>4. Overfitting vs underfitting, generalization</span></label></li>
+<li><label><input type="checkbox" data-id="8-traditional-ai-machine-learning--5-common-algorithms-conceptually-linear-logistic-regression-decision-trees-rando"> <span>5. Common algorithms conceptually: linear/logistic regression, decision trees, random forests</span></label></li>
+<li><label><input type="checkbox" data-id="8-traditional-ai-machine-learning--6-clustering-unsupervised-e-g-k-means-conceptually"> <span>6. Clustering (unsupervised) - e.g. k-means, conceptually</span></label></li>
+<li><label><input type="checkbox" data-id="8-traditional-ai-machine-learning--7-evaluation-metrics-accuracy-precision-recall-f1-rmse"> <span>7. Evaluation metrics: accuracy, precision, recall, F1, RMSE</span></label></li>
+<li><label><input type="checkbox" data-id="8-traditional-ai-machine-learning--8-neural-networks-basics-conceptually"> <span>8. Neural networks basics conceptually</span></label></li>
+<li><label><input type="checkbox" data-id="8-traditional-ai-machine-learning--9-what-deep-learning-added-over-classical-ml"> <span>9. What deep learning added over classical ML</span></label></li>
+<li><label><input type="checkbox" data-id="8-traditional-ai-machine-learning--10-responsible-ai-basics-fairness-bias-transparency-accountability"> <span>10. Responsible AI basics: fairness, bias, transparency, accountability</span></label></li>
+<li><label><input type="checkbox" data-id="8-traditional-ai-machine-learning--concept-fluency-only-no-coding-required-for-your-goals-here"> <span>Concept-fluency only - no coding required for your goals here</span></label></li>
+</ul>
+<h3>Top 30 Interview Questions</h3>
+<ol class="q-list">
+<li>Supervised vs unsupervised learning?</li>
+<li>Regression vs classification?</li>
+<li>What&#x27;s overfitting, and how do you prevent it?</li>
+<li>Why split data into train/validation/test?</li>
+<li>Precision vs recall - when do you prioritize one?</li>
+<li>What&#x27;s a confusion matrix?</li>
+<li>How does a decision tree make a prediction, at a high level?</li>
+<li>Classical ML model vs deep learning model?</li>
+<li>What&#x27;s clustering - real-world example?</li>
+<li>Feature engineering, and why deep learning reduced the need for it?</li>
+<li>Bias-variance trade-off?</li>
+<li>Accuracy vs F1 score - why accuracy can mislead?</li>
+<li>Neural network basics - layers, weights, activation?</li>
+<li>Reinforcement learning vs supervised learning?</li>
+<li>Parametric vs non-parametric model, conceptually?</li>
+<li>Why doesn&#x27;t more data always mean a better model?</li>
+<li>What&#x27;s data drift, why does it matter in production?</li>
+<li>Classification thresholds and precision/recall trade-offs?</li>
+<li>Ensemble methods (random forest, boosting) - why they outperform single models?</li>
+<li>Batch vs online (incremental) learning?</li>
+<li>What&#x27;s regularization, and why is it used?</li>
+<li>Handling a highly imbalanced dataset (e.g. fraud detection)?</li>
+<li>Generative vs discriminative model - link to modern Gen AI?</li>
+<li>Transfer learning, conceptually?</li>
+<li>The six Responsible AI principles (fairness, reliability, privacy, inclusiveness, transparency, accountability)?</li>
+<li>Explainability vs interpretability?</li>
+<li>Monitoring a deployed ML model for degrading performance?</li>
+<li>A/B testing for validating a model change?</li>
+<li>Anomaly detection vs classification?</li>
+<li>Explaining a wrong model prediction to a non-technical stakeholder?</li>
+</ol>
+<hr>
+</div>
+</section>
+<section class="rm-section topic" id="9-vector-databases">
+<button type="button" class="topic-toggle" aria-expanded="false"><h2>9. Vector Databases</h2><span class="chevron"><i class="fas fa-chevron-down"></i></span><span class="topic-progress" data-topic="9-vector-databases">0%</span></button>
+<div class="topic-body">
+<h3>Architecture</h3>
+<p>A vector database stores embeddings and lets you search by similarity instead of exact match. The pipeline flows as:</p>
+<ul class="bullet-list">
+<li>Data is chunked</li>
+<li>Each chunk is converted to a vector via an embedding model</li>
+<li>Vectors are stored alongside the original text/metadata, in an index (e.g., HNSW) built for fast search</li>
+<li>At query time, your question is embedded the same way</li>
+<li>The closest vectors are returned by a distance metric (usually cosine similarity)</li>
+</ul>
+<p>This is the retrieval engine that powers RAG - the piece that finds &quot;which of my documents are actually relevant&quot; before handing anything to the LLM.</p>
+<h3>Sequenced Checklist</h3>
+<ul class="checklist">
+<li><label><input type="checkbox" data-id="9-vector-databases--1-what-an-embedding-is-recap-from-traditional-ai-section-"> <span>1. What an embedding is (recap from Traditional AI section)</span></label></li>
+<li><label><input type="checkbox" data-id="9-vector-databases--2-similarity-search-vs-keyword-search"> <span>2. Similarity search vs keyword search</span></label></li>
+<li><label><input type="checkbox" data-id="9-vector-databases--3-distance-metrics-cosine-similarity-euclidean-distance"> <span>3. Distance metrics: cosine similarity, Euclidean distance</span></label></li>
+<li><label><input type="checkbox" data-id="9-vector-databases--4-what-an-index-is-e-g-hnsw-and-why-brute-force-doesn-t-scale"> <span>4. What an index is (e.g. HNSW) and why brute-force doesn&#x27;t scale</span></label></li>
+<li><label><input type="checkbox" data-id="9-vector-databases--5-chunking-strategies-size-overlap-and-retrieval-quality"> <span>5. Chunking strategies - size/overlap and retrieval quality</span></label></li>
+<li><label><input type="checkbox" data-id="9-vector-databases--6-metadata-filtering-alongside-vector-search-hybrid-search-"> <span>6. Metadata filtering alongside vector search (hybrid search)</span></label></li>
+<li><label><input type="checkbox" data-id="9-vector-databases--7-popular-options-conceptually-pinecone-azure-ai-search-pgvector"> <span>7. Popular options conceptually: Pinecone, Azure AI Search, pgvector</span></label></li>
+<li><label><input type="checkbox" data-id="9-vector-databases--8-hands-on-embed-a-handful-of-documents-and-run-a-similarity-query"> <span>8. Hands-on: embed a handful of documents and run a similarity query</span></label></li>
+</ul>
+<h3>Top 30 Interview Questions</h3>
+<ol class="q-list">
+<li>What is an embedding, and how does it represent meaning numerically?</li>
+<li>Semantic (vector) search vs keyword search?</li>
+<li>Cosine similarity vs Euclidean distance for text embeddings?</li>
+<li>Why can&#x27;t you brute-force compare against millions of vectors?</li>
+<li>What&#x27;s an index like HNSW doing conceptually?</li>
+<li>Deciding chunk size for a vector database?</li>
+<li>What&#x27;s chunk overlap, why does it matter?</li>
+<li>What&#x27;s hybrid search?</li>
+<li>What happens if your embedding model changes - do old embeddings still work?</li>
+<li>Evaluating whether vector search returns relevant results?</li>
+<li>Vector database vs traditional relational database?</li>
+<li>Updating/deleting a document&#x27;s embedding when the source changes?</li>
+<li>Curse of dimensionality and vector search?</li>
+<li>Exact vs approximate nearest-neighbor search?</li>
+<li>Choosing an embedding model for a specific domain?</li>
+<li>What&#x27;s re-ranking, why add it after retrieval?</li>
+<li>Metadata filtering alongside a vector query?</li>
+<li>Storage/cost trade-offs of vector databases at scale?</li>
+<li>Pinecone vs Azure AI Search vs pgvector, at a high level?</li>
+<li>Multi-tenant data isolation in a shared vector database?</li>
+<li>Risk of chunking a document badly?</li>
+<li>Keeping a vector index in sync with an updating dataset?</li>
+<li>Sparse vs dense vector representations?</li>
+<li>Benchmarking two embedding models for your use case?</li>
+<li>Dimensionality reduction and why apply it to embeddings?</li>
+<li>Designing a system to embed/index millions of documents efficiently?</li>
+<li>Latency trade-off: larger accurate index vs smaller faster one?</li>
+<li>Securing a vector database storing sensitive documents?</li>
+<li>Storing embeddings vs on-the-fly embedding at query time?</li>
+<li>Walk through the full pipeline: raw documents in, relevant chunks out, for RAG.</li>
+</ol>
+<hr>
+</div>
+</section>
+<section class="rm-section topic" id="10-gen-ai-rag">
+<button type="button" class="topic-toggle" aria-expanded="false"><h2>10. Gen AI / RAG</h2><span class="chevron"><i class="fas fa-chevron-down"></i></span><span class="topic-progress" data-topic="10-gen-ai-rag">0%</span></button>
+<div class="topic-body">
+<h3>Architecture</h3>
+<p>A RAG (Retrieval-Augmented Generation) system connects everything above. The flow is:</p>
+<ul class="bullet-list">
+<li>User question is embedded (using the same embedding model as your documents)</li>
+<li>Sent to the vector database to retrieve the most relevant chunks</li>
+<li>Chunks are stitched into a prompt alongside the original question</li>
+<li>The augmented prompt goes to the LLM</li>
+<li>The LLM generates an answer grounded in your actual data - reducing hallucination</li>
+</ul>
+<p>Guardrails sit at the input (blocking bad prompts/injection) and output (checking for harmful/ungrounded content) of this pipeline. For more complex tasks, agents extend this pattern further: the LLM can decide to call tools/functions (search, calculators, APIs) across multiple steps, not just generate one answer.</p>
+<h3>Sequenced Checklist</h3>
+<ul class="checklist">
+<li><label><input type="checkbox" data-id="10-gen-ai-rag--1-llm-basics-tokens-context-window-temperature-hallucination"> <span>1. LLM basics: tokens, context window, temperature, hallucination</span></label></li>
+<li><label><input type="checkbox" data-id="10-gen-ai-rag--2-prompt-engineering-zero-shot-few-shot-chain-of-thought"> <span>2. Prompt engineering: zero-shot, few-shot, chain-of-thought</span></label></li>
+<li><label><input type="checkbox" data-id="10-gen-ai-rag--3-recap-embeddings-vector-databases-as-the-retrieval-engine"> <span>3. Recap: embeddings + vector databases as the retrieval engine</span></label></li>
+<li><label><input type="checkbox" data-id="10-gen-ai-rag--4-rag-architecture-end-to-end-ingest-chunk-embed-store-retrieve-augment-prompt-g"> <span>4. RAG architecture end-to-end (ingest -&gt; chunk -&gt; embed -&gt; store -&gt; retrieve -&gt; augment prompt -&gt; generate)</span></label></li>
+<li><label><input type="checkbox" data-id="10-gen-ai-rag--5-guardrails-responsible-ai-content-filtering-prompt-injection-grounding"> <span>5. Guardrails / Responsible AI: content filtering, prompt injection, grounding</span></label></li>
+<li><label><input type="checkbox" data-id="10-gen-ai-rag--6-fine-tuning-vs-rag-vs-prompt-engineering"> <span>6. Fine-tuning vs RAG vs prompt engineering</span></label></li>
+<li><label><input type="checkbox" data-id="10-gen-ai-rag--7-agents-tool-function-calling-multi-step-reasoning"> <span>7. Agents: tool/function calling, multi-step reasoning</span></label></li>
+<li><label><input type="checkbox" data-id="10-gen-ai-rag--8-azure-specific-azure-openai-service-azure-ai-foundry-azure-ai-search"> <span>8. Azure-specific: Azure OpenAI Service, Azure AI Foundry, Azure AI Search</span></label></li>
+<li><label><input type="checkbox" data-id="10-gen-ai-rag--9-evaluating-a-rag-system-relevance-faithfulness-latency-cost-"> <span>9. Evaluating a RAG system (relevance, faithfulness, latency, cost)</span></label></li>
+<li><label><input type="checkbox" data-id="10-gen-ai-rag--book-and-pass-ai-901"> <span>Book and pass AI-901</span></label></li>
+<li><label><input type="checkbox" data-id="10-gen-ai-rag--hands-on-build-a-mini-rag-chatbot-feeds-into-final-integration-project-"> <span>Hands-on: build a mini RAG chatbot (feeds into final integration project)</span></label></li>
+</ul>
+<h3>Top 30 Interview Questions</h3>
+<ol class="q-list">
+<li>Explain RAG end-to-end.</li>
+<li>Why use RAG instead of fine-tuning?</li>
+<li>What&#x27;s an embedding, and how does semantic search differ from keyword search?</li>
+<li>Deciding chunk size for RAG?</li>
+<li>Reducing hallucinations in an LLM-based application?</li>
+<li>What&#x27;s a guardrail - give an example?</li>
+<li>What&#x27;s prompt injection, how do you defend against it?</li>
+<li>Chatbot vs &quot;agent&quot;?</li>
+<li>Evaluating whether a RAG system gives good answers?</li>
+<li>Cost/latency trade-offs of RAG vs a larger context window?</li>
+<li>Zero-shot vs few-shot vs chain-of-thought prompting?</li>
+<li>What&#x27;s &quot;temperature&quot; in an LLM API call?</li>
+<li>What&#x27;s a context window, what happens when exceeded?</li>
+<li>Handling a RAG system where retrieval finds irrelevant chunks?</li>
+<li>Fine-tuning vs RAG - a scenario for each?</li>
+<li>What&#x27;s &quot;groundedness,&quot; how do you measure it?</li>
+<li>Designing RAG for a large enterprise knowledge base (millions of docs)?</li>
+<li>System prompt vs user prompt?</li>
+<li>Function calling / tool use in modern LLM APIs?</li>
+<li>LLM agent vs simple RAG chatbot?</li>
+<li>Preventing a RAG chatbot from answering out-of-scope questions?</li>
+<li>What&#x27;s &quot;prompt leaking,&quot; how do you mitigate it?</li>
+<li>Handling multi-turn conversation context in a RAG chatbot?</li>
+<li>Azure OpenAI Service vs calling OpenAI&#x27;s API directly?</li>
+<li>What&#x27;s Azure AI Foundry, how does it fit into building a Gen AI app?</li>
+<li>Versioning and testing prompt changes safely in production?</li>
+<li>Cost structure of an LLM API call (input vs output tokens)?</li>
+<li>Implementing streaming responses in a chatbot UI?</li>
+<li>Vector search re-ranker vs the LLM scoring relevance itself?</li>
+<li>Walk me through architecting a production RAG chatbot end-to-end, including how it&#x27;s containerized/deployed (Docker + Kubernetes/App Service + Terraform + Azure).</li>
+</ol>
+<hr>
+</div>
+</section>
+<section class="rm-section" id="part-3-senior-level-extras-ongoing-throughout-don-t-skip">
+<h2>PART 3 — Senior-Level Extras (ongoing throughout, don&#x27;t skip)</h2>
+<h3>System Design (2–3×/week, 45 min)</h3>
+<ul class="checklist">
+<li><label><input type="checkbox" data-id="part-3-senior-level-extras-ongoing-throughout-don-t-skip--practice-the-framework-requirements-back-of-envelope-estimation-high-level-desig"> <span>Practice the framework: requirements -&gt; back-of-envelope estimation -&gt; high-level design -&gt; deep dive -&gt; trade-offs</span></label></li>
+<li><label><input type="checkbox" data-id="part-3-senior-level-extras-ongoing-throughout-don-t-skip--classics-url-shortener-rate-limiter-notification-system"> <span>Classics: URL shortener, rate limiter, notification system</span></label></li>
+<li><label><input type="checkbox" data-id="part-3-senior-level-extras-ongoing-throughout-don-t-skip--your-stack-specific-design-a-scalable-rag-based-support-chatbot-for-x-users-on-a"> <span>Your-stack-specific: &quot;design a scalable RAG-based support chatbot for X users on Azure&quot;</span></label></li>
+</ul>
+<h3>Behavioral (STAR format)</h3>
+<ul class="checklist">
+<li><label><input type="checkbox" data-id="part-3-senior-level-extras-ongoing-throughout-don-t-skip--story-1-a-production-incident-you-resolved"> <span>Story 1: a production incident you resolved</span></label></li>
+<li><label><input type="checkbox" data-id="part-3-senior-level-extras-ongoing-throughout-don-t-skip--story-2-a-technical-disagreement-and-how-it-was-resolved"> <span>Story 2: a technical disagreement and how it was resolved</span></label></li>
+<li><label><input type="checkbox" data-id="part-3-senior-level-extras-ongoing-throughout-don-t-skip--story-3-mentoring-someone"> <span>Story 3: mentoring someone</span></label></li>
+<li><label><input type="checkbox" data-id="part-3-senior-level-extras-ongoing-throughout-don-t-skip--story-4-a-project-that-failed-and-what-you-learned"> <span>Story 4: a project that failed and what you learned</span></label></li>
+<li><label><input type="checkbox" data-id="part-3-senior-level-extras-ongoing-throughout-don-t-skip--story-5-influencing-without-authority"> <span>Story 5: influencing without authority</span></label></li>
+<li><label><input type="checkbox" data-id="part-3-senior-level-extras-ongoing-throughout-don-t-skip--story-6-a-scaling-performance-challenge-you-solved"> <span>Story 6: a scaling/performance challenge you solved</span></label></li>
+</ul>
+<hr>
+</section>
+<section class="rm-section" id="quick-reference-cert-order">
+<h2>Quick Reference — Cert Order</h2>
+<ol class="q-list">
+<li>AZ-900 (Azure Fundamentals)</li>
+<li>Terraform Associate (004)</li>
+<li>AI-901 (Azure AI Fundamentals)</li>
+</ol>
+<p>Keep applications running every single week of this - the roadmap is the supporting evidence, not the whole job hunt.</p>
+</section>
+  </main>
+
+  <footer class="rm-footer">
+    <div class="container">
+      <p>Keep applications running every week — the roadmap is supporting evidence, not the whole job hunt.</p>
+      <p><a href="reskilling-roadmap.md">View Markdown source</a> · <a href="index.html">Back to portfolio</a></p>
+    </div>
+  </footer>
+
+  <button type="button" class="scroll-top" id="scrollTop" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+  <script src="roadmap.js"></script>
+</body>
+</html>
