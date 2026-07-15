@@ -25,6 +25,7 @@ A modern, responsive portfolio website showcasing your professional profile, exp
 - **Achievements**: Recognition and awards
 - **Projects**: Showcase of notable projects
 - **Contact**: Contact information and message form
+- **Reskilling Roadmap**: Interactive 25-week learning path (`roadmap.html`)
 
 ⚡ **Interactive Features**
 
@@ -48,11 +49,15 @@ A modern, responsive portfolio website showcasing your professional profile, exp
 
 ```
 ak/
-├── index.html          # Main HTML file
-├── styles.css          # Stylesheet
-├── script.js           # JavaScript interactivity
-├── AnilKumarPResume.pdf # Resume PDF
-└── README.md           # This file
+├── index.html              # Main portfolio page
+├── styles.css              # Portfolio stylesheet
+├── script.js               # Portfolio interactivity
+├── roadmap.html            # Interactive reskilling roadmap
+├── roadmap.css             # Roadmap stylesheet
+├── roadmap.js              # Checklist progress (localStorage)
+├── reskilling-roadmap.md   # Formatted markdown source
+├── Anil_Kumar_P_Full_Stack_Cloud_8_Years.pdf
+└── README.md
 ```
 
 ## File Descriptions
