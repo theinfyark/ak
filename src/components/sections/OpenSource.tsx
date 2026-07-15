@@ -1,5 +1,5 @@
 import { ExternalLink, GitBranch, Package, Star } from 'lucide-react';
-import { githubProfile, openSourcePackages } from '@/data/portfolio';
+import { githubProfile, openSourcePackages, siteConfig } from '@/data/portfolio';
 import { Reveal } from '@/components/ui/Reveal';
 import { Badge, Button, SectionHeading } from '@/components/ui/primitives';
 
@@ -54,8 +54,8 @@ export function OpenSource() {
             <Button href={githubProfile.personal.url} external variant="ghost">
               Personal · @{githubProfile.personal.login}
             </Button>
-            <Button href="https://www.npmjs.com/org/theinfyark" external variant="ghost">
-              <Package size={16} /> npm org
+            <Button href={siteConfig.social.npm} external variant="ghost">
+              <Package size={16} /> npm profile
             </Button>
           </div>
         </Reveal>

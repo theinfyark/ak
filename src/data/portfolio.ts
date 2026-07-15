@@ -20,7 +20,7 @@ export const siteConfig = {
     github: 'https://github.com/theinfyark',
     githubPersonal: 'https://github.com/anilachary67p',
     linkedin: 'https://www.linkedin.com/in/anilachary67',
-    npm: 'https://www.npmjs.com/org/theinfyark',
+    npm: 'https://www.npmjs.com/~anilachary',
     email: 'mailto:anilachary.p@gmail.com',
     whatsapp: 'https://wa.me/919885155454',
     phone: 'tel:+919885155454',

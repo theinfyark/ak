@@ -28,7 +28,7 @@ const channels = [
     label: 'npm',
     href: siteConfig.social.npm,
     icon: Package,
-    detail: 'org/theinfyark',
+    detail: '~anilachary',
     external: true,
   },
   {
