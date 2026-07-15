@@ -54,4 +54,5 @@ Keep applications running every single week — the roadmap is supporting eviden
 
 ---
 
-*Printable version: open [`roadmap-part1.html`](./roadmap-part1.html) and use **Print / Save as PDF** (landscape).*
+*PDF: [`Roadmap_Part1_Sequence_Checklist.pdf`](./Roadmap_Part1_Sequence_Checklist.pdf)*  
+*HTML (re-print): [`roadmap-part1.html`](./roadmap-part1.html) → **Print / Save as PDF** (landscape).*
