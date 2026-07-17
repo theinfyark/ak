@@ -102,9 +102,7 @@ export function About() {
                 </h3>
                 <div className="mt-3 flex flex-wrap gap-2">
                   {about.languages.map((lang) => (
-                    <Badge key={lang.name}>
-                      {lang.name} · {lang.level}
-                    </Badge>
+                    <Badge key={lang}>{lang}</Badge>
                   ))}
                 </div>
               </div>

@@ -151,7 +151,7 @@ export const about = {
   ],
   industries: ['Insurance', 'Manufacturing', 'Enterprise ERP', 'AR / Immersive web'],
   technologies: ['Node.js', 'Kubernetes', 'Azure', 'AWS', 'GCP', 'PostgreSQL', 'Terraform'],
-  languages: [{ name: 'English', level: 'Native' }],
+  languages: ['English', 'Telugu', 'Hindi', 'Kannada'],
 } as const;
 
 export type SkillLevel = 'expert' | 'advanced' | 'proficient' | 'intermediate' | 'working';
@@ -164,54 +164,36 @@ export type SkillCategory = {
 
 export const skillCategories: SkillCategory[] = [
   {
-    id: 'backend',
+    id: 'cloud-backend',
     label: 'Cloud / Backend',
-    skills: [
-      { name: 'Node.js', level: 'expert' },
-      { name: 'Express.js', level: 'expert' },
-      { name: 'Fastify', level: 'advanced' },
-      { name: 'TypeScript / JavaScript', level: 'expert' },
-      { name: 'REST APIs', level: 'expert' },
-      { name: 'GraphQL', level: 'proficient' },
-      { name: 'Prisma', level: 'advanced' },
-      { name: 'Flyway', level: 'advanced' },
-      { name: 'BullMQ', level: 'advanced' },
-      { name: 'HAPI FHIR', level: 'proficient' },
-      { name: 'ODK (Data Collection)', level: 'proficient' },
-      { name: 'MS Graph API', level: 'advanced' },
-    ],
-  },
-  {
-    id: 'databases',
-    label: 'Databases',
-    skills: [
-      { name: 'PostgreSQL', level: 'expert' },
-      { name: 'MongoDB', level: 'advanced' },
-      { name: 'Redis', level: 'advanced' },
-    ],
-  },
-  {
-    id: 'cloud',
-    label: 'Cloud Platforms',
     skills: [
       { name: 'Azure', level: 'expert' },
       { name: 'AWS', level: 'advanced' },
       { name: 'GCP', level: 'advanced' },
       { name: 'Azure DevOps', level: 'advanced' },
-      { name: 'Private Endpoints / DNS', level: 'advanced' },
-      { name: 'Networking / Firewalls', level: 'advanced' },
-    ],
-  },
-  {
-    id: 'containers',
-    label: 'Containers & Kubernetes',
-    skills: [
+      { name: 'Terraform', level: 'working' },
       { name: 'Docker', level: 'expert' },
       { name: 'Kubernetes', level: 'expert' },
       { name: 'Helm', level: 'advanced' },
       { name: 'K3s', level: 'advanced' },
+      { name: 'Nginx', level: 'advanced' },
       { name: 'Istio', level: 'proficient' },
-      { name: 'NGINX', level: 'advanced' },
+      { name: 'Node.js', level: 'expert' },
+      { name: 'Express.js', level: 'expert' },
+      { name: 'Fastify', level: 'advanced' },
+      { name: 'TypeScript', level: 'expert' },
+      { name: 'JavaScript', level: 'expert' },
+      { name: 'Redis', level: 'advanced' },
+      { name: 'MS Graph API', level: 'advanced' },
+      { name: 'REST APIs', level: 'expert' },
+      { name: 'GraphQL', level: 'proficient' },
+      { name: 'PostgreSQL', level: 'expert' },
+      { name: 'MongoDB', level: 'advanced' },
+      { name: 'Prisma', level: 'advanced' },
+      { name: 'Flyway', level: 'advanced' },
+      { name: 'BullMQ', level: 'advanced' },
+      { name: 'HAPI FHIR', level: 'proficient' },
+      { name: 'ODK (Data Collection)', level: 'proficient' },
     ],
   },
   {
@@ -221,30 +203,18 @@ export const skillCategories: SkillCategory[] = [
       { name: 'Jenkins', level: 'advanced' },
       { name: 'Concourse', level: 'proficient' },
       { name: 'Azure Pipelines', level: 'advanced' },
-      { name: 'Argo CD', level: 'proficient' },
       { name: 'SonarQube', level: 'advanced' },
-      { name: 'Snyk / Wiz / Trivy', level: 'advanced' },
-      { name: 'Veracode / HCL AppScan', level: 'proficient' },
+      { name: 'Snyk', level: 'advanced' },
+      { name: 'Wiz', level: 'proficient' },
+      { name: 'Trivy', level: 'advanced' },
+      { name: 'Argo CD', level: 'proficient' },
+      { name: 'Veracode', level: 'proficient' },
       { name: 'Burp Suite', level: 'proficient' },
-    ],
-  },
-  {
-    id: 'iac',
-    label: 'IaC',
-    skills: [
-      { name: 'Terraform', level: 'working' },
-      { name: 'Bicep', level: 'working' },
-    ],
-  },
-  {
-    id: 'observability',
-    label: 'Observability',
-    skills: [
+      { name: 'HCL AppScan', level: 'proficient' },
+      { name: 'Kiali', level: 'proficient' },
       { name: 'Prometheus', level: 'advanced' },
       { name: 'Grafana', level: 'advanced' },
       { name: 'OpenTelemetry', level: 'proficient' },
-      { name: 'Kiali', level: 'proficient' },
-      { name: 'Stackdriver', level: 'proficient' },
     ],
   },
   {
@@ -253,14 +223,38 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       { name: 'Azure Entra ID', level: 'expert' },
       { name: 'Auth0', level: 'expert' },
-      { name: 'OKTA / SSO', level: 'expert' },
+      { name: 'OKTA', level: 'expert' },
       { name: 'Keycloak', level: 'advanced' },
-      { name: 'JWT / OAuth 2.0', level: 'expert' },
+      { name: 'JWT', level: 'expert' },
+      { name: 'OAuth 2.0', level: 'expert' },
+      { name: 'SSO', level: 'expert' },
+    ],
+  },
+  {
+    id: 'frontend',
+    label: 'Frontend / Web',
+    skills: [
+      { name: 'AR / VR / MR', level: 'proficient' },
+      { name: 'ArCore', level: 'proficient' },
+      { name: 'React.js', level: 'working' },
+      { name: 'Three.js', level: 'proficient' },
+      { name: '8th Wall', level: 'proficient' },
+      { name: 'A-Frame', level: 'proficient' },
+      { name: 'JSArToolKit', level: 'proficient' },
+      { name: 'Next.js', level: 'working' },
+      { name: 'AngularJS', level: 'advanced' },
+      { name: 'WebXR', level: 'proficient' },
+      { name: 'MUI', level: 'proficient' },
+      { name: 'Tailwind', level: 'proficient' },
+      { name: 'TanStack', level: 'proficient' },
+      { name: 'Material React Table', level: 'proficient' },
+      { name: 'Table Virtualization', level: 'proficient' },
+      { name: 'Babylon.js', level: 'proficient' },
     ],
   },
   {
     id: 'ai',
-    label: 'AI · GenAI (Basics)',
+    label: 'AI / GenAI (Basics Level)',
     skills: [
       { name: 'OpenAI', level: 'intermediate' },
       { name: 'Azure AI Foundry', level: 'working' },
@@ -268,29 +262,6 @@ export const skillCategories: SkillCategory[] = [
       { name: 'AI Search', level: 'working' },
       { name: 'LLMs', level: 'working' },
       { name: 'RAG', level: 'working' },
-    ],
-  },
-  {
-    id: 'frontend',
-    label: 'Frontend / Web',
-    skills: [
-      { name: 'AngularJS', level: 'advanced' },
-      { name: 'React.js', level: 'working' },
-      { name: 'Next.js', level: 'working' },
-      { name: 'MUI / Tailwind', level: 'proficient' },
-      { name: 'TanStack / Material React Table', level: 'proficient' },
-      { name: 'Table Virtualization', level: 'proficient' },
-    ],
-  },
-  {
-    id: 'ar',
-    label: 'AR / VR / MR',
-    skills: [
-      { name: 'Three.js', level: 'proficient' },
-      { name: 'A-Frame / WebXR', level: 'proficient' },
-      { name: 'JSArToolKit', level: 'proficient' },
-      { name: 'Babylon.js', level: 'proficient' },
-      { name: '8th Wall / ArCore', level: 'proficient' },
     ],
   },
 ];
@@ -309,7 +280,7 @@ export type Experience = {
 
 export const experience: Experience[] = [
   {
-    company: 'SLK Software (Part of Altimetrik)',
+    company: 'SLK Software (Part Of Altimetrik)',
     location: 'Bengaluru, India',
     role: 'Team Lead',
     period: '06/2025 – Present',
@@ -342,7 +313,7 @@ export const experience: Experience[] = [
     ],
   },
   {
-    company: 'SLK Software / Digital (Part of Amin Holdings)',
+    company: 'SLK Software / Digital (Part Of Amin Holdings)',
     location: 'Bengaluru, India',
     role: 'Software Developer Lead',
     period: '04/2024 – 05/2025',
@@ -382,7 +353,7 @@ export const experience: Experience[] = [
     ],
   },
   {
-    company: 'V-Labs Pvt Ltd (Part of SLK Software)',
+    company: 'V-Labs Pvt Ltd (Part Of SLK Software)',
     location: 'Bengaluru, India',
     role: 'Senior Developer',
     period: '07/2021 – 04/2024',
@@ -666,20 +637,20 @@ export const certifications = [
 export const awards = [
   {
     title: 'Innovation Award',
-    period: '2024–25',
-    type: 'Innovation',
+    period: '2024–2025',
+    type: 'Achievement',
     detail: 'Recognized for technical innovation and delivery impact.',
   },
   {
-    title: 'Excellence in Performance',
-    period: '2021–22',
-    type: 'Award',
+    title: 'Excellence in Performance Award',
+    period: '2021–2022',
+    type: 'Achievement',
     detail: 'Recognized for outstanding performance and contribution.',
   },
 ] as const;
 
 export const education = {
-  degree: 'B.Tech / B.E. in Computer Science and Engineering (CSE)',
+  degree: 'B.Tech / B.E. | Computer Science and Engineering (CSE)',
   school: 'VITAM (Affiliated: Jawaharlal Nehru Technological University, Kakinada)',
   location: 'Visakhapatnam, India',
   year: '2015',
@@ -705,27 +676,27 @@ export const resumeSkillGroups = [
   {
     label: 'Cloud / Backend',
     items:
-      'Azure · AWS · GCP · Azure DevOps · Terraform · Docker · Kubernetes · Helm · K3s · Nginx · Istio · Node.js · Express.js · Fastify · TypeScript · PostgreSQL · MongoDB · Redis · Prisma · Flyway · BullMQ · REST · GraphQL · MS Graph · HAPI FHIR · ODK',
+      'Azure · AWS · GCP · Azure DevOps · Terraform · Docker · Kubernetes · Helm · K3s · Nginx · Istio · Node.js · Express.js · Fastify · TypeScript · JavaScript · Redis · MS Graph API · REST APIs · GraphQL · PostgreSQL · MongoDB · Prisma · Flyway · BullMQ · HAPI FHIR · ODK',
   },
   {
-    label: 'DevOps / DevSecOps',
+    label: 'DevOps / DevSecOps & CI/CD',
     items:
-      'Jenkins · Concourse · Azure Pipelines · Argo CD · SonarQube · Snyk · Wiz · Trivy · Veracode · Burp Suite · HCL AppScan · Prometheus · Grafana · OpenTelemetry · Kiali',
+      'Jenkins · Concourse · Azure Pipelines · SonarQube · Snyk · Wiz · Trivy · Argo CD · Veracode · Burp Suite · HCL AppScan · Kiali · Prometheus · Grafana · OpenTelemetry',
   },
   {
     label: 'Identity & Security',
     items: 'Azure Entra ID · Auth0 · OKTA · Keycloak · JWT · OAuth 2.0 · SSO',
   },
   {
-    label: 'Frontend / AR',
+    label: 'Frontend / Web',
     items:
-      'AngularJS · React.js · Next.js · MUI · Tailwind · TanStack · Three.js · A-Frame · WebXR · Babylon.js · 8th Wall · ArCore',
+      'AR/VR/MR · ArCore · React.js · Three.js · 8th Wall · A-Frame · JSArToolKit · Next.js · AngularJS · WebXR · MUI · Tailwind · TanStack · Material React Table · Table Virtualization · Babylon.js',
   },
   {
-    label: 'AI / GenAI (Basics)',
+    label: 'AI / GenAI (Basics Level)',
     items: 'OpenAI · Azure AI Foundry · OCR · AI Search · LLMs · RAG',
   },
 ] as const;
 
 /** Shorter summary tuned to fit one printed page */
-export const resumeSummary = `Cloud and Backend Lead Engineer with ${yearsXp}+ years designing scalable cloud-native and hybrid solutions on AWS, Azure, and GCP. Strong in microservices, Node.js, PostgreSQL, Kubernetes/K3s, and enterprise identity (OKTA, Auth0, Keycloak). Hands-on CI/CD and IaC with measurable impact on deployment speed, reuse, latency, and performance.`;
+export const resumeSummary = `Cloud and Backend Lead Engineer with ${yearsXp}+ years designing and delivering scalable cloud-native and hybrid solutions on AWS, Azure, and GCP. Strong in microservices, Node.js, PostgreSQL, Kubernetes/K3s, and secure auth (OKTA, Auth0, Keycloak). Hands-on with Docker, CI/CD, and IaC (Terraform), plus AngularJS/React and AR/VR/MR web technologies.`;

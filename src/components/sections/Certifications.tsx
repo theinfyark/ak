@@ -9,9 +9,9 @@ export function Certifications() {
       <div className="container-shell">
         <Reveal>
           <SectionHeading
-            eyebrow="Recognition"
+            eyebrow="Achievements"
             title="Certifications & awards"
-            description="Credentials and recognition from the resume."
+            description="Recognition from the resume — Azure Fundamentals plus Innovation and Performance awards."
           />
         </Reveal>
 
