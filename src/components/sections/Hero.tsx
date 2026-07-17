@@ -17,7 +17,7 @@ export function Hero() {
 
       <div className="container-shell relative z-10 flex min-h-[calc(100svh-5rem)] flex-col justify-center py-16">
         <motion.h1
-          className="display max-w-4xl text-5xl font-bold text-[var(--fg-strong)] sm:text-6xl lg:text-7xl"
+          className="brand max-w-4xl text-5xl text-[var(--fg-strong)] sm:text-6xl lg:text-7xl"
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.05 }}

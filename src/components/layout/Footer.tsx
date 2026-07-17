@@ -8,7 +8,7 @@ export function Footer() {
     <footer className="border-t border-[var(--line)] py-10">
       <div className="container-shell flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
         <div>
-          <p className="display text-lg font-semibold text-[var(--fg-strong)]">{siteConfig.name}</p>
+          <p className="brand text-lg text-[var(--fg-strong)]">{siteConfig.name}</p>
           <p className="mt-1 text-sm text-[var(--muted)]">
             Backend · Cloud · DevOps · AI · Open Source
           </p>

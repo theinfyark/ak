@@ -170,7 +170,7 @@ export function ProductsPage() {
           </motion.div>
 
           <motion.h1
-            className="display max-w-3xl text-4xl font-bold text-[var(--fg-strong)] sm:text-5xl lg:text-6xl"
+            className="brand max-w-3xl text-4xl text-[var(--fg-strong)] sm:text-5xl lg:text-6xl"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.05 }}

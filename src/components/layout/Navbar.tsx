@@ -50,7 +50,7 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
       )}
     >
       <div className="container-shell flex h-16 items-center justify-between gap-4">
-        <Link to="/" className="display text-lg font-bold tracking-tight text-[var(--fg-strong)]">
+        <Link to="/" className="brand text-xl tracking-wide text-[var(--fg-strong)]">
           {siteConfig.shortName}
           <span className="text-[var(--accent)]">.</span>
         </Link>

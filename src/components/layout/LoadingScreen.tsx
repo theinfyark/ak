@@ -23,7 +23,7 @@ export function LoadingScreen() {
       aria-hidden
     >
       <div className="text-center">
-        <p className="display text-3xl font-bold text-[var(--fg-strong)]">
+        <p className="brand text-3xl text-[var(--fg-strong)]">
           {siteConfig.shortName}
           <span className="text-[var(--accent)]">.</span>
         </p>
