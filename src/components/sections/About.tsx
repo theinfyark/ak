@@ -6,7 +6,7 @@ import { Badge, SectionHeading } from '@/components/ui/primitives';
 function Stat({ value, suffix, label }: { value: number; suffix: string; label: string }) {
   const { ref, value: shown } = useInViewCounter(value);
   return (
-    <div className="glass rounded-2xl p-5">
+    <div className="glass rounded-2xl p-5 transition duration-300 hover:-translate-y-1 hover:border-[color-mix(in_oklab,var(--accent)_40%,var(--line))]">
       <p className="display text-3xl font-bold text-[var(--fg-strong)]">
         <span ref={ref}>{shown}</span>
         {suffix}
@@ -48,7 +48,7 @@ export function About() {
                 {about.loveBuilding.map((item) => (
                   <li
                     key={item}
-                    className="rounded-xl border border-[var(--line)] px-3 py-2 text-sm"
+                    className="rounded-xl border border-[var(--line)] px-3 py-2 text-sm transition-colors duration-300 hover:border-[color-mix(in_oklab,var(--accent)_45%,var(--line))] hover:text-[var(--fg-strong)]"
                   >
                     {item}
                   </li>

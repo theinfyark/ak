@@ -20,7 +20,7 @@ function ProjectVisual({ project }: { project: Project }) {
     <div
       className={cn(
         'relative mb-5 aspect-[16/9] overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--bg-elevated)]',
-        'bg-gradient-to-br',
+        'bg-gradient-to-br transition-transform duration-500 group-hover:scale-[1.015]',
         tones[project.category],
       )}
       aria-hidden
@@ -65,10 +65,10 @@ export function Projects() {
                 type="button"
                 onClick={() => setFilter(c)}
                 className={cn(
-                  'rounded-full border px-3 py-1.5 text-xs font-medium transition',
+                  'rounded-full border px-3.5 py-1.5 text-xs font-medium transition-all duration-300',
                   filter === c
-                    ? 'border-[var(--accent)] bg-[color-mix(in_oklab,var(--accent)_18%,transparent)] text-[var(--fg-strong)]'
-                    : 'border-[var(--line)] text-[var(--muted)] hover:text-[var(--fg)]',
+                    ? 'border-[var(--accent)] bg-[color-mix(in_oklab,var(--accent)_18%,transparent)] text-[var(--fg-strong)] shadow-[0_0_18px_-8px_var(--accent)]'
+                    : 'border-[var(--line)] text-[var(--muted)] hover:border-[color-mix(in_oklab,var(--accent)_35%,var(--line))] hover:text-[var(--fg)]',
                 )}
               >
                 {c}

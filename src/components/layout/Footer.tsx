@@ -26,7 +26,7 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            className="rounded-lg border border-[var(--line)] p-2 transition hover:border-[var(--accent)]"
+            className="rounded-lg border border-[var(--line)] p-2 transition duration-300 hover:-translate-y-0.5 hover:border-[var(--accent)]"
           >
             <Github size={18} />
           </a>
@@ -35,7 +35,7 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="rounded-lg border border-[var(--line)] p-2 transition hover:border-[var(--accent)]"
+            className="rounded-lg border border-[var(--line)] p-2 transition duration-300 hover:-translate-y-0.5 hover:border-[var(--accent)]"
           >
             <Linkedin size={18} />
           </a>
@@ -44,14 +44,14 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="npm"
-            className="rounded-lg border border-[var(--line)] p-2 transition hover:border-[var(--accent)]"
+            className="rounded-lg border border-[var(--line)] p-2 transition duration-300 hover:-translate-y-0.5 hover:border-[var(--accent)]"
           >
             <Package size={18} />
           </a>
           <a
             href={siteConfig.social.email}
             aria-label="Email"
-            className="rounded-lg border border-[var(--line)] p-2 transition hover:border-[var(--accent)]"
+            className="rounded-lg border border-[var(--line)] p-2 transition duration-300 hover:-translate-y-0.5 hover:border-[var(--accent)]"
           >
             <Mail size={18} />
           </a>

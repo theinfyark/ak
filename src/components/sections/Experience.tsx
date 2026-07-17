@@ -25,7 +25,7 @@ export function Experience() {
                   <p className="text-sm font-medium text-[var(--accent)]">{job.period}</p>
                   <p className="mt-1 text-sm text-[var(--muted)]">{job.location}</p>
                 </div>
-                <article className="glass rounded-3xl p-6">
+                <article className="glass rounded-3xl p-6 transition duration-300 hover:-translate-y-1 hover:border-[color-mix(in_oklab,var(--accent)_40%,var(--line))] sm:p-7">
                   <h3 className="display text-xl font-semibold text-[var(--fg-strong)]">
                     {job.role}
                   </h3>

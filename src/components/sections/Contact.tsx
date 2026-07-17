@@ -70,10 +70,10 @@ export function Contact() {
                     {...('external' in channel && channel.external
                       ? { target: '_blank', rel: 'noopener noreferrer' }
                       : {})}
-                    className="group rounded-2xl border border-[var(--line)] bg-[color-mix(in_oklab,var(--bg)_35%,transparent)] p-5 transition hover:-translate-y-1 hover:border-[var(--accent)]"
+                    className="group rounded-2xl border border-[var(--line)] bg-[color-mix(in_oklab,var(--bg)_35%,transparent)] p-5 transition duration-300 hover:-translate-y-1 hover:border-[var(--accent)] hover:shadow-[0_12px_30px_-18px_var(--accent)]"
                   >
                     <Icon
-                      className="text-[var(--accent)] transition group-hover:scale-110"
+                      className="text-[var(--accent)] transition-transform duration-300 group-hover:scale-110"
                       size={22}
                     />
                     <p className="mt-4 font-semibold text-[var(--fg-strong)]">{channel.label}</p>

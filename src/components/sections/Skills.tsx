@@ -52,10 +52,10 @@ export function Skills() {
                 type="button"
                 onClick={() => setActive(f.id)}
                 className={cn(
-                  'shrink-0 rounded-full border px-3 py-1.5 text-xs font-medium transition',
+                  'shrink-0 rounded-full border px-3.5 py-1.5 text-xs font-medium transition-all duration-300',
                   active === f.id
-                    ? 'border-[var(--accent)] bg-[color-mix(in_oklab,var(--accent)_18%,transparent)] text-[var(--fg-strong)]'
-                    : 'border-[var(--line)] text-[var(--muted)] hover:text-[var(--fg)]',
+                    ? 'border-[var(--accent)] bg-[color-mix(in_oklab,var(--accent)_18%,transparent)] text-[var(--fg-strong)] shadow-[0_0_18px_-8px_var(--accent)]'
+                    : 'border-[var(--line)] text-[var(--muted)] hover:border-[color-mix(in_oklab,var(--accent)_35%,var(--line))] hover:text-[var(--fg)]',
                 )}
               >
                 {f.label}

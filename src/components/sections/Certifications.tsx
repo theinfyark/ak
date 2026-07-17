@@ -18,8 +18,8 @@ export function Certifications() {
         <div className="grid gap-4 lg:grid-cols-3">
           {certifications.map((cert, i) => (
             <Reveal key={cert.code} delay={i * 0.05}>
-              <article className="glass group rounded-3xl p-6 transition hover:-translate-y-1 hover:border-[color-mix(in_oklab,var(--accent)_40%,var(--line))]">
-                <ShieldCheck className="text-[var(--accent)]" />
+              <article className="glass group h-full rounded-3xl p-6 transition duration-300 hover:-translate-y-1 hover:border-[color-mix(in_oklab,var(--accent)_40%,var(--line))]">
+                <ShieldCheck className="text-[var(--accent)] transition-transform duration-300 group-hover:scale-110" />
                 <h3 className="display mt-4 text-xl font-semibold text-[var(--fg-strong)]">
                   {cert.name}
                 </h3>
@@ -33,8 +33,8 @@ export function Certifications() {
 
           {awards.map((award, i) => (
             <Reveal key={award.title} delay={(i + 1) * 0.05}>
-              <article className="glass group rounded-3xl p-6 transition hover:-translate-y-1 hover:border-[color-mix(in_oklab,var(--accent)_40%,var(--line))]">
-                <Award className="text-[var(--accent-2)]" />
+              <article className="glass group h-full rounded-3xl p-6 transition duration-300 hover:-translate-y-1 hover:border-[color-mix(in_oklab,var(--accent)_40%,var(--line))]">
+                <Award className="text-[var(--accent-2)] transition-transform duration-300 group-hover:scale-110" />
                 <h3 className="display mt-4 text-xl font-semibold text-[var(--fg-strong)]">
                   {award.title}
                 </h3>

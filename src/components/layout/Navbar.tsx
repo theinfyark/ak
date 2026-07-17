@@ -104,7 +104,7 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
       {open ? (
         <nav
           id="mobile-nav"
-          className="border-t border-[var(--line)] px-4 py-4 lg:hidden"
+          className="animate-fade-down border-t border-[var(--line)] px-4 py-4 lg:hidden"
           aria-label="Mobile"
         >
           <ul className="flex flex-col gap-1">
@@ -112,7 +112,7 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
               <li key={link.hash}>
                 <a
                   href={sectionHref(link.hash)}
-                  className="block rounded-lg px-3 py-3 text-[var(--fg-strong)]"
+                  className="block rounded-lg px-3 py-3 text-[var(--fg-strong)] transition-colors duration-200 hover:bg-[color-mix(in_oklab,var(--fg)_6%,transparent)]"
                   onClick={() => setOpen(false)}
                 >
                   {link.label}
@@ -122,7 +122,7 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
             <li>
               <Link
                 to="/sponsor"
-                className="flex items-center gap-2 rounded-lg px-3 py-3 text-[var(--fg-strong)]"
+                className="flex items-center gap-2 rounded-lg px-3 py-3 text-[var(--fg-strong)] transition-colors duration-200 hover:bg-[color-mix(in_oklab,var(--fg)_6%,transparent)]"
                 onClick={() => setOpen(false)}
               >
                 <Heart size={16} aria-hidden />

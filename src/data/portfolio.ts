@@ -44,9 +44,15 @@ export const sponsor = {
   ],
   upi: {
     name: 'Anil Kumar Patnala',
-    id: 'anilachary67-4@okaxis',
     qrPath: 'upi-qr.png',
-    payUri: 'upi://pay?pa=anilachary67-4@okaxis&pn=Anil%20Kumar%20Patnala&cu=INR',
+    india: {
+      id: 'anilachary67-4@okaxis',
+      payUri: 'upi://pay?pa=anilachary67-4@okaxis&pn=Anil%20Kumar%20Patnala&cu=INR',
+    },
+    international: {
+      id: 'anilachary67-3@okicici',
+      payUri: 'upi://pay?pa=anilachary67-3@okicici&pn=Anil%20Kumar%20Patnala&cu=INR',
+    },
   },
   channels: [
     {
