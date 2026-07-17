@@ -79,9 +79,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.28 }}
         >
-          <Button href={assetUrl(siteConfig.resumePath)} download external>
-            Resume
-          </Button>
+          <Button href={assetUrl('resume')}>Resume</Button>
           <Button href={siteConfig.social.github} variant="secondary" external>
             <Github size={16} /> GitHub
           </Button>

@@ -267,3 +267,416 @@ a {
 .scrollbar-none::-webkit-scrollbar {
   display: none;
 }
+
+/* —— One-page resume —— */
+.resume-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(900px 420px at 12% -8%, color-mix(in oklab, var(--accent) 18%, transparent), transparent 55%),
+    radial-gradient(700px 380px at 88% 0%, color-mix(in oklab, var(--accent-2) 14%, transparent), transparent 50%),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg-elevated) 100%);
+}
+
+.resume-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  border-bottom: 1px solid var(--line);
+  background: color-mix(in oklab, var(--bg) 88%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.resume-toolbar__inner {
+  width: min(880px, calc(100% - 2rem));
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 0;
+}
+
+.resume-toolbar__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+  transition: color 0.2s ease;
+}
+
+.resume-toolbar__back:hover {
+  color: var(--fg-strong);
+}
+
+.resume-toolbar__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.resume-toolbar__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  background: var(--bg-panel);
+  color: var(--fg-strong);
+  padding: 0.55rem 0.9rem;
+  font: inherit;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.resume-toolbar__btn:hover {
+  border-color: color-mix(in oklab, var(--accent) 50%, var(--line));
+  transform: translateY(-1px);
+}
+
+.resume-toolbar__btn--accent {
+  background: var(--accent);
+  border-color: transparent;
+  color: #042f2e;
+}
+
+.resume-toolbar__btn--accent:hover {
+  border-color: transparent;
+}
+
+.resume-stage {
+  padding: 1.5rem 1rem 3rem;
+}
+
+.resume-sheet {
+  --resume-ink: #0f172a;
+  --resume-muted: #475569;
+  --resume-line: #cbd5e1;
+  --resume-accent: #0f766e;
+  --resume-paper: #ffffff;
+  --resume-wash: #f0f7f6;
+
+  width: min(210mm, 100%);
+  margin: 0 auto;
+  background:
+    linear-gradient(180deg, var(--resume-wash) 0%, var(--resume-paper) 7.5rem),
+    var(--resume-paper);
+  color: var(--resume-ink);
+  border: 1px solid color-mix(in oklab, var(--line) 70%, transparent);
+  border-radius: 1rem;
+  box-shadow:
+    0 24px 60px -36px rgba(2, 12, 27, 0.65),
+    0 0 0 1px color-mix(in oklab, var(--accent) 12%, transparent);
+  padding: 1.35rem 1.45rem 1.25rem;
+  animation: resume-rise 0.55s ease-out both;
+}
+
+@keyframes resume-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.resume-header {
+  display: grid;
+  gap: 0.85rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 2px solid var(--resume-accent);
+  margin-bottom: 0.85rem;
+}
+
+.resume-header__eyebrow {
+  margin: 0;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--resume-accent);
+}
+
+.resume-header__name {
+  margin: 0.15rem 0 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.85rem, 4vw, 2.35rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--resume-ink);
+}
+
+.resume-header__title {
+  margin: 0.35rem 0 0;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--resume-muted);
+}
+
+.resume-header__meta {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.85rem;
+  font-size: 0.72rem;
+  color: var(--resume-muted);
+}
+
+.resume-header__meta li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.resume-header__meta a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.resume-header__meta a:hover {
+  color: var(--resume-accent);
+  border-bottom-color: color-mix(in oklab, var(--resume-accent) 45%, transparent);
+}
+
+.resume-section {
+  margin-top: 0.75rem;
+}
+
+.resume-section__title {
+  margin: 0 0 0.4rem;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--resume-accent);
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid var(--resume-line);
+}
+
+.resume-summary {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: var(--resume-ink);
+}
+
+.resume-skills {
+  margin: 0;
+  display: grid;
+  gap: 0.28rem;
+}
+
+.resume-skills__row {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: 0.55rem;
+  align-items: baseline;
+  font-size: 0.72rem;
+  line-height: 1.35;
+}
+
+.resume-skills__row dt {
+  margin: 0;
+  font-weight: 700;
+  color: var(--resume-ink);
+}
+
+.resume-skills__row dd {
+  margin: 0;
+  color: var(--resume-muted);
+}
+
+.resume-jobs {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.resume-job__head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+  align-items: baseline;
+}
+
+.resume-job__role {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--resume-ink);
+}
+
+.resume-job__company {
+  margin: 0.1rem 0 0;
+  font-size: 0.72rem;
+  color: var(--resume-muted);
+}
+
+.resume-job__period {
+  margin: 0;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--resume-accent);
+  white-space: nowrap;
+}
+
+.resume-job__sep {
+  margin-inline: 0.35rem;
+  opacity: 0.55;
+}
+
+.resume-job__bullets {
+  margin: 0.35rem 0 0;
+  padding-left: 1rem;
+  font-size: 0.72rem;
+  line-height: 1.4;
+  color: var(--resume-ink);
+}
+
+.resume-job__bullets li + li {
+  margin-top: 0.15rem;
+}
+
+.resume-job__meta,
+.resume-job__tech {
+  margin: 0.28rem 0 0;
+  font-size: 0.68rem;
+  line-height: 1.35;
+  color: var(--resume-muted);
+}
+
+.resume-job__meta strong,
+.resume-job__tech strong {
+  color: var(--resume-ink);
+  font-weight: 700;
+}
+
+.resume-bottom {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 0.15rem;
+}
+
+.resume-edu__degree {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--resume-ink);
+}
+
+.resume-edu__school {
+  margin: 0.15rem 0 0;
+  font-size: 0.72rem;
+  color: var(--resume-muted);
+}
+
+.resume-awards {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.2rem;
+  font-size: 0.72rem;
+  color: var(--resume-muted);
+}
+
+.resume-awards strong {
+  color: var(--resume-ink);
+}
+
+@media (min-width: 640px) {
+  .resume-header {
+    grid-template-columns: 1.35fr 1fr;
+    align-items: end;
+  }
+
+  .resume-header__meta {
+    justify-content: flex-end;
+    text-align: right;
+  }
+
+  .resume-header__meta li {
+    justify-content: flex-end;
+  }
+
+  .resume-bottom {
+    grid-template-columns: 1.1fr 1fr;
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .resume-skills__row {
+    grid-template-columns: 1fr;
+    gap: 0.1rem;
+  }
+
+  .resume-sheet {
+    padding: 1.1rem 1rem 1.15rem;
+    border-radius: 0.85rem;
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 10mm 11mm;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+    color: #0f172a !important;
+  }
+
+  body::before {
+    display: none !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .resume-page {
+    background: #fff !important;
+    min-height: auto;
+  }
+
+  .resume-stage {
+    padding: 0 !important;
+  }
+
+  .resume-sheet {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    background: #fff !important;
+    animation: none !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .resume-section,
+  .resume-job {
+    break-inside: avoid;
+  }
+}
