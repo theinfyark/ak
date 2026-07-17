@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { skillCategories, type SkillLevel } from '@/data/portfolio';
+import { skillCategories, type SkillCategory, type SkillLevel } from '@/data/portfolio';
 import { Reveal } from '@/components/ui/Reveal';
 import { SectionHeading } from '@/components/ui/primitives';
 import { cn } from '@/lib/utils';
@@ -20,18 +20,56 @@ const levelLabel: Record<SkillLevel, string> = {
   working: 'Working',
 };
 
+function SkillCard({ category }: { category: SkillCategory }) {
+  return (
+    <article className="glass group h-full rounded-3xl p-5 transition duration-300 hover:-translate-y-1 hover:border-[color-mix(in_oklab,var(--accent)_40%,var(--line))]">
+      <h3 className="display text-lg font-semibold text-[var(--fg-strong)]">{category.label}</h3>
+      <ul className="mt-4 space-y-3">
+        {category.skills.map((skill) => (
+          <li key={skill.name}>
+            <div className="mb-1 flex items-center justify-between gap-3 text-sm">
+              <span>{skill.name}</span>
+              <span className="text-xs text-[var(--muted)]">{levelLabel[skill.level]}</span>
+            </div>
+            <div className="h-1.5 overflow-hidden rounded-full bg-[color-mix(in_oklab,var(--fg)_8%,transparent)]">
+              <div
+                className={cn(
+                  'h-full rounded-full bg-gradient-to-r from-[var(--accent)] to-[var(--accent-2)] transition-all duration-700',
+                  levelWidth[skill.level],
+                )}
+              />
+            </div>
+          </li>
+        ))}
+      </ul>
+    </article>
+  );
+}
+
 export function Skills() {
   const filters = useMemo(
     () => [
       { id: 'all', label: 'All' },
-      ...skillCategories.map((c) => ({ id: c.id, label: c.label })),
+      { id: 'cloud-backend', label: 'Cloud & Backend' },
+      ...skillCategories
+        .filter((c) => c.id !== 'cloud' && c.id !== 'backend')
+        .map((c) => ({ id: c.id, label: c.label })),
     ],
     [],
   );
   const [active, setActive] = useState('all');
 
-  const visible =
-    active === 'all' ? skillCategories : skillCategories.filter((c) => c.id === active);
+  const cloud = skillCategories.find((c) => c.id === 'cloud');
+  const backend = skillCategories.find((c) => c.id === 'backend');
+  const others = skillCategories.filter((c) => c.id !== 'cloud' && c.id !== 'backend');
+
+  const showCloudBackend = active === 'all' || active === 'cloud-backend';
+  const visibleOthers =
+    active === 'all'
+      ? others
+      : active === 'cloud-backend'
+        ? []
+        : others.filter((c) => c.id === active);
 
   return (
     <section id="skills" className="section-pad">
@@ -64,37 +102,26 @@ export function Skills() {
           </div>
         </Reveal>
 
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {visible.map((category, idx) => (
-            <Reveal key={category.id} delay={Math.min(idx * 0.04, 0.2)}>
-              <article className="glass group h-full rounded-3xl p-5 transition duration-300 hover:-translate-y-1 hover:border-[color-mix(in_oklab,var(--accent)_40%,var(--line))]">
-                <h3 className="display text-lg font-semibold text-[var(--fg-strong)]">
-                  {category.label}
-                </h3>
-                <ul className="mt-4 space-y-3">
-                  {category.skills.map((skill) => (
-                    <li key={skill.name}>
-                      <div className="mb-1 flex items-center justify-between gap-3 text-sm">
-                        <span>{skill.name}</span>
-                        <span className="text-xs text-[var(--muted)]">
-                          {levelLabel[skill.level]}
-                        </span>
-                      </div>
-                      <div className="h-1.5 overflow-hidden rounded-full bg-[color-mix(in_oklab,var(--fg)_8%,transparent)]">
-                        <div
-                          className={cn(
-                            'h-full rounded-full bg-gradient-to-r from-[var(--accent)] to-[var(--accent-2)] transition-all duration-700',
-                            levelWidth[skill.level],
-                          )}
-                        />
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </article>
+        {showCloudBackend && cloud && backend ? (
+          <div className="mb-4 grid gap-4 md:grid-cols-2">
+            <Reveal>
+              <SkillCard category={cloud} />
             </Reveal>
-          ))}
-        </div>
+            <Reveal delay={0.04}>
+              <SkillCard category={backend} />
+            </Reveal>
+          </div>
+        ) : null}
+
+        {visibleOthers.length > 0 ? (
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {visibleOthers.map((category, idx) => (
+              <Reveal key={category.id} delay={Math.min(idx * 0.04, 0.2)}>
+                <SkillCard category={category} />
+              </Reveal>
+            ))}
+          </div>
+        ) : null}
       </div>
     </section>
   );
