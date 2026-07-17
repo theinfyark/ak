@@ -1,33 +1,36 @@
 import { useMemo, useState } from 'react';
 import { ExternalLink, Github } from 'lucide-react';
-import { projects, type Project } from '@/data/portfolio';
+import { projects, type Project, type ProjectCategory } from '@/data/portfolio';
 import { Reveal } from '@/components/ui/Reveal';
 import { Badge, SectionHeading } from '@/components/ui/primitives';
 import { cn } from '@/lib/utils';
 
-const categories = ['All', 'AI', 'Cloud', 'Backend', 'DevOps', 'AR'] as const;
+const categories = ['All', 'AI', 'Cloud', 'Backend', 'Frontend'] as const;
+
+const tones: Record<ProjectCategory, string> = {
+  AI: 'from-teal-400/30 via-sky-400/10 to-transparent',
+  Cloud: 'from-sky-400/30 via-cyan-300/10 to-transparent',
+  Backend: 'from-emerald-400/30 via-teal-300/10 to-transparent',
+  Frontend: 'from-fuchsia-400/20 via-sky-300/10 to-transparent',
+};
 
 function ProjectVisual({ project }: { project: Project }) {
-  const tones: Record<Project['category'], string> = {
-    AI: 'from-teal-400/30 via-sky-400/10 to-transparent',
-    Cloud: 'from-sky-400/30 via-cyan-300/10 to-transparent',
-    Backend: 'from-emerald-400/30 via-teal-300/10 to-transparent',
-    DevOps: 'from-amber-400/25 via-orange-300/10 to-transparent',
-    AR: 'from-fuchsia-400/20 via-sky-300/10 to-transparent',
-  };
+  const primary = project.categories[0] ?? 'Cloud';
 
   return (
     <div
       className={cn(
         'relative mb-5 aspect-[16/9] overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--bg-elevated)]',
         'bg-gradient-to-br transition-transform duration-500 group-hover:scale-[1.015]',
-        tones[project.category],
+        tones[primary],
       )}
       aria-hidden
     >
       <div className="absolute inset-0 opacity-40 [background-image:linear-gradient(to_right,rgba(148,163,184,0.15)_1px,transparent_1px),linear-gradient(to_bottom,rgba(148,163,184,0.15)_1px,transparent_1px)] [background-size:24px_24px]" />
       <div className="absolute inset-x-6 bottom-6 top-6 rounded-xl border border-white/10 bg-black/20 p-4 backdrop-blur-sm">
-        <p className="text-xs tracking-[0.2em] text-white/70 uppercase">{project.category}</p>
+        <p className="text-xs tracking-[0.2em] text-white/70 uppercase">
+          {project.categories.join(' · ')}
+        </p>
         <p className="mt-2 text-lg font-semibold text-white">{project.name}</p>
         <div className="mt-4 space-y-2">
           <div className="h-2 w-[80%] rounded bg-white/20" />
@@ -42,7 +45,7 @@ function ProjectVisual({ project }: { project: Project }) {
 export function Projects() {
   const [filter, setFilter] = useState<(typeof categories)[number]>('All');
   const visible = useMemo(
-    () => (filter === 'All' ? projects : projects.filter((p) => p.category === filter)),
+    () => (filter === 'All' ? projects : projects.filter((p) => p.categories.includes(filter))),
     [filter],
   );
 
@@ -53,7 +56,7 @@ export function Projects() {
           <SectionHeading
             eyebrow="Projects"
             title="Featured delivery"
-            description="Selected client delivery — AI copilots, extraction platforms, ERP, and AR/web experiences. Durations omitted."
+            description="Selected client delivery — AI copilots, extraction platforms, ERP, and AR/web experiences."
           />
         </Reveal>
 
@@ -83,7 +86,9 @@ export function Projects() {
               <article className="glass group h-full rounded-3xl p-5 transition duration-300 hover:-translate-y-1 hover:border-[color-mix(in_oklab,var(--accent)_40%,var(--line))] sm:p-6">
                 <ProjectVisual project={project} />
                 <div className="flex flex-wrap items-center gap-2">
-                  <Badge>{project.category}</Badge>
+                  {project.categories.map((c) => (
+                    <Badge key={c}>{c}</Badge>
+                  ))}
                   <h3 className="display text-xl font-semibold text-[var(--fg-strong)]">
                     {project.name}
                   </h3>

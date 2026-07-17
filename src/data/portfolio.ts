@@ -376,7 +376,7 @@ export const experience: Experience[] = [
       'Critical module performance improved by ~68%.',
     ],
     clients: ['CNA', 'Finolex'],
-    projects: ['NBSI', 'Endorsement (EMS)', 'POCs & demos'],
+    projects: ['New Business Submission (NBSI)', 'Endorsement (EMS)', 'POCs & demos'],
     tech: [
       'Node.js',
       'Express.js',
@@ -427,10 +427,12 @@ export const experience: Experience[] = [
   },
 ];
 
+export type ProjectCategory = 'AI' | 'Cloud' | 'Backend' | 'Frontend';
+
 export type Project = {
   id: string;
   name: string;
-  category: 'AI' | 'Cloud' | 'Backend' | 'DevOps' | 'AR';
+  categories: ProjectCategory[];
   tagline: string;
   description: string;
   challenge: string;
@@ -445,7 +447,7 @@ export const projects: Project[] = [
   {
     id: 'askball',
     name: 'AskBall',
-    category: 'AI',
+    categories: ['AI', 'Cloud'],
     tagline: 'HR chatbot in Copilot',
     description:
       'HR chatbot in Copilot to interact regarding employee details, with multilingual support.',
@@ -457,7 +459,7 @@ export const projects: Project[] = [
   {
     id: 'frp',
     name: 'FRP',
-    category: 'AI',
+    categories: ['Cloud'],
     tagline: 'AI-based report generation',
     description: 'AI-based report generation across different report types and formats.',
     challenge: 'Produce consistent business reports without heavy manual drafting.',
@@ -468,7 +470,7 @@ export const projects: Project[] = [
   {
     id: 'quote-ai',
     name: 'Quote AI',
-    category: 'AI',
+    categories: ['AI', 'Backend', 'Cloud', 'Frontend'],
     tagline: 'Quote generation for NAM & MEA',
     description:
       'Quote generation platform covering NAM and MEA regions with AI-assisted quoting workflows.',
@@ -480,7 +482,7 @@ export const projects: Project[] = [
   {
     id: 'mm-erp',
     name: 'MM-ERP',
-    category: 'Backend',
+    categories: ['Cloud'],
     tagline: 'ERP for Maldivian Mermaid',
     description:
       'ERP system for Maldivian Mermaid — business process automation and day-to-day operations.',
@@ -493,7 +495,7 @@ export const projects: Project[] = [
   {
     id: 'dextr',
     name: 'Dextr',
-    category: 'Backend',
+    categories: ['Backend', 'Cloud', 'Frontend'],
     tagline: 'Data extraction platform',
     description:
       'Data extraction platform for turning documents and inputs into usable business data.',
@@ -505,7 +507,7 @@ export const projects: Project[] = [
   {
     id: 'endorsement',
     name: 'Endorsement (EMS)',
-    category: 'Backend',
+    categories: ['Cloud', 'Frontend'],
     tagline: 'Email endorsement automation',
     description:
       'Handles endorsement requests from different customers through email and automates the process.',
@@ -519,7 +521,7 @@ export const projects: Project[] = [
   {
     id: 'nbsi',
     name: 'New Business Submission (NBSI)',
-    category: 'AI',
+    categories: ['Backend', 'Cloud'],
     tagline: 'AI email-attachment extraction',
     description:
       'Data extraction from email attachments through an AI engine, then processing of that data for new business submission.',
@@ -532,7 +534,7 @@ export const projects: Project[] = [
   {
     id: 'als',
     name: 'ALS',
-    category: 'Backend',
+    categories: ['Backend', 'Frontend'],
     tagline: 'Online course subscription platform',
     description: 'Online course subscription platform with different user role access levels.',
     challenge: 'Support role-based access for learners and admins across subscription workflows.',
@@ -543,7 +545,7 @@ export const projects: Project[] = [
   {
     id: 'wishar',
     name: 'WishAR',
-    category: 'AR',
+    categories: ['Backend', 'Frontend'],
     tagline: 'AR greeting card platform',
     description:
       'Platform where users purchase a greeting card and receive a QR code that anyone can scan to experience augmented reality.',
@@ -555,7 +557,7 @@ export const projects: Project[] = [
   {
     id: 'ar-cards',
     name: 'AR Cards',
-    category: 'AR',
+    categories: ['Backend', 'Frontend'],
     tagline: 'AR visiting cards with social links',
     description:
       'Users register for Augmented Reality cards, pick a template layout, and enter social profile links (Facebook, LinkedIn, Twitter, Instagram, WhatsApp, Mail, and more). They receive a QR code to print on a visiting card. Scanning opens an AR web page with clickable social icons and a user video that deep-link to profiles, calls, or WhatsApp.',
@@ -570,7 +572,7 @@ export const projects: Project[] = [
   {
     id: 'l-catalog',
     name: 'L Catalog',
-    category: 'AR',
+    categories: ['Frontend'],
     tagline: 'AR furniture catalog (B2C)',
     description:
       'Augmented Reality application for a furniture vendor (B2C). The vendor provides a marker such as a QR code; the end user augments 3D furniture models in their space to decide faster. Helps reduce manpower, transport cost, pricing friction, decision time, and experience gaps for both vendor and buyer.',
