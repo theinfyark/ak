@@ -53,7 +53,7 @@ export function Projects() {
           <SectionHeading
             eyebrow="Projects"
             title="Featured delivery"
-            description="Cloud, AI, backend, and AR work highlighted from recent client programs. Live demo links marked when unavailable."
+            description="Selected client delivery — AI copilots, extraction platforms, ERP, and AR/web experiences. Durations omitted."
           />
         </Reveal>
 

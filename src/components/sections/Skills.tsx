@@ -39,8 +39,8 @@ export function Skills() {
         <Reveal>
           <SectionHeading
             eyebrow="Skills"
-            title="Skills from the resume"
-            description="Cloud/Backend, DevOps/DevSecOps & CI/CD, Identity & Security, Frontend/Web, and AI/GenAI at basics level."
+            title="Cloud, backend, DevOps, and full-stack delivery"
+            description="Hands-on stack across Azure, AWS, GCP, Kubernetes, Node.js, identity, frontend/web, and AI at a basics level."
           />
         </Reveal>
 
