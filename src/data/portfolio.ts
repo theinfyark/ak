@@ -1,3 +1,7 @@
+import { yearsOfExperience } from '@/lib/utils';
+
+const yearsXp = yearsOfExperience();
+
 export const siteConfig = {
   name: 'Anil Kumar P',
   shortName: 'AK',
@@ -8,8 +12,7 @@ export const siteConfig = {
     'Secure auth · resilient APIs',
     'Open source for AI & cloud',
   ],
-  summary:
-    'Cloud and Backend Engineer with 8+ years of experience designing and deploying scalable backend systems and cloud-native infrastructures. Strong expertise in Kubernetes, Docker, and cloud platforms AWS, Azure, and GCP. Experienced in full-stack development using Node.js, Express.js, PostgreSQL, MongoDB, and RESTful APIs, with frontend exposure to React.js and AngularJS. Proficient in secure authentication using OKTA, Auth0, and Azure Entra ID, with hands-on experience in DevOps and DevSecOps practices. Delivering high-availability Microservice Architecture and optimizing performance in Agile environments.',
+  summary: `Cloud and Backend Engineer with ${yearsXp}+ years of experience designing and deploying scalable backend systems and cloud-native infrastructures. Strong expertise in Kubernetes, Docker, and cloud platforms AWS, Azure, and GCP. Experienced in full-stack development using Node.js, Express.js, PostgreSQL, MongoDB, and RESTful APIs, with frontend exposure to React.js and AngularJS. Proficient in secure authentication using OKTA, Auth0, and Azure Entra ID, with hands-on experience in DevOps and DevSecOps practices. Delivering high-availability Microservice Architecture and optimizing performance in Agile environments.`,
   location: 'Bengaluru, India',
   email: 'anilachary.p@gmail.com',
   phone: '+91 9885155454',
@@ -28,10 +31,11 @@ export const siteConfig = {
 } as const;
 
 export const sponsor = {
-  brand: 'THE INFY ARK',
-  tagline: 'Open-source libraries for AI, cloud, and backend developers.',
+  brand: 'TheInfyArk',
+  tagline: 'BUILD · ROBUST · DEPLOY · SCALE',
+  logoPath: 'theinfyark-logo.png',
   mission:
-    'THE INFY ARK builds small, production-ready TypeScript and JavaScript packages — streaming LLM SDKs, RAG helpers, Express starters, Azure utilities, and DevOps CLIs — so teams ship reliable systems faster without reinventing the basics.',
+    'TheInfyArk builds small, production-ready TypeScript and JavaScript packages — streaming LLM SDKs, RAG helpers, Express starters, Azure utilities, and DevOps CLIs — so teams ship reliable systems faster without reinventing the basics.',
   whySupport: [
     'Keep npm packages maintained, typed, tested, and documented',
     'Fund CI, releases, and security updates across the org',
@@ -122,7 +126,7 @@ export const sponsor = {
 } as const;
 
 export const stats = [
-  { label: 'Years Experience', value: 8, suffix: '+' },
+  { label: 'Years Experience', value: yearsXp, suffix: '+' },
   { label: 'Dev Effort Reduced', value: 80, suffix: '%' },
   { label: 'Perf Optimized', value: 68, suffix: '%' },
   { label: 'Latency Reduced', value: 20, suffix: '%' },
@@ -655,9 +659,12 @@ export const openSourcePackages = [
 export const githubProfile = {
   org: {
     login: 'theinfyark',
-    name: 'InfyArk-Tech',
-    bio: 'Modern Javascript / TypeScript Libraries for AI, Cloud and Backend Development.',
+    name: 'TheInfyArk',
+    bio: 'AI, Cloud & Backend Frontend libraries',
+    tagline: 'BUILD · ROBUST · DEPLOY · SCALE',
+    logoPath: 'theinfyark-logo.png',
     url: 'https://github.com/theinfyark',
+    npm: 'https://www.npmjs.com/~anilachary',
     publicRepos: 20,
     followers: 0,
   },

@@ -17,7 +17,7 @@ export function Footer() {
             className="mt-3 inline-flex items-center gap-1.5 text-sm text-[var(--accent)] transition hover:underline"
           >
             <Heart size={14} aria-hidden />
-            Sponsor THE INFY ARK
+            Sponsor TheInfyArk
           </Link>
         </div>
         <div className="flex items-center gap-3">

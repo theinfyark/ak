@@ -7,3 +7,14 @@ export function assetUrl(path: string): string {
   const clean = path.replace(/^\//, '');
   return `${base}${clean}`;
 }
+
+/** Professional career start — years shown as (currentYear − start)+ */
+export const CAREER_START_YEAR = 2017;
+
+export function yearsOfExperience(now = new Date()): number {
+  return Math.max(1, now.getFullYear() - CAREER_START_YEAR);
+}
+
+export function yearsOfExperienceLabel(now = new Date()): string {
+  return `${yearsOfExperience(now)}+`;
+}

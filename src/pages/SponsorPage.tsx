@@ -22,19 +22,33 @@ export function SponsorPage() {
 
   return (
     <main>
-      <section className="relative isolate overflow-hidden pt-24 pb-16 sm:pt-28">
+      <section className="relative isolate overflow-hidden pt-32 pb-16 sm:pt-36 lg:pt-40">
         <div className="absolute inset-0 mesh opacity-80" aria-hidden />
         <div className="absolute inset-0 grid-fade opacity-30" aria-hidden />
 
         <div className="container-shell relative z-10">
-          <motion.p
-            className="text-xs font-semibold tracking-[0.22em] text-[var(--accent)] uppercase"
+          <motion.div
+            className="mb-6 flex items-center gap-4"
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45 }}
           >
-            Sponsor
-          </motion.p>
+            <img
+              src={assetUrl(sponsor.logoPath)}
+              alt="TheInfyArk logo"
+              width={88}
+              height={88}
+              className="h-20 w-20 rounded-full border border-[var(--line)] shadow-lg sm:h-24 sm:w-24"
+            />
+            <div>
+              <p className="text-xs font-semibold tracking-[0.22em] text-[var(--accent)] uppercase">
+                Sponsor
+              </p>
+              <p className="mt-1 text-xs tracking-[0.18em] text-[var(--muted)] uppercase">
+                {sponsor.tagline}
+              </p>
+            </div>
+          </motion.div>
 
           <motion.h1
             className="display mt-3 max-w-3xl text-4xl font-bold text-[var(--fg-strong)] sm:text-5xl lg:text-6xl"
@@ -42,7 +56,7 @@ export function SponsorPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.05 }}
           >
-            {sponsor.brand}
+            The<span className="text-[var(--accent-2)]">Infy</span>Ark
           </motion.h1>
 
           <motion.p
@@ -51,7 +65,7 @@ export function SponsorPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.12 }}
           >
-            {sponsor.tagline}
+            AI, Cloud & Backend Frontend libraries
           </motion.p>
 
           <motion.p
@@ -120,9 +134,9 @@ export function SponsorPage() {
         <div className="container-shell">
           <Reveal>
             <SectionHeading
-              eyebrow="Donate in India"
+              eyebrow="UPI payments"
               title="UPI"
-              description="Fastest way to support — scan the QR or pay to the UPI ID below."
+              description="Supports Indian and international transactions — scan the QR or pay to the UPI ID below."
             />
           </Reveal>
 
@@ -163,8 +177,9 @@ export function SponsorPage() {
                 </div>
 
                 <p className="mt-4 text-sm text-[var(--muted)]">
-                  Open any UPI app (GPay, PhonePe, Paytm, BHIM) and scan the QR, or paste the ID
-                  above.
+                  India: open GPay, PhonePe, Paytm, or BHIM and scan the QR / paste the UPI ID.
+                  International: pay through UPI apps and banks that support cross-border UPI
+                  transfers to this ID.
                 </p>
 
                 <div className="mt-6">

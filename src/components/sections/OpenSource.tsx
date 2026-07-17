@@ -1,6 +1,7 @@
 import { ExternalLink, GitBranch, Heart, Package, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { githubProfile, openSourcePackages, siteConfig } from '@/data/portfolio';
+import { assetUrl } from '@/lib/utils';
 import { Reveal } from '@/components/ui/Reveal';
 import { Badge, Button, SectionHeading } from '@/components/ui/primitives';
 
@@ -9,11 +10,25 @@ export function OpenSource() {
     <section id="opensource" className="section-pad">
       <div className="container-shell">
         <Reveal>
-          <SectionHeading
-            eyebrow="Open Source"
-            title="InfyArk — AI, cloud & backend libraries"
-            description={githubProfile.org.bio}
-          />
+          <div className="mb-10 flex flex-col gap-5 sm:flex-row sm:items-center">
+            <img
+              src={assetUrl(githubProfile.org.logoPath)}
+              alt="TheInfyArk logo"
+              width={96}
+              height={96}
+              className="h-24 w-24 shrink-0 rounded-full border border-[var(--line)] shadow-lg"
+            />
+            <SectionHeading
+              className="mb-0"
+              eyebrow="Open Source · npm & GitHub"
+              title={
+                <>
+                  The<span className="text-[var(--accent-2)]">Infy</span>Ark
+                </>
+              }
+              description="AI, Cloud & Backend Frontend libraries"
+            />
+          </div>
         </Reveal>
 
         <Reveal>
