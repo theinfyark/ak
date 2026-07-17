@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
-import { ArrowDown, Github, Linkedin, Mail, Package, Phone } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Mail, Package, Phone, Sparkles } from 'lucide-react';
 import { floatingTech, siteConfig } from '@/data/portfolio';
 import { useTypingText } from '@/hooks/useTypingText';
-import { assetUrl } from '@/lib/utils';
+import { assetUrl, yearsOfExperienceLabel } from '@/lib/utils';
 import { Button } from '@/components/ui/primitives';
 import { ParticleField } from '@/components/effects/ParticleField';
 
@@ -17,13 +17,32 @@ export function Hero() {
 
       <div className="container-shell relative z-10 flex min-h-[calc(100svh-5rem)] flex-col justify-center py-16">
         <motion.h1
-          className="brand max-w-4xl text-5xl text-[var(--fg-strong)] sm:text-6xl lg:text-7xl"
+          className="brand text-5xl text-[var(--fg-strong)] sm:text-6xl lg:text-7xl"
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.05 }}
         >
           {siteConfig.name}
         </motion.h1>
+
+        <motion.div
+          className="mt-3 flex flex-wrap items-center gap-2"
+          initial={{ opacity: 0, y: 14 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
+          <span className="glass inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm text-[var(--fg)]">
+            <span className="relative flex h-2 w-2" aria-hidden>
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--accent)] opacity-60" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--accent)]" />
+            </span>
+            Hey there — I&apos;m
+          </span>
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-[var(--line)] px-4 py-1.5 text-sm text-[var(--muted)]">
+            <Sparkles size={13} className="text-[var(--accent-2)]" aria-hidden />
+            {yearsOfExperienceLabel()} years experience
+          </span>
+        </motion.div>
 
         <motion.p
           className="mt-4 max-w-2xl text-lg text-[var(--muted)] sm:text-xl"
