@@ -54,7 +54,7 @@ export function Contact() {
           <SectionHeading
             eyebrow="Contact"
             title="Let's build something resilient"
-            description="Open to Staff/Lead backend, cloud, DevOps, and AI platform conversations."
+            description="Open to Lead/Staff backend, cloud, DevOps, and platform conversations."
           />
         </Reveal>
 

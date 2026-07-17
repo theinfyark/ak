@@ -1,6 +1,6 @@
-# Anil Kumar P — Portfolio
+# Anil Kumar Patnala — Portfolio
 
-Premium developer portfolio for **Anil Kumar P**, Cloud & Backend Engineer specializing in Kubernetes, multi-cloud platforms, DevOps/DevSecOps, GenAI, and open source.
+Premium developer portfolio for **Anil Kumar Patnala**, Lead Software Engineer | Cloud & Full-Stack Developer specializing in Kubernetes, multi-cloud platforms, DevOps/DevSecOps, and open source.
 
 **Live site:** [https://theinfyark.github.io/ak/](https://theinfyark.github.io/ak/)
 

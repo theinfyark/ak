@@ -12,8 +12,8 @@ export function HomePage() {
     <main>
       <Hero />
       <About />
-      <Skills />
       <Experience />
+      <Skills />
       <Projects />
       <OpenSource />
       <Certifications />

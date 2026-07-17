@@ -7,8 +7,8 @@ import type { Theme } from '@/hooks/useTheme';
 
 const sectionLinks = [
   { hash: '#about', label: 'About' },
-  { hash: '#skills', label: 'Skills' },
   { hash: '#experience', label: 'Experience' },
+  { hash: '#skills', label: 'Skills' },
   { hash: '#projects', label: 'Projects' },
   { hash: '#opensource', label: 'Open Source' },
   { hash: '#certifications', label: 'Certs' },
