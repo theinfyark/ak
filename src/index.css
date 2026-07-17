@@ -5,9 +5,9 @@
   --font-brand: 'Poiret One', Georgia, serif;
   --font-display: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
   --font-sans: 'Jost', ui-sans-serif, system-ui, sans-serif;
-  --color-ink: #07090f;
-  --color-ink-soft: #0e121b;
-  --color-panel: #121826;
+  --color-ink: #0a1628;
+  --color-ink-soft: #0f2140;
+  --color-panel: #152d4f;
   --color-line: rgba(148, 163, 184, 0.16);
   --color-muted: #94a3b8;
   --color-fg: #e8eef8;
@@ -20,20 +20,20 @@
 :root,
 [data-theme='dark'] {
   color-scheme: dark;
-  --bg: #07090f;
-  --bg-elevated: #0e121b;
-  --bg-panel: rgba(18, 24, 38, 0.72);
-  --bg-panel-solid: #121826;
+  --bg: #0a1628;
+  --bg-elevated: #0f2140;
+  --bg-panel: rgba(21, 45, 79, 0.72);
+  --bg-panel-solid: #152d4f;
   --fg: #e8eef8;
   --fg-strong: #f8fafc;
   --muted: #94a3b8;
-  --line: rgba(148, 163, 184, 0.16);
+  --line: rgba(148, 163, 184, 0.18);
   --accent: #2dd4bf;
   --accent-2: #38bdf8;
-  --glow: rgba(45, 212, 191, 0.18);
-  --hero-a: #0b1020;
-  --hero-b: #102033;
-  --hero-c: #132018;
+  --glow: rgba(56, 139, 248, 0.16);
+  --hero-a: #081428;
+  --hero-b: #0f2848;
+  --hero-c: #122d52;
 }
 
 [data-theme='light'] {
@@ -88,7 +88,7 @@ body {
   color: var(--fg);
   background:
     radial-gradient(1200px 600px at 10% -10%, var(--glow), transparent 55%),
-    radial-gradient(900px 500px at 90% 0%, rgba(56, 189, 248, 0.12), transparent 50%),
+    radial-gradient(900px 500px at 90% 0%, rgba(59, 130, 246, 0.14), transparent 50%),
     linear-gradient(180deg, var(--bg) 0%, var(--bg-elevated) 100%);
   background-attachment: fixed;
   text-rendering: optimizeLegibility;
