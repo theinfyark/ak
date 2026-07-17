@@ -668,3 +668,33 @@ export const floatingTech = [
   'Terraform',
   'Grafana',
 ] as const;
+
+/** Compact skill rows for the printable one-page resume */
+export const resumeSkillGroups = [
+  {
+    label: 'Cloud & DevOps',
+    items:
+      'Azure · GCP · AWS · Kubernetes · Docker · Helm · Argo CD · Jenkins · Concourse · Terraform · CI/CD · Microservices',
+  },
+  {
+    label: 'Backend & Data',
+    items:
+      'Node.js · Express.js · Fastify · PostgreSQL · MongoDB · Redis · Prisma · Flyway · REST / SOAP · BullMQ',
+  },
+  {
+    label: 'Identity & Security',
+    items:
+      'OKTA · Auth0 · Azure Entra ID · JWT · SonarQube · Snyk · Trivy · Veracode · VAPT · Keycloak',
+  },
+  {
+    label: 'Messaging & AI',
+    items: 'Kafka · Pub/Sub · Azure Service Bus · MS Graph · OpenAI · GenAI · OCR · Webhooks',
+  },
+  {
+    label: 'Frontend',
+    items: 'React.js · AngularJS · HTML/CSS · PWA · MUI · TanStack · Three.js · A-Frame · WebXR',
+  },
+] as const;
+
+/** Shorter summary tuned to fit one printed page */
+export const resumeSummary = `Cloud & Backend Engineer with ${yearsXp}+ years building scalable backends and cloud-native platforms across AWS, Azure, and GCP. Expert in Kubernetes, Node.js microservices, PostgreSQL/MongoDB, and enterprise identity (OKTA, Auth0, Entra ID). Strong DevOps/DevSecOps delivery with measurable impact on performance, reuse, and latency.`;

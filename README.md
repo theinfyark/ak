@@ -22,6 +22,7 @@ Optimized for **GitHub Pages** — no server, no SSR, no API routes.
 - Featured projects (filterable), TheInfyArk open source (featured npm libraries)
 - Certifications, awards, education
 - Contact (email, GitHub, LinkedIn, npm, WhatsApp, phone)
+- One-page resume (`/resume`) — print-ready A4 layout with Print/Save PDF
 - Products catalog (`/products`) — all npm libraries, V Cards placeholders, filters
 - Sponsor page (`/sponsor`) — UPI, roadmap, monthly goals
 - Dark-first theme with light toggle, reduced-motion support
@@ -53,7 +54,7 @@ src/
   data/         portfolio.ts (resume, sponsor) + products.ts (catalog)
   hooks/        theme, typing, counters, reduced motion
   lib/          helpers
-  pages/        Home, Products, Sponsor
+  pages/        Home, Resume, Products, Sponsor
 public/         resume PDF, favicon, SEO assets
 .github/workflows/static.yml   build + Pages deploy
 ```
