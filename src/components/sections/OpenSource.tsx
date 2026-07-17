@@ -1,11 +1,20 @@
 import { ExternalLink, GitBranch, Heart, Package, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { githubProfile, openSourcePackages, siteConfig } from '@/data/portfolio';
+import {
+  featuredLibraryProducts,
+  githubProfile,
+  libraryProducts,
+  productStatusLabel,
+  siteConfig,
+} from '@/data/portfolio';
 import { assetUrl } from '@/lib/utils';
 import { Reveal } from '@/components/ui/Reveal';
 import { Badge, Button, SectionHeading } from '@/components/ui/primitives';
 
 export function OpenSource() {
+  const featured = featuredLibraryProducts();
+  const libraryCount = libraryProducts().length;
+
   return (
     <section id="opensource" className="section-pad">
       <div className="container-shell">
@@ -26,13 +35,19 @@ export function OpenSource() {
                   The<span className="text-[var(--accent-2)]">Infy</span>Ark
                 </>
               }
-              description="AI, Cloud & Backend Frontend libraries"
+              description={githubProfile.org.bio}
             />
           </div>
         </Reveal>
 
         <Reveal>
           <div className="mb-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="glass rounded-2xl p-5">
+              <p className="text-sm text-[var(--muted)]">npm libraries</p>
+              <p className="display mt-2 text-3xl font-bold text-[var(--fg-strong)]">
+                {libraryCount}
+              </p>
+            </div>
             <div className="glass rounded-2xl p-5">
               <p className="text-sm text-[var(--muted)]">Org repositories</p>
               <p className="display mt-2 text-3xl font-bold text-[var(--fg-strong)]">
@@ -43,12 +58,6 @@ export function OpenSource() {
               <p className="text-sm text-[var(--muted)]">Followers</p>
               <p className="display mt-2 text-3xl font-bold text-[var(--fg-strong)]">
                 {githubProfile.org.followers}
-              </p>
-            </div>
-            <div className="glass rounded-2xl p-5">
-              <p className="text-sm text-[var(--muted)]">Personal repos</p>
-              <p className="display mt-2 text-3xl font-bold text-[var(--fg-strong)]">
-                {githubProfile.personal.publicRepos}
               </p>
             </div>
             <div className="glass rounded-2xl p-5">
@@ -74,6 +83,12 @@ export function OpenSource() {
               <Package size={16} /> npm profile
             </Button>
             <Link
+              to="/products"
+              className="btn-ripple inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold text-[var(--muted)] transition duration-300 hover:text-[var(--fg-strong)]"
+            >
+              <Package size={16} /> All products
+            </Link>
+            <Link
               to="/sponsor"
               className="btn-ripple inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold text-[var(--muted)] transition duration-300 hover:text-[var(--fg-strong)]"
             >
@@ -83,16 +98,17 @@ export function OpenSource() {
         </Reveal>
 
         <div className="grid gap-4 md:grid-cols-2">
-          {openSourcePackages.map((pkg, i) => (
-            <Reveal key={pkg.name} delay={Math.min(i * 0.04, 0.2)}>
-              <article className="glass flex h-full flex-col rounded-3xl p-5 transition hover:-translate-y-1 hover:border-[color-mix(in_oklab,var(--accent)_40%,var(--line))]">
+          {featured.map((pkg, i) => (
+            <Reveal key={pkg.id} delay={Math.min(i * 0.04, 0.2)}>
+              <article className="glass flex h-full flex-col rounded-3xl p-5 transition duration-300 hover:-translate-y-1 hover:border-[color-mix(in_oklab,var(--accent)_40%,var(--line))]">
                 <div className="flex items-start justify-between gap-3">
                   <div>
                     <h3 className="display text-lg font-semibold text-[var(--fg-strong)]">
                       {pkg.name}
                     </h3>
                     <p className="mt-1 text-xs text-[var(--muted)]">
-                      {pkg.language} · v{pkg.version}
+                      {pkg.language ?? 'TypeScript'} ·{' '}
+                      {pkg.npmVersion ? `v${pkg.npmVersion}` : productStatusLabel[pkg.status]}
                     </p>
                   </div>
                   <Star size={16} className="text-[var(--accent)]" aria-hidden />
@@ -105,17 +121,18 @@ export function OpenSource() {
                     <Badge key={tag}>{tag}</Badge>
                   ))}
                 </div>
-                <p className="mt-4 text-xs text-[var(--muted)]">Downloads: {pkg.downloads}</p>
                 <div className="mt-4 flex flex-wrap gap-3 text-sm">
-                  <a
-                    href={pkg.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 hover:text-[var(--accent)]"
-                  >
-                    <ExternalLink size={14} /> Repository
-                  </a>
-                  {'npm' in pkg && pkg.npm ? (
+                  {pkg.github ? (
+                    <a
+                      href={pkg.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 hover:text-[var(--accent)]"
+                    >
+                      <ExternalLink size={14} /> Repository
+                    </a>
+                  ) : null}
+                  {pkg.npm ? (
                     <a
                       href={pkg.npm}
                       target="_blank"

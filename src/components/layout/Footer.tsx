@@ -12,13 +12,22 @@ export function Footer() {
           <p className="mt-1 text-sm text-[var(--muted)]">
             Backend · Cloud · DevOps · AI · Open Source
           </p>
-          <Link
-            to="/sponsor"
-            className="mt-3 inline-flex items-center gap-1.5 text-sm text-[var(--accent)] transition hover:underline"
-          >
-            <Heart size={14} aria-hidden />
-            Sponsor TheInfyArk
-          </Link>
+          <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
+            <Link
+              to="/products"
+              className="inline-flex items-center gap-1.5 text-sm text-[var(--accent)] transition hover:underline"
+            >
+              <Package size={14} aria-hidden />
+              All products
+            </Link>
+            <Link
+              to="/sponsor"
+              className="inline-flex items-center gap-1.5 text-sm text-[var(--accent)] transition hover:underline"
+            >
+              <Heart size={14} aria-hidden />
+              Sponsor TheInfyArk
+            </Link>
+          </div>
         </div>
         <div className="flex items-center gap-3">
           <a

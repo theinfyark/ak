@@ -44,13 +44,16 @@ export const sponsor = {
   ],
   upi: {
     name: 'Anil Kumar Patnala',
-    qrPath: 'upi-qr.png',
     india: {
+      label: 'India',
       id: 'anilachary67-4@okaxis',
+      qrPath: 'upi-qr-india.png',
       payUri: 'upi://pay?pa=anilachary67-4@okaxis&pn=Anil%20Kumar%20Patnala&cu=INR',
     },
     international: {
+      label: 'International',
       id: 'anilachary67-3@okicici',
+      qrPath: 'upi-qr-international.png',
       payUri: 'upi://pay?pa=anilachary67-3@okicici&pn=Anil%20Kumar%20Patnala&cu=INR',
     },
   },
@@ -79,34 +82,24 @@ export const sponsor = {
   ],
   roadmap: [
     {
-      name: 'streamflow-ai',
+      name: 'V Cards',
+      status: 'Coming soon',
+      blurb: 'Smart digital business cards with QR, links, and shareable profiles.',
+    },
+    {
+      name: 'node-gen',
       status: 'In progress',
-      blurb: 'Unified streaming SDK across major LLM providers.',
+      blurb: 'Interactive CLI to scaffold production-ready Node.js backends.',
     },
     {
-      name: 'deploy-doctor-cli',
-      status: 'In progress',
-      blurb: 'Pre-deploy health checks for Docker, K8s, Helm, and cloud CLIs.',
+      name: 'env-ok',
+      status: 'Publishing next',
+      blurb: 'Tiny TypeScript environment validator for Node.js.',
     },
     {
-      name: 'mcp-server-plus',
-      status: 'Next',
-      blurb: 'Ergonomic toolkit for Model Context Protocol servers.',
-    },
-    {
-      name: 'ai-cost-insight',
-      status: 'Next',
-      blurb: 'Token and cost tracking across providers.',
-    },
-    {
-      name: 'ai-telemetry-kit',
-      status: 'Planned',
-      blurb: 'Observability helpers for GenAI workloads.',
-    },
-    {
-      name: 'db-health',
-      status: 'Planned',
-      blurb: 'Database readiness and pool health for Node services.',
+      name: 'docker-health-check',
+      status: 'Publishing next',
+      blurb: 'Docker/K8s-ready health checks for databases, Redis, and probes.',
     },
   ],
   monthlyGoals: [
@@ -580,98 +573,44 @@ export const projects: Project[] = [
   },
 ];
 
-export const openSourcePackages = [
-  {
-    name: 'streamflow-ai',
-    description:
-      'Unified TypeScript streaming SDK for OpenAI, Azure OpenAI, Anthropic, Gemini, Ollama, Groq, DeepSeek, Mistral, and OpenRouter.',
-    language: 'TypeScript',
-    tags: ['ai', 'llm', 'streaming'],
-    version: '—',
-    downloads: 'Placeholder — publishing soon',
-    url: 'https://github.com/theinfyark/streamflow-ai',
-    npm: 'https://www.npmjs.com/package/streamflow-ai',
-  },
-  {
-    name: 'deploy-doctor-cli',
-    description:
-      'Deployment validation CLI — Docker, Kubernetes, Helm, Terraform, cloud CLIs, Node, disk, memory, ports, and networking.',
-    language: 'TypeScript',
-    tags: ['devops', 'cli', 'kubernetes'],
-    version: '—',
-    downloads: 'Placeholder — publishing soon',
-    url: 'https://github.com/theinfyark/deploy-doctor-cli',
-  },
-  {
-    name: 'env-ok',
-    description:
-      'Tiny TypeScript environment validator with Enum, Boolean, Email, URL, Port, Secret, and defaults.',
-    language: 'TypeScript',
-    tags: ['node', 'config', 'validation'],
-    version: '—',
-    downloads: 'Placeholder — publishing soon',
-    url: 'https://github.com/theinfyark/env-ok',
-  },
-  {
-    name: 'rag-toolkit',
-    description:
-      'Tiny RAG toolkit — chunking, embeddings, similarity search, and context building.',
-    language: 'JavaScript',
-    tags: ['ai', 'rag'],
-    version: '—',
-    downloads: 'Placeholder — publishing soon',
-    url: 'https://github.com/theinfyark/rag-toolkit',
-  },
-  {
-    name: 'express-api-starter',
-    description:
-      'Production-ready Express API starter with logger, errors, JWT, rate limit, CORS, Helmet, request IDs, and health checks.',
-    language: 'JavaScript',
-    tags: ['backend', 'express'],
-    version: '—',
-    downloads: 'Placeholder — publishing soon',
-    url: 'https://github.com/theinfyark/express-api-starter',
-  },
-  {
-    name: 'mcp-server-plus',
-    description: 'MCP Server Toolkit — typed helpers for building Model Context Protocol servers.',
-    language: 'TypeScript',
-    tags: ['mcp', 'ai', 'toolkit'],
-    version: '—',
-    downloads: 'Placeholder — publishing soon',
-    url: 'https://github.com/theinfyark/mcp-server-plus',
-  },
-  {
-    name: 'ai-cost-insight',
-    description: 'Universal AI cost and token usage tracker.',
-    language: 'TypeScript',
-    tags: ['ai', 'cost', 'observability'],
-    version: '—',
-    downloads: 'Placeholder — publishing soon',
-    url: 'https://github.com/theinfyark/ai-cost-insight',
-  },
-  {
-    name: 'azure-secret-manager',
-    description:
-      'Tiny Azure Key Vault helper — get secrets with DefaultAzureCredential, caching, and a clean API.',
-    language: 'JavaScript',
-    tags: ['azure', 'security'],
-    version: '—',
-    downloads: 'Placeholder — publishing soon',
-    url: 'https://github.com/theinfyark/azure-secret-manager',
-  },
-] as const;
+import {
+  featuredLibraryIds,
+  featuredLibraryProducts,
+  libraryProducts,
+  productMatchesTab,
+  productStatusLabel,
+  productTabs,
+  productsCatalog,
+  upcomingProducts,
+  type Product,
+  type ProductStatus,
+  type ProductTab,
+} from './products';
+
+export {
+  featuredLibraryIds,
+  featuredLibraryProducts,
+  libraryProducts,
+  productMatchesTab,
+  productStatusLabel,
+  productTabs,
+  productsCatalog,
+  upcomingProducts,
+  type Product,
+  type ProductStatus,
+  type ProductTab,
+};
 
 export const githubProfile = {
   org: {
     login: 'theinfyark',
     name: 'TheInfyArk',
-    bio: 'AI, Cloud & Backend Frontend libraries',
+    bio: 'AI, cloud, and backend libraries for TypeScript and Node.js',
     tagline: 'BUILD · ROBUST · DEPLOY · SCALE',
     logoPath: 'theinfyark-logo.png',
     url: 'https://github.com/theinfyark',
     npm: 'https://www.npmjs.com/~anilachary',
-    publicRepos: 20,
+    publicRepos: 21,
     followers: 0,
   },
   personal: {
@@ -681,14 +620,7 @@ export const githubProfile = {
     followers: 0,
   },
   languages: ['TypeScript', 'JavaScript', 'HTML'],
-  featured: [
-    'streamflow-ai',
-    'deploy-doctor-cli',
-    'mcp-server-plus',
-    'express-api-starter',
-    'rag-toolkit',
-    'ai-telemetry-kit',
-  ],
+  featured: featuredLibraryIds,
 } as const;
 
 export const certifications = [

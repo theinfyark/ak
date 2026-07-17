@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Heart, Menu, Moon, Sun, X } from 'lucide-react';
+import { Heart, Menu, Moon, Package, Sun, X } from 'lucide-react';
 import { siteConfig } from '@/data/portfolio';
 import { assetUrl, cn } from '@/lib/utils';
 import type { Theme } from '@/hooks/useTheme';
@@ -66,6 +66,18 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
             </a>
           ))}
           <Link
+            to="/products"
+            className={cn(
+              'inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm transition',
+              pathname === '/products'
+                ? 'bg-[color-mix(in_oklab,var(--accent)_16%,transparent)] text-[var(--accent)]'
+                : 'text-[var(--muted)] hover:bg-[color-mix(in_oklab,var(--fg)_6%,transparent)] hover:text-[var(--fg-strong)]',
+            )}
+          >
+            <Package size={14} aria-hidden />
+            Products
+          </Link>
+          <Link
             to="/sponsor"
             className={cn(
               'inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm transition',
@@ -119,6 +131,16 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
                 </a>
               </li>
             ))}
+            <li>
+              <Link
+                to="/products"
+                className="flex items-center gap-2 rounded-lg px-3 py-3 text-[var(--fg-strong)] transition-colors duration-200 hover:bg-[color-mix(in_oklab,var(--fg)_6%,transparent)]"
+                onClick={() => setOpen(false)}
+              >
+                <Package size={16} aria-hidden />
+                Products
+              </Link>
+            </li>
             <li>
               <Link
                 to="/sponsor"

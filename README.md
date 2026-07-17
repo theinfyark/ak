@@ -19,13 +19,15 @@ Optimized for **GitHub Pages** — no server, no SSR, no API routes.
 
 - Hero with typing tagline, floating stack, CTAs
 - About, skills (filterable proficiency), experience timeline
-- Featured projects (filterable), InfyArk open source
+- Featured projects (filterable), TheInfyArk open source (featured npm libraries)
 - Certifications, awards, education
 - Contact (email, GitHub, LinkedIn, npm, WhatsApp, phone)
+- Products catalog (`/products`) — all npm libraries, V Cards placeholders, filters
 - Sponsor page (`/sponsor`) — UPI, roadmap, monthly goals
 - Dark-first theme with light toggle, reduced-motion support
 
-Content is sourced from `Anil_Kumar_P_Full_Stack_Cloud_9_Years.pdf` via `src/data/portfolio.ts`.
+Content is sourced from `Anil_Kumar_P_Full_Stack_Cloud_9_Years.pdf` via `src/data/portfolio.ts`.  
+Product catalog (single source of truth): `src/data/products.ts` — folder name === npm name === GitHub repo name.
 
 ## Local development
 
@@ -48,9 +50,10 @@ npm run preview
 ```text
 src/
   components/   layout, sections, effects, ui
-  data/         resume-accurate portfolio content
+  data/         portfolio.ts (resume, sponsor) + products.ts (catalog)
   hooks/        theme, typing, counters, reduced motion
   lib/          helpers
+  pages/        Home, Products, Sponsor
 public/         resume PDF, favicon, SEO assets
 .github/workflows/static.yml   build + Pages deploy
 ```

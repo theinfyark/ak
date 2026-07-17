@@ -4,6 +4,7 @@ import { Footer } from '@/components/layout/Footer';
 import { LoadingScreen } from '@/components/layout/LoadingScreen';
 import { ScrollToTop } from '@/components/layout/ScrollToTop';
 import { HomePage } from '@/pages/HomePage';
+import { ProductsPage } from '@/pages/ProductsPage';
 import { SponsorPage } from '@/pages/SponsorPage';
 import { useTheme } from '@/hooks/useTheme';
 
@@ -22,6 +23,7 @@ export default function App() {
       <Navbar theme={theme} onToggleTheme={toggle} />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/products" element={<ProductsPage />} />
         <Route path="/sponsor" element={<SponsorPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
