@@ -1,4 +1,4 @@
-import { Github, Heart, Linkedin, Mail, Package } from 'lucide-react';
+import { FileText, Github, Heart, Linkedin, Mail, Package } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { siteConfig } from '@/data/portfolio';
 
@@ -13,6 +13,13 @@ export function Footer() {
             Backend · Cloud · DevOps · AI · Open Source
           </p>
           <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
+            <Link
+              to="/resume"
+              className="inline-flex items-center gap-1.5 text-sm text-[var(--accent)] transition hover:underline"
+            >
+              <FileText size={14} aria-hidden />
+              One-page resume
+            </Link>
             <Link
               to="/products"
               className="inline-flex items-center gap-1.5 text-sm text-[var(--accent)] transition hover:underline"
