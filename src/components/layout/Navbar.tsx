@@ -1,17 +1,18 @@
 import { useEffect, useState } from 'react';
-import { Menu, Moon, Sun, X } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
+import { Heart, Menu, Moon, Sun, X } from 'lucide-react';
 import { siteConfig } from '@/data/portfolio';
-import { cn } from '@/lib/utils';
+import { assetUrl, cn } from '@/lib/utils';
 import type { Theme } from '@/hooks/useTheme';
 
-const links = [
-  { href: '#about', label: 'About' },
-  { href: '#skills', label: 'Skills' },
-  { href: '#experience', label: 'Experience' },
-  { href: '#projects', label: 'Projects' },
-  { href: '#opensource', label: 'Open Source' },
-  { href: '#certifications', label: 'Certs' },
-  { href: '#contact', label: 'Contact' },
+const sectionLinks = [
+  { hash: '#about', label: 'About' },
+  { hash: '#skills', label: 'Skills' },
+  { hash: '#experience', label: 'Experience' },
+  { hash: '#projects', label: 'Projects' },
+  { hash: '#opensource', label: 'Open Source' },
+  { hash: '#certifications', label: 'Certs' },
+  { hash: '#contact', label: 'Contact' },
 ] as const;
 
 type NavbarProps = {
@@ -22,6 +23,8 @@ type NavbarProps = {
 export function Navbar({ theme, onToggleTheme }: NavbarProps) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { pathname } = useLocation();
+  const onHome = pathname === '/';
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 16);
@@ -37,6 +40,8 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
     };
   }, [open]);
 
+  const sectionHref = (hash: string) => (onHome ? hash : `${assetUrl('')}${hash}`);
+
   return (
     <header
       className={cn(
@@ -45,24 +50,33 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
       )}
     >
       <div className="container-shell flex h-16 items-center justify-between gap-4">
-        <a
-          href="#home"
-          className="display text-lg font-bold tracking-tight text-[var(--fg-strong)]"
-        >
+        <Link to="/" className="display text-lg font-bold tracking-tight text-[var(--fg-strong)]">
           {siteConfig.shortName}
           <span className="text-[var(--accent)]">.</span>
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
-          {links.map((link) => (
+          {sectionLinks.map((link) => (
             <a
-              key={link.href}
-              href={link.href}
+              key={link.hash}
+              href={sectionHref(link.hash)}
               className="rounded-lg px-3 py-2 text-sm text-[var(--muted)] transition hover:bg-[color-mix(in_oklab,var(--fg)_6%,transparent)] hover:text-[var(--fg-strong)]"
             >
               {link.label}
             </a>
           ))}
+          <Link
+            to="/sponsor"
+            className={cn(
+              'inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm transition',
+              pathname === '/sponsor'
+                ? 'bg-[color-mix(in_oklab,var(--accent)_16%,transparent)] text-[var(--accent)]'
+                : 'text-[var(--muted)] hover:bg-[color-mix(in_oklab,var(--fg)_6%,transparent)] hover:text-[var(--fg-strong)]',
+            )}
+          >
+            <Heart size={14} aria-hidden />
+            Sponsor
+          </Link>
         </nav>
 
         <div className="flex items-center gap-2">
@@ -94,10 +108,10 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
           aria-label="Mobile"
         >
           <ul className="flex flex-col gap-1">
-            {links.map((link) => (
-              <li key={link.href}>
+            {sectionLinks.map((link) => (
+              <li key={link.hash}>
                 <a
-                  href={link.href}
+                  href={sectionHref(link.hash)}
                   className="block rounded-lg px-3 py-3 text-[var(--fg-strong)]"
                   onClick={() => setOpen(false)}
                 >
@@ -105,6 +119,16 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
                 </a>
               </li>
             ))}
+            <li>
+              <Link
+                to="/sponsor"
+                className="flex items-center gap-2 rounded-lg px-3 py-3 text-[var(--fg-strong)]"
+                onClick={() => setOpen(false)}
+              >
+                <Heart size={16} aria-hidden />
+                Sponsor
+              </Link>
+            </li>
           </ul>
         </nav>
       ) : null}

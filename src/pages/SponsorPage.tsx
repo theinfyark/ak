@@ -1,0 +1,314 @@
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Check, Coffee, Copy, Github, Heart, Package, Sparkles, Target } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { siteConfig, sponsor } from '@/data/portfolio';
+import { assetUrl } from '@/lib/utils';
+import { Reveal } from '@/components/ui/Reveal';
+import { Badge, Button, SectionHeading } from '@/components/ui/primitives';
+
+export function SponsorPage() {
+  const [copied, setCopied] = useState(false);
+
+  const copyUpi = async () => {
+    try {
+      await navigator.clipboard.writeText(sponsor.upi.id);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 2000);
+    } catch {
+      setCopied(false);
+    }
+  };
+
+  return (
+    <main>
+      <section className="relative isolate overflow-hidden pt-24 pb-16 sm:pt-28">
+        <div className="absolute inset-0 mesh opacity-80" aria-hidden />
+        <div className="absolute inset-0 grid-fade opacity-30" aria-hidden />
+
+        <div className="container-shell relative z-10">
+          <motion.p
+            className="text-xs font-semibold tracking-[0.22em] text-[var(--accent)] uppercase"
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.45 }}
+          >
+            Sponsor
+          </motion.p>
+
+          <motion.h1
+            className="display mt-3 max-w-3xl text-4xl font-bold text-[var(--fg-strong)] sm:text-5xl lg:text-6xl"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.55, delay: 0.05 }}
+          >
+            {sponsor.brand}
+          </motion.h1>
+
+          <motion.p
+            className="mt-4 max-w-2xl text-lg text-[var(--muted)]"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.55, delay: 0.12 }}
+          >
+            {sponsor.tagline}
+          </motion.p>
+
+          <motion.p
+            className="mt-3 text-sm text-[var(--fg)]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+          >
+            Maintained by{' '}
+            <span className="font-semibold text-[var(--fg-strong)]">{siteConfig.name}</span>
+          </motion.p>
+
+          <motion.div
+            className="mt-8 flex flex-wrap gap-3"
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.28 }}
+          >
+            <Button href="#upi">
+              <Heart size={16} /> Support via UPI
+            </Button>
+            <Button href="#roadmap" variant="secondary">
+              <Package size={16} /> Roadmap
+            </Button>
+            <Link
+              to="/"
+              className="btn-ripple inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold text-[var(--muted)] transition duration-300 hover:text-[var(--fg-strong)]"
+            >
+              ← Back to portfolio
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="section-pad !pt-0">
+        <div className="container-shell">
+          <Reveal>
+            <SectionHeading
+              eyebrow="❤️ Why support THE INFY ARK"
+              title="Your open-source mission"
+              description={sponsor.mission}
+            />
+          </Reveal>
+
+          <Reveal>
+            <ul className="grid gap-3 sm:grid-cols-2">
+              {sponsor.whySupport.map((item) => (
+                <li
+                  key={item}
+                  className="glass flex items-start gap-3 rounded-2xl p-5 text-sm leading-relaxed text-[var(--muted)]"
+                >
+                  <Sparkles
+                    size={18}
+                    className="mt-0.5 shrink-0 text-[var(--accent)]"
+                    aria-hidden
+                  />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+        </div>
+      </section>
+
+      <section id="upi" className="section-pad !pt-0">
+        <div className="container-shell">
+          <Reveal>
+            <SectionHeading
+              eyebrow="Donate in India"
+              title="UPI"
+              description="Fastest way to support — scan the QR or pay to the UPI ID below."
+            />
+          </Reveal>
+
+          <Reveal>
+            <div className="glass grid gap-8 rounded-3xl p-6 sm:p-8 lg:grid-cols-[minmax(0,280px)_1fr] lg:items-center">
+              <div className="mx-auto w-full max-w-[280px] overflow-hidden rounded-2xl border border-[var(--line)] shadow-sm">
+                <img
+                  src={assetUrl(sponsor.upi.qrPath)}
+                  alt={`UPI QR code for ${sponsor.upi.name} — ${sponsor.upi.id}`}
+                  width={280}
+                  height={334}
+                  className="h-auto w-full"
+                />
+              </div>
+
+              <div>
+                <p className="text-sm text-[var(--muted)]">Payment via UPI</p>
+                <p className="display mt-1 text-2xl font-semibold text-[var(--fg-strong)]">
+                  {sponsor.upi.name}
+                </p>
+
+                <div className="mt-5 flex flex-wrap items-center gap-3">
+                  <code className="rounded-xl border border-[var(--line)] bg-[color-mix(in_oklab,var(--bg)_40%,transparent)] px-4 py-2.5 font-mono text-sm text-[var(--fg-strong)] sm:text-base">
+                    {sponsor.upi.id}
+                  </code>
+                  <button
+                    type="button"
+                    onClick={copyUpi}
+                    className="inline-flex items-center gap-2 rounded-xl border border-[var(--line)] px-3 py-2.5 text-sm font-semibold transition hover:border-[var(--accent)]"
+                  >
+                    {copied ? (
+                      <Check size={16} className="text-[var(--accent)]" />
+                    ) : (
+                      <Copy size={16} />
+                    )}
+                    {copied ? 'Copied' : 'Copy UPI ID'}
+                  </button>
+                </div>
+
+                <p className="mt-4 text-sm text-[var(--muted)]">
+                  Open any UPI app (GPay, PhonePe, Paytm, BHIM) and scan the QR, or paste the ID
+                  above.
+                </p>
+
+                <div className="mt-6">
+                  <Button href={sponsor.upi.payUri} external variant="secondary">
+                    Open UPI app
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="section-pad !pt-0">
+        <div className="container-shell">
+          <Reveal>
+            <SectionHeading
+              eyebrow="More ways to help"
+              title="Global sponsorship channels"
+              description="GitHub Sponsors, Buy Me a Coffee, and Ko-fi will appear here as soon as they are available."
+            />
+          </Reveal>
+
+          <div className="grid gap-4 md:grid-cols-3">
+            {sponsor.channels.map((channel, i) => (
+              <Reveal key={channel.id} delay={Math.min(i * 0.05, 0.15)}>
+                <article className="glass flex h-full flex-col rounded-3xl p-6">
+                  <div className="flex items-center justify-between gap-3">
+                    {channel.id === 'github-sponsors' ? (
+                      <Github size={22} className="text-[var(--accent)]" aria-hidden />
+                    ) : (
+                      <Coffee size={22} className="text-[var(--accent)]" aria-hidden />
+                    )}
+                    <Badge>Coming soon</Badge>
+                  </div>
+                  <h3 className="display mt-4 text-lg font-semibold text-[var(--fg-strong)]">
+                    {channel.label}
+                  </h3>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-[var(--muted)]">
+                    {channel.description}
+                  </p>
+                  {channel.href ? (
+                    <Button href={channel.href} external className="mt-5" variant="secondary">
+                      Open {channel.label}
+                    </Button>
+                  ) : (
+                    <p className="mt-5 text-xs text-[var(--muted)]">
+                      Link will be added when ready.
+                    </p>
+                  )}
+                </article>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="roadmap" className="section-pad !pt-0">
+        <div className="container-shell">
+          <Reveal>
+            <SectionHeading
+              eyebrow="Roadmap"
+              title="Upcoming npm packages"
+              description="Sponsorship helps ship and maintain the next wave of InfyArk libraries."
+            />
+          </Reveal>
+
+          <div className="grid gap-4 md:grid-cols-2">
+            {sponsor.roadmap.map((item, i) => (
+              <Reveal key={item.name} delay={Math.min(i * 0.04, 0.2)}>
+                <article className="glass rounded-3xl p-5 transition hover:-translate-y-1 hover:border-[color-mix(in_oklab,var(--accent)_40%,var(--line))]">
+                  <div className="flex items-start justify-between gap-3">
+                    <h3 className="display text-lg font-semibold text-[var(--fg-strong)]">
+                      {item.name}
+                    </h3>
+                    <Badge>{item.status}</Badge>
+                  </div>
+                  <p className="mt-3 text-sm leading-relaxed text-[var(--muted)]">{item.blurb}</p>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-pad !pt-0">
+        <div className="container-shell">
+          <Reveal>
+            <SectionHeading
+              eyebrow="Goals"
+              title="Monthly sponsor goals"
+              description="Transparent targets for infrastructure, maintenance, and shipping velocity."
+            />
+          </Reveal>
+
+          <div className="grid gap-4 lg:grid-cols-3">
+            {sponsor.monthlyGoals.map((goal, i) => (
+              <Reveal key={goal.label} delay={Math.min(i * 0.05, 0.15)}>
+                <article className="glass flex h-full flex-col rounded-3xl p-6">
+                  <div className="flex items-center gap-2 text-[var(--accent)]">
+                    <Target size={18} aria-hidden />
+                    <span className="text-xs font-semibold tracking-[0.18em] uppercase">
+                      {goal.label}
+                    </span>
+                  </div>
+                  <p className="display mt-4 text-3xl font-bold text-[var(--fg-strong)]">
+                    {goal.amount}
+                    <span className="ml-1 text-base font-medium text-[var(--muted)]">/ month</span>
+                  </p>
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-[var(--muted)]">
+                    {goal.detail}
+                  </p>
+                  <div className="mt-5">
+                    <div className="mb-2 flex justify-between text-xs text-[var(--muted)]">
+                      <span>Progress</span>
+                      <span>{goal.progress}%</span>
+                    </div>
+                    <div className="h-2 overflow-hidden rounded-full bg-[var(--line)]">
+                      <div
+                        className="h-full rounded-full bg-[var(--accent)]"
+                        style={{ width: `${goal.progress}%` }}
+                      />
+                    </div>
+                  </div>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal>
+            <div className="mt-10 flex flex-wrap items-center gap-3">
+              <Button href="#upi">
+                <Heart size={16} /> Sponsor with UPI
+              </Button>
+              <Link
+                to="/"
+                className="text-sm text-[var(--muted)] transition hover:text-[var(--accent)]"
+              >
+                Return to portfolio →
+              </Link>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+    </main>
+  );
+}

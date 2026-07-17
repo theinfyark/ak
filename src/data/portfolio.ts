@@ -27,6 +27,100 @@ export const siteConfig = {
   },
 } as const;
 
+export const sponsor = {
+  brand: 'THE INFY ARK',
+  tagline: 'Open-source libraries for AI, cloud, and backend developers.',
+  mission:
+    'THE INFY ARK builds small, production-ready TypeScript and JavaScript packages — streaming LLM SDKs, RAG helpers, Express starters, Azure utilities, and DevOps CLIs — so teams ship reliable systems faster without reinventing the basics.',
+  whySupport: [
+    'Keep npm packages maintained, typed, tested, and documented',
+    'Fund CI, releases, and security updates across the org',
+    'Accelerate the roadmap of AI, cloud, and backend tooling',
+    'Support an independent Indian open-source maintainer',
+  ],
+  upi: {
+    name: 'Anil Kumar Patnala',
+    id: 'anilachary67-4@okaxis',
+    qrPath: 'upi-qr.png',
+    payUri: 'upi://pay?pa=anilachary67-4@okaxis&pn=Anil%20Kumar%20Patnala&cu=INR',
+  },
+  channels: [
+    {
+      id: 'github-sponsors',
+      label: 'GitHub Sponsors',
+      description: 'Recurring support on GitHub when the Sponsors profile is live.',
+      href: undefined,
+      status: 'coming-soon' as const,
+    },
+    {
+      id: 'buymeacoffee',
+      label: 'Buy Me a Coffee',
+      description: 'One-time tips for coffee-fueled release nights.',
+      href: undefined,
+      status: 'coming-soon' as const,
+    },
+    {
+      id: 'kofi',
+      label: 'Ko-fi',
+      description: 'Support the org with a tip or membership.',
+      href: undefined,
+      status: 'coming-soon' as const,
+    },
+  ],
+  roadmap: [
+    {
+      name: 'streamflow-ai',
+      status: 'In progress',
+      blurb: 'Unified streaming SDK across major LLM providers.',
+    },
+    {
+      name: 'deploy-doctor-cli',
+      status: 'In progress',
+      blurb: 'Pre-deploy health checks for Docker, K8s, Helm, and cloud CLIs.',
+    },
+    {
+      name: 'mcp-server-plus',
+      status: 'Next',
+      blurb: 'Ergonomic toolkit for Model Context Protocol servers.',
+    },
+    {
+      name: 'ai-cost-insight',
+      status: 'Next',
+      blurb: 'Token and cost tracking across providers.',
+    },
+    {
+      name: 'ai-telemetry-kit',
+      status: 'Planned',
+      blurb: 'Observability helpers for GenAI workloads.',
+    },
+    {
+      name: 'db-health',
+      status: 'Planned',
+      blurb: 'Database readiness and pool health for Node services.',
+    },
+  ],
+  monthlyGoals: [
+    {
+      amount: '₹5,000',
+      label: 'Infrastructure',
+      detail: 'Cover npm org costs, CI minutes, and domain/docs hosting.',
+      progress: 0,
+    },
+    {
+      amount: '₹15,000',
+      label: 'Maintenance',
+      detail: 'Dedicated hours each month for bugs, types, and docs across packages.',
+      progress: 0,
+    },
+    {
+      amount: '₹40,000',
+      label: 'Ship velocity',
+      detail: 'Fund focused sprints to publish the next wave of InfyArk libraries.',
+      progress: 0,
+    },
+  ],
+} as const;
+
 export const stats = [
   { label: 'Years Experience', value: 8, suffix: '+' },
   { label: 'Dev Effort Reduced', value: 80, suffix: '%' },

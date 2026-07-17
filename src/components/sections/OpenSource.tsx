@@ -1,4 +1,5 @@
-import { ExternalLink, GitBranch, Package, Star } from 'lucide-react';
+import { ExternalLink, GitBranch, Heart, Package, Star } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { githubProfile, openSourcePackages, siteConfig } from '@/data/portfolio';
 import { Reveal } from '@/components/ui/Reveal';
 import { Badge, Button, SectionHeading } from '@/components/ui/primitives';
@@ -57,6 +58,12 @@ export function OpenSource() {
             <Button href={siteConfig.social.npm} external variant="ghost">
               <Package size={16} /> npm profile
             </Button>
+            <Link
+              to="/sponsor"
+              className="btn-ripple inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold text-[var(--muted)] transition duration-300 hover:text-[var(--fg-strong)]"
+            >
+              <Heart size={16} /> Sponsor
+            </Link>
           </div>
         </Reveal>
 

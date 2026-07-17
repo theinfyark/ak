@@ -22,6 +22,7 @@ Optimized for **GitHub Pages** — no server, no SSR, no API routes.
 - Featured projects (filterable), InfyArk open source
 - Certifications, awards, education
 - Contact (email, GitHub, LinkedIn, npm, WhatsApp, phone)
+- Sponsor page (`/sponsor`) — UPI, roadmap, monthly goals
 - Dark-first theme with light toggle, reduced-motion support
 
 Content is sourced from `Anil_Kumar_P_Full_Stack_Cloud_9_Years.pdf` via `src/data/portfolio.ts`.

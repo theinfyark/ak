@@ -1,15 +1,10 @@
+import { Navigate, Route, Routes } from 'react-router-dom';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { LoadingScreen } from '@/components/layout/LoadingScreen';
 import { ScrollToTop } from '@/components/layout/ScrollToTop';
-import { Hero } from '@/components/sections/Hero';
-import { About } from '@/components/sections/About';
-import { Skills } from '@/components/sections/Skills';
-import { Experience } from '@/components/sections/Experience';
-import { Projects } from '@/components/sections/Projects';
-import { OpenSource } from '@/components/sections/OpenSource';
-import { Certifications } from '@/components/sections/Certifications';
-import { Contact } from '@/components/sections/Contact';
+import { HomePage } from '@/pages/HomePage';
+import { SponsorPage } from '@/pages/SponsorPage';
 import { useTheme } from '@/hooks/useTheme';
 
 export default function App() {
@@ -25,16 +20,11 @@ export default function App() {
         Skip to content
       </a>
       <Navbar theme={theme} onToggleTheme={toggle} />
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Experience />
-        <Projects />
-        <OpenSource />
-        <Certifications />
-        <Contact />
-      </main>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/sponsor" element={<SponsorPage />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
       <Footer />
       <ScrollToTop />
     </>

@@ -1,4 +1,5 @@
-import { Github, Linkedin, Mail, Package } from 'lucide-react';
+import { Github, Heart, Linkedin, Mail, Package } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { siteConfig } from '@/data/portfolio';
 
 export function Footer() {
@@ -11,6 +12,13 @@ export function Footer() {
           <p className="mt-1 text-sm text-[var(--muted)]">
             Backend · Cloud · DevOps · AI · Open Source
           </p>
+          <Link
+            to="/sponsor"
+            className="mt-3 inline-flex items-center gap-1.5 text-sm text-[var(--accent)] transition hover:underline"
+          >
+            <Heart size={14} aria-hidden />
+            Sponsor THE INFY ARK
+          </Link>
         </div>
         <div className="flex items-center gap-3">
           <a
