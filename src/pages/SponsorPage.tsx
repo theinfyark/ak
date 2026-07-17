@@ -141,48 +141,53 @@ export function SponsorPage() {
           </Reveal>
 
           <Reveal>
-            <p className="mb-6 text-sm text-[var(--muted)]">
+            <p className="mb-8 text-sm text-[var(--muted)]">
               Payment via UPI to{' '}
-              <span className="font-semibold text-[var(--fg-strong)]">{sponsor.upi.name}</span>
+              <span className="font-semibold text-[var(--fg-strong)]">{sponsor.upi.name}</span>.
+              Scan the correct QR for your region.
             </p>
 
-            <div className="grid gap-6 lg:grid-cols-2">
+            <div className="grid gap-8 md:grid-cols-2">
               {(['india', 'international'] as const).map((type) => {
                 const option = sponsor.upi[type];
                 return (
                   <article
                     key={type}
-                    className="glass flex flex-col rounded-3xl p-6 transition duration-300 hover:-translate-y-1 hover:border-[color-mix(in_oklab,var(--accent)_40%,var(--line))] sm:p-8"
+                    className="glass flex flex-col items-center rounded-3xl p-6 text-center transition duration-300 hover:-translate-y-1 hover:border-[color-mix(in_oklab,var(--accent)_40%,var(--line))] sm:p-8"
                   >
-                    <p className="text-xs font-semibold tracking-[0.14em] text-[var(--accent)] uppercase">
-                      {option.label}
+                    <p className="text-xs font-semibold tracking-[0.18em] text-[var(--accent)] uppercase">
+                      {type === 'india' ? 'India payment' : 'International payment'}
+                    </p>
+                    <p className="display mt-2 text-lg font-semibold text-[var(--fg-strong)]">
+                      {option.id}
                     </p>
 
-                    <div className="mx-auto mt-5 w-full max-w-[260px] overflow-hidden rounded-2xl border border-[var(--line)] shadow-sm">
+                    <div className="mt-6 w-full max-w-[280px] overflow-hidden rounded-2xl border border-[var(--line)] bg-white shadow-md">
                       <img
                         src={assetUrl(option.qrPath)}
-                        alt={`${option.label} UPI QR code for ${sponsor.upi.name} — ${option.id}`}
-                        width={260}
-                        height={type === 'india' ? 310 : 260}
-                        className="h-auto w-full"
+                        alt={`${option.label} UPI QR — ${option.id}`}
+                        width={280}
+                        height={280}
+                        loading="eager"
+                        className="mx-auto block h-auto w-full"
                       />
                     </div>
 
-                    <div className="mt-5 flex flex-wrap items-center gap-3">
-                      <code className="rounded-xl border border-[var(--line)] bg-[color-mix(in_oklab,var(--bg)_40%,transparent)] px-3 py-2 font-mono text-sm text-[var(--fg-strong)] sm:text-base">
+                    <div className="mt-6 flex w-full flex-col items-center gap-3 sm:flex-row sm:justify-center">
+                      <code className="rounded-xl border border-[var(--line)] bg-[color-mix(in_oklab,var(--bg)_40%,transparent)] px-4 py-2 font-mono text-sm text-[var(--fg-strong)]">
                         {option.id}
                       </code>
                       <button
                         type="button"
                         onClick={() => copyUpi(type)}
-                        className="inline-flex items-center gap-2 rounded-xl border border-[var(--line)] px-3 py-2 text-sm font-semibold transition duration-300 hover:border-[var(--accent)]"
+                        className="inline-flex items-center gap-2 rounded-xl border border-[var(--line)] px-4 py-2 text-sm font-semibold transition duration-300 hover:border-[var(--accent)]"
                       >
                         {copied === type ? (
                           <Check size={16} className="text-[var(--accent)]" />
                         ) : (
                           <Copy size={16} />
                         )}
-                        {copied === type ? 'Copied' : 'Copy'}
+                        {copied === type ? 'Copied' : 'Copy UPI ID'}
                       </button>
                     </div>
 
@@ -196,9 +201,10 @@ export function SponsorPage() {
               })}
             </div>
 
-            <p className="mt-6 text-sm text-[var(--muted)]">
-              Scan the QR for your region, or copy the matching UPI ID into GPay, PhonePe, Paytm,
-              BHIM, or any app that supports international UPI transfers.
+            <p className="mt-8 text-center text-sm text-[var(--muted)]">
+              <strong className="text-[var(--fg)]">India:</strong> {sponsor.upi.india.id} ·{' '}
+              <strong className="text-[var(--fg)]">International:</strong>{' '}
+              {sponsor.upi.international.id}
             </p>
           </Reveal>
         </div>
