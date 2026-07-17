@@ -164,8 +164,8 @@ export type SkillCategory = {
 
 export const skillCategories: SkillCategory[] = [
   {
-    id: 'cloud-backend',
-    label: 'Cloud / Backend',
+    id: 'cloud',
+    label: 'Cloud',
     skills: [
       { name: 'Azure', level: 'expert' },
       { name: 'AWS', level: 'advanced' },
@@ -178,6 +178,12 @@ export const skillCategories: SkillCategory[] = [
       { name: 'K3s', level: 'advanced' },
       { name: 'Nginx', level: 'advanced' },
       { name: 'Istio', level: 'proficient' },
+    ],
+  },
+  {
+    id: 'backend',
+    label: 'Backend',
+    skills: [
       { name: 'Node.js', level: 'expert' },
       { name: 'Express.js', level: 'expert' },
       { name: 'Fastify', level: 'advanced' },
@@ -674,9 +680,14 @@ export const floatingTech = [
 /** Compact skill rows for the printable one-page resume */
 export const resumeSkillGroups = [
   {
-    label: 'Cloud / Backend',
+    label: 'Cloud',
     items:
-      'Azure · AWS · GCP · Azure DevOps · Terraform · Docker · Kubernetes · Helm · K3s · Nginx · Istio · Node.js · Express.js · Fastify · TypeScript · JavaScript · Redis · MS Graph API · REST APIs · GraphQL · PostgreSQL · MongoDB · Prisma · Flyway · BullMQ · HAPI FHIR · ODK',
+      'Azure · AWS · GCP · Azure DevOps · Terraform · Docker · Kubernetes · Helm · K3s · Nginx · Istio',
+  },
+  {
+    label: 'Backend',
+    items:
+      'Node.js · Express.js · Fastify · TypeScript · JavaScript · Redis · MS Graph API · REST APIs · GraphQL · PostgreSQL · MongoDB · Prisma · Flyway · BullMQ · HAPI FHIR · ODK',
   },
   {
     label: 'DevOps / DevSecOps & CI/CD',
