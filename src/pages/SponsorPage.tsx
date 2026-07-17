@@ -100,7 +100,7 @@ export function SponsorPage() {
         </div>
       </section>
 
-      <section className="section-pad !pt-0">
+      <section className="section-pad !pt-10 sm:!pt-14">
         <div className="container-shell">
           <Reveal>
             <SectionHeading
