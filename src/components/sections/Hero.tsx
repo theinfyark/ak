@@ -1,5 +1,14 @@
 import { motion } from 'framer-motion';
-import { ArrowDown, Github, Linkedin, Mail, Package, Phone, Sparkles } from 'lucide-react';
+import {
+  ArrowDown,
+  Github,
+  Linkedin,
+  Mail,
+  MessageCircle,
+  Package,
+  Phone,
+  Sparkles,
+} from 'lucide-react';
 import { floatingTech, siteConfig } from '@/data/portfolio';
 import { useTypingText } from '@/hooks/useTypingText';
 import { assetUrl, yearsOfExperienceLabel } from '@/lib/utils';
@@ -84,6 +93,9 @@ export function Hero() {
           </Button>
           <Button href="#contact" variant="ghost">
             <Mail size={16} /> Contact
+          </Button>
+          <Button href={siteConfig.social.whatsapp} variant="ghost" external>
+            <MessageCircle size={16} /> WhatsApp
           </Button>
         </motion.div>
 
