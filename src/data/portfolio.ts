@@ -17,7 +17,7 @@ export const siteConfig = {
   email: 'anilachary.p@gmail.com',
   phone: '+91 9885155454',
   phoneRaw: '919885155454',
-  resumePath: 'Anil_Kumar_Patnala_Lead_Software_Cloud_Engineer_9Y_Resume.pdf',
+  resumePath: 'Anil_Kumar_Patnala_Lead_Software_Cloud_Engineer_9Y_Resume_1.pdf',
   siteUrl: 'https://theinfyark.github.io/ak/',
   social: {
     github: 'https://github.com/theinfyark',
@@ -499,7 +499,8 @@ export const projects: Project[] = [
       'Intelligent quote generation using generative AI for dynamic pricing support and personalized quotes across NAM and MEA programs.',
     challenge: 'Produce consistent, context-aware quotes from complex product rules.',
     solution: 'Secure GenAI orchestration with enterprise identity and cloud-native deployment.',
-    impact: 'Shorter quote cycles with AI-assisted pricing support for Emerson NAM/MEA and related clients.',
+    impact:
+      'Shorter quote cycles with AI-assisted pricing support for Emerson NAM/MEA and related clients.',
     tech: ['Node.js', 'GenAI', 'PostgreSQL', 'Azure', 'Kubernetes'],
   },
   {
@@ -546,7 +547,8 @@ export const projects: Project[] = [
     description:
       'Interactive AR/WebAR experiences and catalog apps with 3D rendering, marker-based tracking, and cross-device responsiveness.',
     challenge: 'Deliver smooth AR on the open web under device and network constraints.',
-    solution: 'A-Frame / Three.js / WebXR / Babylon.js stack with caching, proxies, and performance tuning.',
+    solution:
+      'A-Frame / Three.js / WebXR / Babylon.js stack with caching, proxies, and performance tuning.',
     impact: 'Engaging marker-based AR product experiences for ALS, Cliff, and in-house campaigns.',
     tech: ['Three.js', 'A-Frame', 'WebXR', 'PWA', 'JSArToolKit', 'Babylon.js', '8th Wall'],
   },
