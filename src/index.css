@@ -133,7 +133,7 @@ a {
 .brand {
   font-family: var(--font-brand);
   letter-spacing: 0.03em;
-  font-weight: 600;
+  font-weight: 800;
   font-synthesis: weight;
   -webkit-text-stroke: 0.45px currentColor;
   paint-order: stroke fill;
