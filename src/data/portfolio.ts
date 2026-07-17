@@ -266,12 +266,12 @@ export const skillCategories: SkillCategory[] = [
     id: 'ai',
     label: 'AI · GenAI · LLM',
     skills: [
-      { name: 'OpenAI', level: 'advanced' },
-      { name: 'GenAI / Agents', level: 'advanced' },
-      { name: 'Copilot / Models', level: 'proficient' },
-      { name: 'OCR pipelines', level: 'advanced' },
-      { name: 'LLM streaming', level: 'proficient' },
-      { name: 'RAG (tooling)', level: 'proficient' },
+      { name: 'OpenAI', level: 'intermediate' },
+      { name: 'GenAI / Agents', level: 'intermediate' },
+      { name: 'Copilot / Models', level: 'working' },
+      { name: 'OCR pipelines', level: 'intermediate' },
+      { name: 'LLM streaming', level: 'working' },
+      { name: 'RAG (tooling)', level: 'working' },
     ],
   },
   {
@@ -312,7 +312,7 @@ export const skillCategories: SkillCategory[] = [
     id: 'frontend',
     label: 'Frontend',
     skills: [
-      { name: 'AngularJS', level: 'intermediate' },
+      { name: 'AngularJS', level: 'advanced' },
       { name: 'React.js', level: 'working' },
       { name: 'HTML / CSS / Bootstrap', level: 'proficient' },
       { name: 'MUI / TanStack', level: 'proficient' },
