@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, Package, Rocket, Sparkles } from 'lucide-react';
+import { Download, ExternalLink, Github, Package, Rocket, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import {
   githubProfile,
@@ -12,6 +12,8 @@ import {
   type ProductStatus,
   type ProductTab,
 } from '@/data/portfolio';
+import { useNpmWeeklyDownloads } from '@/hooks/useNpmWeeklyDownloads';
+import { formatDownloadCount, npmPackageName } from '@/lib/npmDownloads';
 import { assetUrl, cn } from '@/lib/utils';
 import { Reveal } from '@/components/ui/Reveal';
 import { Badge, Button, SectionHeading } from '@/components/ui/primitives';
@@ -30,7 +32,7 @@ function matchesTab(product: Product, tab: ProductTab): boolean {
   return productMatchesTab(product, tab);
 }
 
-function ProductCard({ product }: { product: Product }) {
+function ProductCard({ product, weeklyDownloads }: { product: Product; weeklyDownloads?: number }) {
   const isVCards = product.group === 'v-cards';
 
   return (
@@ -73,6 +75,13 @@ function ProductCard({ product }: { product: Product }) {
       </p>
 
       <div className="mt-4 flex flex-wrap gap-2">
+        {product.npmVersion ? <Badge>v{product.npmVersion}</Badge> : null}
+        {typeof weeklyDownloads === 'number' ? (
+          <Badge className="inline-flex items-center gap-1 border-[color-mix(in_oklab,var(--accent)_30%,var(--line))] text-[var(--accent)]">
+            <Download size={12} aria-hidden />
+            {formatDownloadCount(weeklyDownloads)} / week
+          </Badge>
+        ) : null}
         {product.tags.map((tag) => (
           <Badge key={tag}>{tag}</Badge>
         ))}
@@ -121,6 +130,16 @@ function ProductCard({ product }: { product: Product }) {
 
 export function ProductsPage() {
   const [tab, setTab] = useState<ProductTab>('all');
+
+  const npmNames = useMemo(
+    () =>
+      productsCatalog
+        .map((product) => npmPackageName(product))
+        .filter((name): name is string => Boolean(name)),
+    [],
+  );
+
+  const { byPackage, range, status, total } = useNpmWeeklyDownloads(npmNames);
 
   const visible = useMemo(
     () => productsCatalog.filter((product) => matchesTab(product, tab)),
@@ -188,6 +207,29 @@ export function ProductsPage() {
             <span className="font-medium text-[var(--fg-strong)]">V Cards</span>.
           </motion.p>
 
+          {status === 'ready' && total > 0 ? (
+            <motion.p
+              className="mt-4 inline-flex items-center gap-2 text-sm text-[var(--muted)]"
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+            >
+              <Download size={14} className="text-[var(--accent)]" aria-hidden />
+              <span>
+                <span className="font-semibold text-[var(--fg-strong)]">
+                  {formatDownloadCount(total)}
+                </span>{' '}
+                npm downloads last week
+                {range ? (
+                  <span className="text-[var(--muted)]">
+                    {' '}
+                    ({range.start} → {range.end})
+                  </span>
+                ) : null}
+              </span>
+            </motion.p>
+          ) : null}
+
           <motion.div
             className="mt-8 flex flex-wrap gap-3"
             initial={{ opacity: 0, y: 12 }}
@@ -216,7 +258,7 @@ export function ProductsPage() {
             <SectionHeading
               eyebrow="Catalog"
               title="Browse by category"
-              description="Filter npm libraries, V Cards placeholders, and upcoming releases."
+              description="Filter npm libraries, V Cards placeholders, and upcoming releases. Weekly download counts come live from the npm registry."
             />
           </Reveal>
 
@@ -248,11 +290,15 @@ export function ProductsPage() {
           </Reveal>
 
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-            {visible.map((product, i) => (
-              <Reveal key={product.id} delay={Math.min(i * 0.04, 0.2)}>
-                <ProductCard product={product} />
-              </Reveal>
-            ))}
+            {visible.map((product, i) => {
+              const pkg = npmPackageName(product);
+              const weekly = pkg ? byPackage[pkg] : undefined;
+              return (
+                <Reveal key={product.id} delay={Math.min(i * 0.04, 0.2)}>
+                  <ProductCard product={product} weeklyDownloads={weekly} />
+                </Reveal>
+              );
+            })}
           </div>
 
           {visible.length === 0 ? (
