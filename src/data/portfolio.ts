@@ -8,9 +8,9 @@ export const siteConfig = {
   title: 'Lead Software Engineer | Cloud & Full-Stack Developer',
   taglines: [
     'Cloud-native backends that scale',
-    'Kubernetes · DevOps · GenAI',
+    'Kubernetes · K3s · hybrid cloud',
     'Secure auth · resilient APIs',
-    'Open source for AI & cloud',
+    'Solution architecture & leadership',
   ],
   summary: `Cloud and Backend Lead Engineer with ${yearsXp}+ years designing and delivering scalable cloud-native and hybrid solutions on AWS, Azure, and GCP. Experienced with on-premises VMs and Kubernetes (K3s) for sensitive and regulated workloads. Strong in microservices, Node.js, PostgreSQL, and secure auth (OKTA, Auth0, Keycloak with RBAC). Hands-on with Docker, Kubernetes/K3s, CI/CD (Jenkins, Argo CD, Azure DevOps), and IaC (Terraform). Frontend experience with AngularJS and React, plus AR/VR/MR web technologies, with a focus on high availability, solution architecture, and technical leadership.`,
   location: 'Bengaluru, India',
@@ -128,7 +128,7 @@ export const stats = [
   { label: 'Years Experience', value: yearsXp, suffix: '+' },
   { label: 'Dev Effort Reduced', value: 80, suffix: '%' },
   { label: 'Perf Optimized', value: 68, suffix: '%' },
-  { label: 'Latency Reduced', value: 20, suffix: '%' },
+  { label: 'Deploy Code Cut', value: 50, suffix: '%' },
 ] as const;
 
 export const about = {
@@ -151,6 +151,7 @@ export const about = {
   ],
   industries: ['Insurance', 'Manufacturing', 'Enterprise ERP', 'AR / Immersive web'],
   technologies: ['Node.js', 'Kubernetes', 'Azure', 'AWS', 'GCP', 'PostgreSQL', 'Terraform'],
+  languages: [{ name: 'English', level: 'Native' }],
 } as const;
 
 export type SkillLevel = 'expert' | 'advanced' | 'proficient' | 'intermediate' | 'working';
@@ -531,13 +532,62 @@ export const projects: Project[] = [
     id: 'askball',
     name: 'AskBall',
     category: 'AI',
-    tagline: 'AI assistant for client product surface',
+    tagline: 'AI assistant for Ball Corp / Emerson NAM',
     description:
-      'Client-facing AI assistant experience delivered as part of SLK / Altimetrik product work.',
+      'Client-facing AI assistant experience delivered as Team Lead work at SLK Software (Altimetrik).',
     challenge: 'Embed helpful AI interactions into an existing product ecosystem.',
-    solution: 'Backend GenAI integration with secure identity and operational monitoring.',
-    impact: 'Expanded product capabilities with conversational / agent-style assistance.',
-    tech: ['Node.js', 'GenAI', 'Azure', 'Auth', 'Kubernetes'],
+    solution:
+      'Backend GenAI integration with secure Azure networking, identity, and operational monitoring.',
+    impact: 'Expanded product capabilities with conversational assistance for AskBall.',
+    tech: ['Node.js', 'GenAI', 'Azure', 'Docker', 'Azure DevOps'],
+  },
+  {
+    id: 'frp',
+    name: 'FRP',
+    category: 'Backend',
+    tagline: 'Enterprise delivery program',
+    description:
+      'Production platform work delivered during Software Developer Lead tenure spanning architecture, build, and release.',
+    challenge: 'Ship reliable backend and cloud changes across a multi-team delivery program.',
+    solution: 'Node.js services with Docker/Kubernetes delivery and Auth0/OKTA identity.',
+    impact: 'Supported scalable client delivery with lower latency after architecture refinements.',
+    tech: ['Node.js', 'PostgreSQL', 'Docker', 'Kubernetes', 'Auth0'],
+  },
+  {
+    id: 'tat',
+    name: 'TAT',
+    category: 'Backend',
+    tagline: 'Turnaround-time / workflow platform',
+    description:
+      'Workflow-oriented product delivery under Software Developer Lead role at SLK Software / Digital.',
+    challenge: 'Improve operational throughput with clearer service boundaries and reliable APIs.',
+    solution: 'Microservice-style Node.js services with PostgreSQL and cloud deployment.',
+    impact: 'Contributed to multi-client platform delivery alongside ERP and GenAI programs.',
+    tech: ['Node.js', 'PostgreSQL', 'Docker', 'Kubernetes', 'GCP'],
+  },
+  {
+    id: 'mithril',
+    name: 'Mithril',
+    category: 'Cloud',
+    tagline: 'Cloud platform delivery',
+    description:
+      'Cloud and backend platform work delivered for SLK Software / Digital client programs.',
+    challenge: 'Stabilize cloud-native delivery with secure auth and repeatable deployments.',
+    solution: 'Node.js on Docker/Kubernetes across GCP/Azure with Auth0 and OKTA.',
+    impact: 'Supported production readiness for multi-client initiatives.',
+    tech: ['Node.js', 'Kubernetes', 'Azure', 'GCP', 'OKTA'],
+  },
+  {
+    id: 'endorsement',
+    name: 'Endorsement',
+    category: 'Cloud',
+    tagline: 'Mission-critical endorsement flows',
+    description:
+      'Backend and cloud platform capabilities for endorsement workflows at V-Labs (part of SLK Software).',
+    challenge: 'Deliver reliable microservices with enterprise SSO and strong quality gates.',
+    solution: 'Node.js/Express APIs on GCP (GKE, Pub/Sub) with OKTA/Auth0 and Concourse CI/CD.',
+    impact: 'Improved reliability for mission-critical client systems alongside NBSI.',
+    tech: ['Node.js', 'Express.js', 'PostgreSQL', 'GKE', 'OKTA', 'Concourse'],
   },
   {
     id: 'ar-cards',

@@ -97,6 +97,16 @@ export function About() {
                     </Badge>
                   ))}
                 </div>
+                <h3 className="display mt-6 text-lg font-semibold text-[var(--fg-strong)]">
+                  Languages
+                </h3>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {about.languages.map((lang) => (
+                    <Badge key={lang.name}>
+                      {lang.name} · {lang.level}
+                    </Badge>
+                  ))}
+                </div>
               </div>
             </Reveal>
           </div>

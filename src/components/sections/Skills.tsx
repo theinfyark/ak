@@ -39,8 +39,8 @@ export function Skills() {
         <Reveal>
           <SectionHeading
             eyebrow="Skills"
-            title="Systems fluency across cloud, backend, and AI"
-            description="Proficiency from the resume — grouped for scanning by hiring managers and principal engineers."
+            title="Cloud, backend, DevOps, identity & web"
+            description="Grouped to match the resume — Cloud/Backend, DevOps/DevSecOps, Identity, Frontend/AR, and AI at basics level."
           />
         </Reveal>
 

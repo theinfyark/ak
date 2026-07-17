@@ -10,7 +10,7 @@ export function Experience() {
           <SectionHeading
             eyebrow="Experience"
             title="Career timeline"
-            description="From immersive product engineering to leading cloud, backend, and GenAI delivery."
+            description="From AR/WebAR product engineering on AWS to Team Lead delivery on Azure, Kubernetes, and hybrid cloud."
           />
         </Reveal>
 
