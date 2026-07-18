@@ -27,7 +27,7 @@ Optimized for **GitHub Pages** — no server, no SSR, no API routes.
 - Sponsor page (`/sponsor`) — UPI, roadmap, monthly goals
 - Dark-first theme with light toggle, reduced-motion support
 
-Content is sourced from `Anil_Kumar_P_Full_Stack_Cloud_9_Years.pdf` via `src/data/portfolio.ts`.  
+Content is sourced from `Anil_Kumar_Patnala_Lead_Software_Engineer_Cloud_9Y_Resume.pdf` via `src/data/portfolio.ts`.  
 Product catalog (single source of truth): `src/data/products.ts` — folder name === npm name === GitHub repo name.
 
 ## Local development
@@ -78,4 +78,4 @@ Manual run: Actions → **Deploy to GitHub Pages** → Run workflow.
 
 ## Resume
 
-Download path in production: `/ak/Anil_Kumar_P_Full_Stack_Cloud_9_Years.pdf`
+Download path in production: `/ak/Anil_Kumar_Patnala_Lead_Software_Engineer_Cloud_9Y_Resume.pdf`

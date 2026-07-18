@@ -12,12 +12,12 @@ export const siteConfig = {
     'Secure auth · resilient APIs',
     'Solution architecture & leadership',
   ],
-  summary: `Cloud and Backend Lead Engineer with ${yearsXp}+ years designing and delivering scalable cloud-native and hybrid solutions on AWS, Azure, and GCP. Experienced with on-premises VMs and Kubernetes (K3s) for sensitive and regulated workloads. Strong in microservices, Node.js, PostgreSQL, and secure auth (OKTA, Auth0, Keycloak with RBAC). Hands-on with Docker, Kubernetes/K3s, CI/CD (Jenkins, Argo CD, Azure DevOps), and IaC (Terraform). Frontend experience with AngularJS and React, plus AR/VR/MR web technologies, with a focus on high availability, solution architecture, and technical leadership.`,
+  summary: `Cloud and Backend Lead Engineer with ${yearsXp}+ years designing and delivering scalable cloud-native and hybrid solutions on AWS, Azure, and GCP. Experienced with on-premises VMs and Kubernetes (K3s) for regulated workloads. Strong in microservices, Node.js, PostgreSQL, and secure auth (OKTA, Auth0, Keycloak with RBAC). Hands-on with Docker, Kubernetes/K3s, CI/CD (Jenkins, Argo CD, Azure DevOps), and IaC (Terraform). Frontend experience with React and AngularJS, plus AR/VR/MR web technologies, with a focus on high availability, solution architecture, and technical leadership.`,
   location: 'Bengaluru, India',
   email: 'anilachary.p@gmail.com',
   phone: '+91 9885155454',
   phoneRaw: '919885155454',
-  resumePath: 'Anil_Kumar_Patnala_Lead_Software_Cloud_Engineer_9Y_Resume_1.pdf',
+  resumePath: 'Anil_Kumar_Patnala_Lead_Software_Engineer_Cloud_9Y_Resume.pdf',
   siteUrl: 'https://theinfyark.github.io/ak/',
   social: {
     github: 'https://github.com/theinfyark',
@@ -151,7 +151,7 @@ export const about = {
   ],
   industries: ['Insurance', 'Manufacturing', 'Enterprise ERP', 'AR / Immersive web'],
   technologies: ['Node.js', 'Kubernetes', 'Azure', 'AWS', 'GCP', 'PostgreSQL', 'Terraform'],
-  languages: ['English', 'Telugu', 'Hindi', 'Kannada'],
+  languages: ['English (Native)', 'Telugu (Native)', 'Hindi (Native)', 'Kannada (Beginner)'],
 } as const;
 
 export type SkillLevel = 'expert' | 'advanced' | 'proficient' | 'intermediate' | 'working';
@@ -248,7 +248,7 @@ export const skillCategories: SkillCategory[] = [
       { name: 'A-Frame', level: 'proficient' },
       { name: 'JSArToolKit', level: 'proficient' },
       { name: 'Next.js', level: 'working' },
-      { name: 'AngularJS', level: 'advanced' },
+      { name: 'AngularJS', level: 'intermediate' },
       { name: 'WebXR', level: 'proficient' },
       { name: 'MUI', level: 'proficient' },
       { name: 'Tailwind', level: 'proficient' },
@@ -286,16 +286,15 @@ export type Experience = {
 
 export const experience: Experience[] = [
   {
-    company: 'SLK Software (Part Of Altimetrik)',
+    company: 'SLK Software (Part of Altimetrik)',
     location: 'Bengaluru, India',
-    role: 'Team Lead',
+    role: 'Team Lead Software',
     period: '06/2025 – Present',
     responsibilities: [
-      'Lead end-to-end solution design, estimation, and delivery; mentor engineers across backend.',
-      'Optimize deployment pipelines and platform performance; reduced deployment time by ~20 minutes by optimizing Docker container images.',
-      'Cut deployment-related code by approximately 50% using shared libraries and reusable modules for CI/CD and release workflows.',
-      'Set up CI/CD and Infrastructure as Code for secure cloud deployments (Azure DevOps Pipelines, self-hosted agents, Azure Blob Storage for artifacts).',
-      'Built an evaluation pipeline to automate data ingestion and reduce manual work by ~30%.',
+      'Lead end-to-end solution design, estimation, and delivery; mentor engineers across backend, cloud, and frontend.',
+      'Reduced deployment time by ~20 minutes by optimizing Docker container images; cut deployment-related code ~50% via shared libraries.',
+      'Led CI/CD and Infrastructure as Code for secure cloud deployments (Azure DevOps Pipelines, self-hosted agents, Blob Storage for artifacts).',
+      'Built an evaluation pipeline to automate data ingestion, reducing manual work by ~30%.',
       'Hardened Azure networking and security with private endpoints, DNS zones, and firewalls; set up monitoring, logging, and debugging with Azure Functions and related Azure services.',
     ],
     impact: [
@@ -319,16 +318,14 @@ export const experience: Experience[] = [
     ],
   },
   {
-    company: 'SLK Software / Digital (Part Of Amin Holdings)',
+    company: 'SLK Software / Digital (Part of Amin Holdings)',
     location: 'Bengaluru, India',
-    role: 'Software Developer Lead',
+    role: 'Lead Software Engineer',
     period: '04/2024 – 05/2025',
     responsibilities: [
-      'Lead and mentor engineers across backend, cloud, and frontend; set technical direction and reduce delivery risk via code reviews.',
-      'Own end-to-end delivery across full SDLC — scope, estimation, architecture, build, test & deploy.',
+      'Led and mentored engineers across backend, cloud, and frontend; owned end-to-end delivery across full SDLC.',
       'Improved scalability and reliability through architecture refinements and database migrations, cutting latency by ~20%.',
-      'Built production platforms with Node.js, PostgreSQL, Docker, Kubernetes, GCP, and Azure.',
-      'Integrated secure authentication with Auth0 and OKTA in Agile delivery.',
+      'Built production platforms with Node.js, PostgreSQL, Docker, Kubernetes, GCP, and Azure; integrated Auth0/OKTA.',
     ],
     impact: [
       'Architecture and database migration work cut latency by ~20%.',
@@ -359,24 +356,23 @@ export const experience: Experience[] = [
     ],
   },
   {
-    company: 'V-Labs Pvt Ltd (Part Of SLK Software)',
+    company: 'Vijna Labs Pvt Ltd (Part of SLK Software)',
     location: 'Bengaluru, India',
-    role: 'Senior Developer',
-    period: '07/2021 – 04/2024',
+    role: 'Senior Software Developer',
+    period: '08/2021 – 04/2024',
     responsibilities: [
       'Delivered backend and cloud platforms for mission-critical systems with stronger reliability and scalability.',
-      'Built Node.js/Express microservices and REST APIs with PostgreSQL for AI-driven data processing.',
-      'Created reusable components that cut development effort by ~80% and improved critical module performance by ~68%.',
-      'Integrated secure authentication with OKTA (SSO), Auth0, Azure AD, and JWT.',
-      'Architected scalable GCP infrastructure (GKE, Pub/Sub) and end-to-end CI/CD with Concourse, Docker, and Kubernetes.',
-      'Enforced quality and security gates with Veracode, SonarQube, and Stackdriver.',
+      'Built Node.js/Express microservices and REST APIs with PostgreSQL for AI-driven data processing; created reusable components cutting dev effort ~80% and improving performance ~68% and enabled multi-tenancy and Row-Level Security (RLS).',
+      'Integrated secure authentication with OKTA (SSO), Auth0, Azure AD, and JWT. Architected scalable GCP infrastructure (GKE, Pub/Sub) with end-to-end CI/CD (Concourse, Docker, Kubernetes).',
+      'Enforced quality/security gates with Veracode, SonarQube, Stackdriver.',
     ],
     impact: [
       'Reusable components cut development effort by ~80%.',
       'Critical module performance improved by ~68%.',
+      'Enabled multi-tenancy and PostgreSQL Row-Level Security (RLS).',
     ],
     clients: ['CNA', 'Finolex'],
-    projects: ['New Business Submission (NBSI)', 'Endorsement (EMS)', 'POCs & demos'],
+    projects: ['NBSI', 'Endorsement', 'POCs & demos'],
     tech: [
       'Node.js',
       'Express.js',
@@ -398,19 +394,21 @@ export const experience: Experience[] = [
   {
     company: 'Immersion Software Labs Pvt Ltd',
     location: 'Bengaluru / Hyderabad, India',
-    role: 'Software Developer',
+    role: 'Sr Software Developer',
     period: '02/2017 – 08/2021',
     responsibilities: [
-      'Owned end-to-end web delivery for AR/WebAR, VR/MR products and admin dashboards (UI/UX) across L Catalog, ALS, WebAR apps, and POCs/demos.',
-      'Built interactive AR experiences with A-Frame, Three.js, JSArToolKit, WebXR, and Babylon.js; optimized 3D rendering, interactivity, and mobile performance.',
-      'Delivered AngularJS Progressive Web Apps with Google Analytics for engagement tracking and frontend flows for catalog browsing and AR campaigns.',
+      'Led end-to-end web delivery for AR/WebAR, VR/MR products and admin dashboards (UI/UX) across L Catalog, ALS, WebAR, POCs/demos.',
+      'Built interactive AR experiences with A-Frame, Three.js, JSArToolKit, WebXR, and Babylon.js; optimized 3D rendering, interactivity, mobile performance.',
+      'Optimized module loading and model re-rendering, reducing render time by ~30% and improving overall website performance by ~20%; enhanced AR model visualization by refining perspective camera angle, positioning, and lighting within the AR scene.',
+      'Delivered AngularJS PWA and Google Analytics for engagement tracking and front-end flows for catalog browsing and AR campaigns.',
       'Built Node.js APIs with MongoDB (caching/proxy patterns) and deployed on AWS (EC2, S3, Auto Scaling, Security Groups, ELB, VPC).',
     ],
     impact: [
+      'Reduced AR render time by ~30% and improved overall website performance by ~20%.',
       'Shipped immersive AR/WebAR product experiences optimized for cross-device 3D performance.',
     ],
     clients: ['ALS', 'Cliff'],
-    projects: ['L Catalog', 'ALS', 'WishAR', 'AR Cards', 'POCs & demos'],
+    projects: ['L Catalog', 'ALS', 'WebAR apps', 'POCs & demos'],
     tech: [
       'AngularJS',
       'Node.js',
@@ -658,8 +656,8 @@ export const awards = [
 ] as const;
 
 export const education = {
-  degree: 'B.Tech / B.E. | Computer Science and Engineering (CSE)',
-  school: 'VITAM (Affiliated: Jawaharlal Nehru Technological University, Kakinada)',
+  degree: 'B.Tech / B.E., Computer Science and Engineering',
+  school: 'VITAM (Affiliated: JNTU, Kakinada)',
   location: 'Visakhapatnam, India',
   year: '2015',
 } as const;
@@ -712,4 +710,4 @@ export const resumeSkillGroups = [
 ] as const;
 
 /** Shorter summary tuned to fit one printed page */
-export const resumeSummary = `Cloud and Backend Lead Engineer with ${yearsXp}+ years designing and delivering scalable cloud-native and hybrid solutions on AWS, Azure, and GCP. Strong in microservices, Node.js, PostgreSQL, Kubernetes/K3s, and secure auth (OKTA, Auth0, Keycloak). Hands-on with Docker, CI/CD, and IaC (Terraform), plus AngularJS/React and AR/VR/MR web technologies.`;
+export const resumeSummary = `Cloud and Backend Lead Engineer with ${yearsXp}+ years designing and delivering scalable cloud-native and hybrid solutions on AWS, Azure, and GCP. Experienced with on-premises VMs and Kubernetes (K3s) for regulated workloads. Strong in microservices, Node.js, PostgreSQL, and secure auth (OKTA, Auth0, Keycloak with RBAC). Hands-on with Docker, Kubernetes/K3s, CI/CD, and IaC (Terraform), plus React/AngularJS and AR/VR/MR web technologies.`;
