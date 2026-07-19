@@ -13,6 +13,7 @@ Premium developer portfolio for **Anil Kumar Patnala**, Lead Software Engineer |
 - Lucide icons
 - ESLint + Prettier
 
+
 Optimized for **GitHub Pages** — no server, no SSR, no API routes.
 
 ## Sections
